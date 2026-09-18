@@ -76,20 +76,20 @@ export function EnquiryForm() {
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Name" error={errors.clientName}><Input value={values.clientName} onChange={(event) => update("clientName", event.target.value)} maxLength={100} autoComplete="name" placeholder="Your name" aria-invalid={Boolean(errors.clientName)} className={fieldClass} /></Field>
-        <Field label="Email" error={errors.email}><Input type="email" value={values.email} onChange={(event) => update("email", event.target.value)} maxLength={255} autoComplete="email" placeholder="you@company.com" aria-invalid={Boolean(errors.email)} className={fieldClass} /></Field>
+        <Field id="client-name" label="Name" error={errors.clientName}><Input id="client-name" value={values.clientName} onChange={(event) => update("clientName", event.target.value)} maxLength={100} autoComplete="name" placeholder="Your name" aria-invalid={Boolean(errors.clientName)} className={fieldClass} /></Field>
+        <Field id="client-email" label="Email" error={errors.email}><Input id="client-email" type="email" value={values.email} onChange={(event) => update("email", event.target.value)} maxLength={255} autoComplete="email" placeholder="you@company.com" aria-invalid={Boolean(errors.email)} className={fieldClass} /></Field>
       </div>
 
-      <Field label="Phone / WhatsApp" error={errors.phone}><Input type="tel" value={values.phone} onChange={(event) => update("phone", event.target.value)} maxLength={24} autoComplete="tel" placeholder="+91 98765 43210" aria-invalid={Boolean(errors.phone)} className={fieldClass} /></Field>
+      <Field id="client-phone" label="Phone / WhatsApp" error={errors.phone}><Input id="client-phone" type="tel" value={values.phone} onChange={(event) => update("phone", event.target.value)} maxLength={24} autoComplete="tel" placeholder="+91 98765 43210" aria-invalid={Boolean(errors.phone)} className={fieldClass} /></Field>
 
       <div className="grid gap-5 sm:grid-cols-3">
-        <SelectField label="Service" value={values.service} options={enquiryServices} onChange={(value) => update("service", value)} />
-        <SelectField label="Budget" value={values.budget} options={enquiryBudgets} onChange={(value) => update("budget", value)} />
-        <SelectField label="Timeline" value={values.timeline} options={enquiryTimelines} onChange={(value) => update("timeline", value)} />
+        <SelectField id="enquiry-service" label="Service" value={values.service} options={enquiryServices} onChange={(value) => update("service", value)} />
+        <SelectField id="enquiry-budget" label="Budget" value={values.budget} options={enquiryBudgets} onChange={(value) => update("budget", value)} />
+        <SelectField id="enquiry-timeline" label="Timeline" value={values.timeline} options={enquiryTimelines} onChange={(value) => update("timeline", value)} />
       </div>
 
-      <Field label="Project brief" error={errors.projectBrief} detail={`${values.projectBrief.length}/3000`}>
-        <Textarea value={values.projectBrief} onChange={(event) => update("projectBrief", event.target.value)} maxLength={3000} rows={7} placeholder="What do you need, who is it for, and what should the final work achieve?" aria-invalid={Boolean(errors.projectBrief)} className="min-h-40 resize-y border-ink/15 bg-surface shadow-none focus-visible:ring-accent" />
+      <Field id="project-brief" label="Project brief" error={errors.projectBrief} detail={`${values.projectBrief.length}/3000`}>
+        <Textarea id="project-brief" value={values.projectBrief} onChange={(event) => update("projectBrief", event.target.value)} maxLength={3000} rows={7} placeholder="What do you need, who is it for, and what should the final work achieve?" aria-invalid={Boolean(errors.projectBrief)} className="min-h-40 resize-y border-ink/15 bg-surface shadow-none focus-visible:ring-accent" />
       </Field>
 
       <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
@@ -107,10 +107,10 @@ export function EnquiryForm() {
   );
 }
 
-function Field({ label, error, detail, children }: { label: string; error?: string | undefined; detail?: string | undefined; children: React.ReactNode }) {
-  return <div className="space-y-2"><div className="flex items-center justify-between gap-3"><Label>{label}</Label>{detail && <span className="text-xs text-ink/40">{detail}</span>}</div>{children}{error && <p className="text-xs font-medium text-destructive">{error}</p>}</div>;
+function Field({ id, label, error, detail, children }: { id: string; label: string; error?: string | undefined; detail?: string | undefined; children: React.ReactNode }) {
+  return <div className="space-y-2"><div className="flex items-center justify-between gap-3"><Label htmlFor={id}>{label}</Label>{detail && <span className="text-xs text-ink/40">{detail}</span>}</div>{children}{error && <p className="text-xs font-medium text-destructive">{error}</p>}</div>;
 }
 
-function SelectField({ label, value, options, onChange }: { label: string; value: string; options: readonly string[]; onChange: (value: string) => void }) {
-  return <div className="space-y-2"><Label>{label}</Label><Select value={value} onValueChange={onChange}><SelectTrigger className="h-11 border-ink/15 bg-surface shadow-none focus:ring-accent"><SelectValue /></SelectTrigger><SelectContent>{options.map((option) => <SelectItem key={option} value={option}>{option}</SelectItem>)}</SelectContent></Select></div>;
+function SelectField({ id, label, value, options, onChange }: { id: string; label: string; value: string; options: readonly string[]; onChange: (value: string) => void }) {
+  return <div className="space-y-2"><Label htmlFor={id}>{label}</Label><Select value={value} onValueChange={onChange}><SelectTrigger id={id} className="h-11 border-ink/15 bg-surface shadow-none focus:ring-accent"><SelectValue /></SelectTrigger><SelectContent>{options.map((option) => <SelectItem key={option} value={option}>{option}</SelectItem>)}</SelectContent></Select></div>;
 }
