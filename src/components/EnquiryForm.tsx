@@ -107,7 +107,7 @@ export function EnquiryForm() {
   );
 }
 
-function Field({ label, error, detail, children }: { label: string; error?: string; detail?: string; children: React.ReactNode }) {
+function Field({ label, error, detail, children }: { label: string; error?: string | undefined; detail?: string | undefined; children: React.ReactNode }) {
   return <div className="space-y-2"><div className="flex items-center justify-between gap-3"><Label>{label}</Label>{detail && <span className="text-xs text-ink/40">{detail}</span>}</div>{children}{error && <p className="text-xs font-medium text-destructive">{error}</p>}</div>;
 }
 
