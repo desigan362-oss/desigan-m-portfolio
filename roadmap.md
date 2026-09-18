@@ -9,3 +9,8 @@
 - [x] Replace hero illustration with a full celestial animation
 - [x] Refresh figures, card colors, spacing, and text contrast
 - [x] Verify desktop and mobile presentation
+- [ ] Unify portfolio palette and matching statistic cards
+- [ ] Add persistent light/dark theme control
+- [ ] Refine professional contact language and primary action
+- [ ] Add Instagram profiles to matching brand project cards
+- [ ] Verify desktop and mobile presentation
