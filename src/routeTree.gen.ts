@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as GraphicDesignRouteImport } from './routes/graphic-design'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as UiUxProjectsRouteImport } from './routes/ui-ux-projects'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
@@ -44,6 +45,11 @@ const ExperienceRoute = ExperienceRouteImport.update({
   path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GraphicDesignRoute = GraphicDesignRouteImport.update({
+  id: '/graphic-design',
+  path: '/graphic-design',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SkillsRoute = SkillsRouteImport.update({
   id: '/skills',
   path: '/skills',
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-design': typeof GraphicDesignRoute
   '/skills': typeof SkillsRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-design': typeof GraphicDesignRoute
   '/skills': typeof SkillsRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-design': typeof GraphicDesignRoute
   '/skills': typeof SkillsRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/education'
     | '/experience'
+    | '/graphic-design'
     | '/skills'
     | '/ui-ux-projects'
     | '/work/$projectId'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/education'
     | '/experience'
+    | '/graphic-design'
     | '/skills'
     | '/ui-ux-projects'
     | '/work/$projectId'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/education'
     | '/experience'
+    | '/graphic-design'
     | '/skills'
     | '/ui-ux-projects'
     | '/work/$projectId'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EducationRoute: typeof EducationRoute
   ExperienceRoute: typeof ExperienceRoute
+  GraphicDesignRoute: typeof GraphicDesignRoute
   SkillsRoute: typeof SkillsRoute
   UiUxProjectsRoute: typeof UiUxProjectsRoute
   WorkProjectIdRoute: typeof WorkProjectIdRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/graphic-design': {
+      id: '/graphic-design'
+      path: '/graphic-design'
+      fullPath: '/graphic-design'
+      preLoaderRoute: typeof GraphicDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/skills': {
       id: '/skills'
       path: '/skills'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EducationRoute: EducationRoute,
   ExperienceRoute: ExperienceRoute,
+  GraphicDesignRoute: GraphicDesignRoute,
   SkillsRoute: SkillsRoute,
   UiUxProjectsRoute: UiUxProjectsRoute,
   WorkProjectIdRoute: WorkProjectIdRoute,

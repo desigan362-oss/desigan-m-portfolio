@@ -1,21 +1,21 @@
 const stars = [
-  ["left-[5%] top-[14%]", "animation-delay:0.2s"],
-  ["left-[14%] top-[72%]", "animation-delay:1.1s"],
-  ["left-[27%] top-[24%]", "animation-delay:2s"],
-  ["left-[39%] top-[82%]", "animation-delay:0.7s"],
-  ["left-[53%] top-[12%]", "animation-delay:1.7s"],
-  ["left-[66%] top-[70%]", "animation-delay:0.4s"],
-  ["left-[77%] top-[20%]", "animation-delay:2.4s"],
-  ["left-[88%] top-[78%]", "animation-delay:1.3s"],
-  ["left-[94%] top-[35%]", "animation-delay:0.9s"],
+  "left-[5%] top-[14%] [animation-delay:.2s]",
+  "left-[14%] top-[72%] [animation-delay:1.1s]",
+  "left-[27%] top-[24%] [animation-delay:2s]",
+  "left-[39%] top-[82%] [animation-delay:.7s]",
+  "left-[53%] top-[12%] [animation-delay:1.7s]",
+  "left-[66%] top-[70%] [animation-delay:.4s]",
+  "left-[77%] top-[20%] [animation-delay:2.4s]",
+  "left-[88%] top-[78%] [animation-delay:1.3s]",
+  "left-[94%] top-[35%] [animation-delay:.9s]",
 ] as const;
 
 export function SolarSystemBackground() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,var(--color-pastel-blue),transparent_42%),radial-gradient(circle_at_20%_20%,var(--color-pastel-peach),transparent_36%)] opacity-80" />
-      {stars.map(([position, delay]) => (
-        <span key={position} className={`absolute ${position} size-1.5 rounded-full bg-accent shadow-[0_0_14px_var(--color-accent)] animate-twinkle`} style={{ animationDelay: delay }} />
+      {stars.map((position) => (
+        <span key={position} className={`absolute ${position} size-1.5 rounded-full bg-accent shadow-[0_0_14px_var(--color-accent)] animate-twinkle`} />
       ))}
 
       <div className="absolute -right-28 top-1/2 size-[520px] -translate-y-1/2 md:right-[2%] md:size-[680px]">
