@@ -5,3 +5,7 @@
 - [x] Reorder and enhance Work page; add UI/UX Projects page
 - [x] Expand About, Experience, Skills, Contact, and add Education page
 - [x] Complete metadata and verify desktop/mobile interactions
+- [x] Add dedicated Graphic Design page and navigation
+- [x] Replace hero illustration with a full celestial animation
+- [x] Refresh figures, card colors, spacing, and text contrast
+- [x] Verify desktop and mobile presentation
