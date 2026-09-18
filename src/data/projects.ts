@@ -1,4 +1,3 @@
-import beezHero from "@/assets/beez-haircare-hero.jpg";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
@@ -27,6 +26,11 @@ import primeAdmissions from "@/assets/prime-public-school-28.webp.asset.json";
 import primePlayLearnGrow from "@/assets/prime-public-school-29.webp.asset.json";
 import primeCaringTeachers from "@/assets/prime-public-school-30.webp.asset.json";
 import primeLearningSuccess from "@/assets/prime-public-school-31.webp.asset.json";
+import beezAlmondSerum from "@/assets/beez-almond-serum.png.asset.json";
+import beezRakshaBandhan from "@/assets/beez-raksha-bandhan.webp.asset.json";
+import beezOilCampaign from "@/assets/beez-brightening-oil-campaign.webp.asset.json";
+import beezFaceOilBottle from "@/assets/beez-face-oil-bottle.webp.asset.json";
+import beezFaceOilLabel from "@/assets/beez-face-oil-label.png.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -44,7 +48,14 @@ export const projects: Project[] = [
     description: "A premium packaging system for Beez hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "Beez is a hair-care brand, not a honey brand. The identity uses botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    heroImage: beezRakshaBandhan.url,
+    galleryImages: [
+      { src: beezRakshaBandhan.url, alt: "Beez hair oil Raksha Bandhan social media campaign", caption: "Raksha Bandhan Hair Oil Campaign" },
+      { src: beezAlmondSerum.url, alt: "Beez almond serum bottle packaging mockup", caption: "Almond Serum Packaging" },
+      { src: beezOilCampaign.url, alt: "Beez brightening hair oil new product campaign", caption: "Brightening Hair Oil Launch" },
+      { src: beezFaceOilBottle.url, alt: "Beez brightening face oil bottle packaging", caption: "Brightening Face Oil Packaging" },
+      { src: beezFaceOilLabel.url, alt: "Beez brightening face oil wraparound label design", caption: "Face Oil Label System" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientName: "Jayanthi Bakery", title: "Bakery packaging & identity system",

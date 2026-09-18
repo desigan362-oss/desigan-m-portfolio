@@ -21,3 +21,4 @@
 - [ ] Send each enquiry to WhatsApp after Business connection approval
 - [x] Verify enquiry flow on desktop and mobile
 - [x] Replace Prime Public School placeholders with 10 real campaign designs
+- [x] Replace Beez placeholder with 5 real product, packaging, and campaign designs
