@@ -2,8 +2,6 @@ import { ArrowUpRight, Instagram } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Project } from "@/data/projects";
 
-const tones = ["bg-pastel-lilac", "bg-pastel-mint", "bg-pastel-peach", "bg-pastel-blue"];
-
 export function ProjectCard({ project }: { project: Project; index?: number }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-md border border-ink/15 bg-card text-ink shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
