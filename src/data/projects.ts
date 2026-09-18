@@ -1,6 +1,5 @@
 import beezHero from "@/assets/beez-haircare-hero.jpg";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
-import primePublicSchoolHero from "@/assets/prime-public-school-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
@@ -18,6 +17,16 @@ import amCuriousMinds from "@/assets/annai-mira-128.webp.asset.json";
 import amGuidingCompasses from "@/assets/annai-mira-129.webp.asset.json";
 import amHeartDay from "@/assets/annai-mira-heart_day_29_sep.webp.asset.json";
 import amLaughter from "@/assets/annai-mira-post_podala_2.webp.asset.json";
+import primeHappyChild from "@/assets/prime-public-school-22.webp.asset.json";
+import primeCoreBasics from "@/assets/prime-public-school-23.webp.asset.json";
+import primeHealthyHabits from "@/assets/prime-public-school-24.webp.asset.json";
+import primeFoundations from "@/assets/prime-public-school-25.webp.asset.json";
+import primePotential from "@/assets/prime-public-school-26.webp.asset.json";
+import primeBrandLockup from "@/assets/prime-public-school-27.webp.asset.json";
+import primeAdmissions from "@/assets/prime-public-school-28.webp.asset.json";
+import primePlayLearnGrow from "@/assets/prime-public-school-29.webp.asset.json";
+import primeCaringTeachers from "@/assets/prime-public-school-30.webp.asset.json";
+import primeLearningSuccess from "@/assets/prime-public-school-31.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -82,11 +91,22 @@ export const projects: Project[] = [
     ], featured: true, year: "2025", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
   },
   {
-    id: "prime-public-school", clientName: "Prime Public School", title: "CBSE circular & communication system",
-    category: ["Graphic Design", "Marketing"], description: "A clear and credible CBSE circular system for notices, parent updates and academic communication.",
-    overview: "A consistent layout language that makes official circulars easy to recognise and read across print and digital formats.", role: "Graphic Designer",
-    services: ["CBSE circular design", "School communication", "Layout system"], heroImage: primePublicSchoolHero,
-    galleryImages: [{ src: primePublicSchoolHero, alt: "Prime Public School CBSE circular designs", caption: "CBSE circular system" }], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
+    id: "prime-public-school", clientName: "Prime Public School", title: "School campaigns & social communication",
+    category: ["Graphic Design", "Social Media", "Marketing", "Posters"], description: "A vibrant campaign system for admissions, parent communication and educational storytelling.",
+    overview: "A recognisable visual language for Prime Public School that turns learning values, admissions messages and school strengths into clear, engaging social campaigns.", role: "Graphic Designer",
+    services: ["Admission campaigns", "Educational posters", "Social media design", "School communication"], heroImage: primeHappyChild.url,
+    galleryImages: [
+      { src: primeHappyChild.url, alt: "Prime Public School happy confident successful child campaign", caption: "A Happy, Confident, Successful Child" },
+      { src: primeCoreBasics.url, alt: "Prime Public School strengthen core basics campaign", caption: "Strengthen Core Basics" },
+      { src: primeHealthyHabits.url, alt: "Prime Public School healthy student habits campaign", caption: "Healthy Student Habits" },
+      { src: primeFoundations.url, alt: "Prime Public School strong foundations campaign", caption: "Strong Foundations Matter" },
+      { src: primePotential.url, alt: "Prime Public School confidence and potential campaign", caption: "From ‘I Can’t’ to ‘I Can’" },
+      { src: primeBrandLockup.url, alt: "Prime Public School brand identity lockup", caption: "School Brand Identity" },
+      { src: primeAdmissions.url, alt: "Prime Public School admissions open 2026–27 poster", caption: "Admissions Open 2026–27" },
+      { src: primePlayLearnGrow.url, alt: "Prime Public School play learn and grow campaign", caption: "Play, Learn and Grow" },
+      { src: primeCaringTeachers.url, alt: "Prime Public School caring teachers and creative classrooms campaign", caption: "Caring Teachers, Creative Classrooms" },
+      { src: primeLearningSuccess.url, alt: "Prime Public School learning turns into success campaign", caption: "Where Learning Turns Into Success" },
+    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
   },
   {
     id: "mapis-clinic", clientName: "MAPIS Hair, Skin & Beauty Clinic", title: "Clinic identity & beauty campaigns",

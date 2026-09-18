@@ -20,3 +20,4 @@
 - [ ] Send each enquiry to Desigan's email after sender-domain setup
 - [ ] Send each enquiry to WhatsApp after Business connection approval
 - [x] Verify enquiry flow on desktop and mobile
+- [x] Replace Prime Public School placeholders with 10 real campaign designs
