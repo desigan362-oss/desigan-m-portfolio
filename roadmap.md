@@ -19,4 +19,4 @@
 - [x] Save client enquiries securely in Lovable Cloud
 - [ ] Send each enquiry to Desigan's email after sender-domain setup
 - [ ] Send each enquiry to WhatsApp after Business connection approval
-- [ ] Verify enquiry flow on desktop and mobile
+- [x] Verify enquiry flow on desktop and mobile
