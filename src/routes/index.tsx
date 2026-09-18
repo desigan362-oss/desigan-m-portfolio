@@ -31,12 +31,15 @@ function Index() {
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-8rem)] max-w-7xl items-center">
-        <div className="max-w-4xl py-16">
-          <div className="mb-8 flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.24em] text-accent"><span className="h-px w-10 bg-accent" /> Portfolio · 2026</div>
-          <h1 className="whitespace-nowrap font-display text-5xl font-extrabold leading-none sm:text-7xl md:text-8xl xl:text-9xl">Desigan <span className="text-accent">M</span></h1>
-          <p className="mt-7 max-w-3xl text-xl font-semibold leading-snug text-ink md:text-3xl">Building memorable brands through graphic design, visual storytelling and thoughtful digital experiences.</p>
-          <p className="mt-5 max-w-xl text-sm font-bold leading-relaxed text-ink/80 md:text-base"><span className="text-coral">Graphic Designer</span> · UI/UX Designer · Visual Designer · Trainer</p>
-          <div className="mt-9"><ContactActions /></div>
+        <div className="relative z-10 mx-auto grid min-h-[calc(100svh-8rem)] max-w-7xl items-center gap-10 lg:grid-cols-[1fr_320px]">
+          <div className="max-w-4xl py-16">
+            <div className="mb-8 flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.24em] text-accent"><span className="h-px w-10 bg-accent" /> Portfolio · 2026</div>
+            <h1 className="whitespace-nowrap font-display text-5xl font-extrabold leading-none sm:text-7xl md:text-8xl xl:text-9xl">Desigan <span className="text-accent">M</span></h1>
+            <p className="mt-7 max-w-3xl text-xl font-semibold leading-snug text-ink md:text-3xl">Building memorable brands through graphic design, visual storytelling and thoughtful digital experiences.</p>
+            <p className="mt-5 max-w-xl text-sm font-bold leading-relaxed text-ink/80 md:text-base">Graphic Designer · UI/UX Designer · Visual Designer · Trainer</p>
+            <div className="mt-9"><ContactActions /></div>
+          </div>
+          <img src={portrait.url} alt="Portrait of Desigan M." width={800} height={1000} className="hidden aspect-4/5 w-full max-w-[320px] justify-self-end rounded-md border border-ink/15 bg-panel-soft object-cover object-top shadow-lg lg:block" />
         </div>
       </div>
       <a href="#highlights" className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/45">Explore <ArrowDown className="size-4 animate-bounce" /></a>
