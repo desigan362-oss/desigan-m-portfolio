@@ -1,52 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BrainCircuit, Users, Workflow } from "lucide-react";
 import portrait from "@/assets/desigan-portrait.png.asset.json";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Desigan M." },
-      {
-        name: "description",
-        content:
-          "Desigan M. is a UI/UX, graphic and visual designer and trainer working across brand identity, campaigns and digital products.",
-      },
-      { property: "og:title", content: "About — Desigan M." },
-      { property: "og:description", content: "Designer and trainer across brand, campaign and product design." },
-    ],
-  }),
-  component: About,
-});
+export const Route = createFileRoute("/about")({ head: () => ({ meta: [
+  { title: "About Desigan M. — Designer & Trainer" }, { name: "description", content: "Learn about Desigan M.'s design practice, client experience, training work and human-centred approach to AI." },
+  { property: "og:title", content: "About Desigan M. — Designer & Trainer" }, { property: "og:description", content: "Designer and trainer bridging UI/UX, graphic design, branding and mentorship." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
+]}), component: About });
 
-function About() {
-  return (
-    <section className="px-6 py-24">
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_380px]">
-        <div>
-          <h1 className="font-display text-5xl font-medium leading-none md:text-7xl">About</h1>
-          <div className="mt-12 max-w-[56ch] space-y-6 text-lg leading-relaxed text-ink/70">
-            <p>
-              I'm Desigan M., a designer working across user experience, brand identity and visual
-              communication. My work spans more than a hundred designs made for schools, consumer
-              brands and digital products.
-            </p>
-            <p>
-              I like problems that sit between clarity and craft: an admission campaign that has to
-              earn a parent's trust, a streaming interface that has to disappear behind the content,
-              a brand that has to hold together across a jar, a poster and a phone screen.
-            </p>
-            <p>
-              Alongside client work I train aspiring designers — teaching design fundamentals, tools
-              and the thinking that makes work hold up beyond the first impression.
-            </p>
-          </div>
-        </div>
-        <img
-          src={portrait.url}
-          alt="Portrait of Desigan M."
-          loading="lazy"
-          className="aspect-4/5 w-full rounded-[12px] object-cover object-top outline outline-1 -outline-offset-1 outline-ink/5"
-        />
-      </div>
-    </section>
-  );
-}
+function About() { return <>
+  <section className="bg-panel px-6 py-24 text-surface md:py-32"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_360px] lg:items-end"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">About me</p><h1 className="mt-6 max-w-5xl font-display text-5xl font-bold leading-[1.02] md:text-7xl">Design professional and trainer bridging imagination, systems and mentorship.</h1></div><img src={portrait.url} alt="Portrait of Desigan M." width={800} height={1000} className="aspect-4/5 w-full rounded-md bg-panel-soft object-cover object-top" /></div></section>
+  <section className="px-6 py-24"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[.75fr_1.25fr]"><div className="text-sm font-bold uppercase tracking-[0.16em] text-accent">My practice</div><div className="space-y-7 text-lg leading-relaxed text-ink/70"><p>I have around eight months of experience working with Myme Techies, a startup in Vellore. I’ve worked across UI/UX, graphic design and a client rebranding project, while also completing three UI/UX projects independently.</p><p>Training is one of my strengths. I have guided more than 50 students through summer and online internships, teaching design concepts, practical tools and the thinking behind strong work.</p><p>I’m comfortable with Figma, Adobe Photoshop, Adobe Illustrator and Canva. My strength is combining design thinking with practical execution and teaching—so I can contribute as a designer while also supporting students or interns when needed.</p><p>I believe AI is a powerful tool for designers, but good design still requires human understanding, creativity, empathy, problem-solving and design thinking. I use technology to improve my workflow while keeping people at the core.</p><p>I’m looking for an opportunity where I can step outside my comfort zone, contribute across multiple areas and continue developing professionally as a designer and trainer.</p></div></div></section>
+  <section className="bg-accent-soft px-6 py-24"><div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">{[[Workflow,"Design + execution","Turning client and learner needs into clear, usable and visually compelling outcomes."],[Users,"Teaching + mentorship","Clear communication, practical guidance and curriculum built around real projects."],[BrainCircuit,"Human-centred AI","Using new tools to improve the process without outsourcing judgment or empathy."]].map(([Icon,title,copy]) => { const I=Icon as typeof Workflow; return <article key={String(title)} className="rounded-md border border-ink/10 bg-card p-7"><I className="size-6 text-accent"/><h2 className="mt-10 text-xl font-bold">{String(title)}</h2><p className="mt-3 text-sm leading-relaxed text-ink/65">{String(copy)}</p></article>})}</div></section>
+</> }
