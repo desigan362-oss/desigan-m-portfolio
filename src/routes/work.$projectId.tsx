@@ -29,7 +29,7 @@ function ProjectPage() {
   const { project } = Route.useLoaderData();
 
   return (
-    <article className="px-6 py-24">
+    <article className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-7xl">
         <Link to="/work" className="text-xs font-medium uppercase tracking-[0.2em] text-ink/40 hover:text-ink">
           ← All work
@@ -40,7 +40,7 @@ function ProjectPage() {
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {project.clientName} · {project.year}
             </span>
-            <h1 className="mb-8 font-display text-4xl font-medium leading-tight text-balance md:text-5xl">
+            <h1 className="mb-8 font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
               {project.title}
             </h1>
             <div className="grid grid-cols-2 gap-8 border-t border-ink/5 pt-8">
@@ -79,7 +79,9 @@ function ProjectPage() {
         <img
           src={project.heroImage}
           alt={`${project.clientName} hero design`}
-          className="mb-20 w-full rounded-[12px] outline outline-1 -outline-offset-1 outline-ink/5"
+          width={1536}
+          height={1024}
+          className="mb-20 w-full rounded-md outline outline-1 -outline-offset-1 outline-ink/10"
         />
 
         <h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2>
