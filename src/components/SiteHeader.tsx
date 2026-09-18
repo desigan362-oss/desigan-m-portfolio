@@ -18,7 +18,7 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-surface/90 text-ink backdrop-blur-xl">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-5 px-6" aria-label="Main navigation">
-        <Link to="/" className="shrink-0 font-display text-base font-bold"><span className="text-accent">D</span>esigan M.</Link>
+        <Link to="/" className="shrink-0 font-display text-base font-bold">Home</Link>
         <div className="hidden items-center gap-6 text-[13px] font-medium text-ink/60 lg:flex">
           {links.map((link) => <Link key={link.to} to={link.to} activeProps={{ className: "text-ink" }} className="transition-colors hover:text-ink">{link.label}</Link>)}
         </div>

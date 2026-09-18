@@ -3,6 +3,7 @@ import { ArrowDown, ArrowUpRight, GraduationCap, Palette, PenTool, Users } from 
 import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SolarSystemBackground } from "@/components/SolarSystemBackground";
+import portrait from "@/assets/desigan-portrait.png.asset.json";
 import { featuredProjects } from "@/data/projects";
 
 const clients = ["Beez Haircare", "Jayanthi Bakery", "Annai Mira World School", "Prime Public School", "MAPIS Clinic", "Lee Digital Arts", "KAR Towers"];
