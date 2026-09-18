@@ -19,6 +19,11 @@
  */
 
 @theme inline {
+  --font-display: "Fraunces", serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent-warm);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
