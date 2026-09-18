@@ -1,58 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-
-const groups = [
-  {
-    title: "Design",
-    items: ["UI/UX design", "Wireframing & prototyping", "Design systems", "Brand identity", "Layout & typography"],
-  },
-  {
-    title: "Visual & Print",
-    items: ["Poster design", "Packaging", "Campaign creatives", "Social media design", "Marketing collateral"],
-  },
-  {
-    title: "Tools",
-    items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Canva"],
-  },
-  {
-    title: "Other",
-    items: ["Design training & mentoring", "Client communication", "Art direction", "Content planning"],
-  },
+import { Boxes, Brush, MessageSquareText, MonitorSmartphone } from "lucide-react";
+const groups=[
+  {icon:MonitorSmartphone,title:"UI/UX",level:"Advanced",items:["User-centred design","UX research","Wireframing & prototyping","UI design","Design systems"]},
+  {icon:Brush,title:"Visual craft",level:"Advanced",items:["Brand identity","Packaging","Print & poster design","Campaign creatives","Visual communication"]},
+  {icon:Boxes,title:"Tools",level:"Daily practice",items:["Figma","Adobe Photoshop","Adobe Illustrator","Canva"]},
+  {icon:MessageSquareText,title:"Training",level:"50+ students",items:["Workshop facilitation","Curriculum development","Mentorship","Client communication","English & Tamil"]},
 ];
-
-export const Route = createFileRoute("/skills")({
-  head: () => ({
-    meta: [
-      { title: "Skills — Desigan M." },
-      {
-        name: "description",
-        content: "Design, visual, print and tool skills of Desigan M., UI/UX and visual designer.",
-      },
-      { property: "og:title", content: "Skills — Desigan M." },
-      { property: "og:description", content: "Design, visual, print and tool capabilities." },
-    ],
-  }),
-  component: Skills,
-});
-
-function Skills() {
-  return (
-    <section className="px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="font-display text-5xl font-medium leading-none md:text-7xl">Skills</h1>
-
-        <div className="mt-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {groups.map((g) => (
-            <div key={g.title} className="border-t border-ink/10 pt-6">
-              <h2 className="mb-5 text-xs font-medium uppercase tracking-widest text-accent">{g.title}</h2>
-              <ul className="space-y-3 text-ink/70">
-                {g.items.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export const Route=createFileRoute("/skills")({head:()=>({meta:[{title:"Skills — Desigan M."},{name:"description",content:"UI/UX, graphic design, visual communication, design tools, training and mentoring skills."},{property:"og:title",content:"Skills — Desigan M."},{property:"og:description",content:"Design craft, tools, systems and teaching capabilities."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Skills});
+function Skills(){return <><section className="bg-panel px-6 py-24 text-surface md:py-32"><div className="mx-auto max-w-7xl"><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Capability map</p><h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-tight md:text-7xl">Thinking, making and teaching design.</h1></div></section><section className="px-6 py-24"><div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">{groups.map((group,index)=><article key={group.title} className={`${index===3?"bg-lime/50":index===1?"bg-coral/20":index===0?"bg-accent-soft":"bg-card"} group rounded-md border border-ink/10 p-7 transition-all hover:-translate-y-1 hover:shadow-xl`}><div className="flex items-center justify-between"><group.icon className="size-7 transition-transform group-hover:rotate-6 group-hover:scale-110"/><span className="rounded-full border border-ink/15 px-3 py-1 text-[10px] font-bold uppercase">{group.level}</span></div><h2 className="mt-12 font-display text-3xl font-bold">{group.title}</h2><div className="mt-7 flex flex-wrap gap-2">{group.items.map((item)=><span key={item} className="rounded-full border border-ink/15 bg-surface/60 px-3 py-2 text-xs font-medium transition-colors hover:bg-ink hover:text-surface">{item}</span>)}</div></article>)}</div></section></>}

@@ -1,29 +1,17 @@
+import { ContactActions } from "@/components/ContactActions";
+
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink/5 px-6 py-24">
-      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-12 md:flex-row md:items-center">
+    <footer className="bg-panel px-6 py-20 text-surface">
+      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
         <div>
-          <h2 className="font-display text-4xl">Let's create something together.</h2>
-          <p className="mt-4 text-ink/60">Available for freelance and full-time design work.</p>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent">Have a project in mind?</p>
+          <h2 className="max-w-2xl font-display text-4xl font-bold leading-tight md:text-6xl">Let’s make something clear, useful and memorable.</h2>
         </div>
-        <div className="flex flex-wrap gap-8 text-sm font-medium">
-          <a
-            href="mailto:hello@desigan.design"
-            className="border-b border-ink/10 pb-1 transition-colors hover:border-ink"
-          >
-            Email
-          </a>
-          <a href="#" className="border-b border-ink/10 pb-1 transition-colors hover:border-ink">
-            LinkedIn
-          </a>
-          <a href="#" className="border-b border-ink/10 pb-1 transition-colors hover:border-ink">
-            Behance
-          </a>
-        </div>
+        <div className="[&_a]:!text-surface/70 [&_a:hover]:!text-surface"><ContactActions compact /></div>
       </div>
-      <div className="mx-auto mt-24 flex max-w-7xl flex-wrap justify-between gap-4 text-[10px] font-medium uppercase tracking-widest text-ink/30">
-        <span>© {new Date().getFullYear()} Desigan M.</span>
-        <span>Visual &amp; Interface Systems</span>
+      <div className="mx-auto mt-20 flex max-w-7xl flex-wrap justify-between gap-4 border-t border-surface/10 pt-6 text-xs text-surface/40">
+        <span>© {new Date().getFullYear()} Desigan M.</span><span>Designer · Trainer · Human-centred thinker</span>
       </div>
     </footer>
   );

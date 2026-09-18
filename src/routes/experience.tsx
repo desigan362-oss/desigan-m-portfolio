@@ -1,63 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const experience = [
-  {
-    role: "UI/UX & Visual Designer — Freelance",
-    period: "2023 — Present",
-    detail:
-      "Brand identity, campaign and product design for schools, consumer brands and early-stage digital products.",
-  },
-  {
-    role: "Graphic Designer — Beez",
-    period: "2024",
-    detail: "Identity system, packaging, product design, social media and marketing campaigns.",
-  },
-  {
-    role: "Design Trainer",
-    period: "2023 — Present",
-    detail:
-      "Teaching design fundamentals, UI/UX process and industry tools to students and early-career designers.",
-  },
+const timeline = [
+  { date: "10 Jul — 11 Aug 2025", title: "UI/UX Design Intern", org: "Untik", detail: "Practised user flows, wireframing and interface design through a focused product-design internship." },
+  { date: "Sep — Nov 2025", title: "Graphic Designing Intern", org: "Myme Techies", detail: "Created visual communication and campaign work for real client requirements." },
+  { date: "10 Dec 2025 — Mar 2026", title: "UI/UX Design Intern", org: "Least Action", detail: "Developed user-centred screens and prototypes while strengthening UX process and presentation." },
+  { date: "14 Feb 2026 — Present", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Delivering work for client accounts, leading a bakery rebrand, building UI/UX projects and training more than 50 students." },
+  { date: "Jun 2026", title: "Graphic Designing Trainer Certificate", org: "Certification", detail: "Recognition of practical graphic-design teaching and workshop facilitation." },
+  { date: "Jun 2026", title: "UI/UX Designing Trainer Certificate", org: "Certification", detail: "Recognition of UI/UX curriculum delivery, mentorship and practical project guidance." },
 ];
-
-export const Route = createFileRoute("/experience")({
-  head: () => ({
-    meta: [
-      { title: "Experience — Desigan M." },
-      {
-        name: "description",
-        content: "Design roles, client engagements and training work by Desigan M.",
-      },
-      { property: "og:title", content: "Experience — Desigan M." },
-      { property: "og:description", content: "Design roles, client engagements and training work." },
-    ],
-  }),
-  component: Experience,
-});
-
-function Experience() {
-  return (
-    <section className="px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="font-display text-5xl font-medium leading-none md:text-7xl">Experience</h1>
-
-        <div className="mt-16 border-t border-ink/5">
-          {experience.map((item) => (
-            <div
-              key={item.role}
-              className="grid gap-4 border-b border-ink/5 py-10 md:grid-cols-[220px_minmax(0,1fr)] md:gap-12"
-            >
-              <span className="text-xs font-medium uppercase tracking-widest text-ink/40">
-                {item.period}
-              </span>
-              <div className="min-w-0">
-                <h2 className="text-xl font-medium">{item.role}</h2>
-                <p className="mt-2 max-w-[56ch] text-ink/60">{item.detail}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export const Route=createFileRoute("/experience")({head:()=>({meta:[{title:"Experience — Desigan M."},{name:"description",content:"Timeline of internships, professional design work and trainer certifications completed by Desigan M."},{property:"og:title",content:"Experience — Desigan M."},{property:"og:description",content:"Design roles, internships, certifications and training experience."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Experience});
+function Experience(){return <section className="px-6 py-24 md:py-32"><div className="mx-auto max-w-6xl"><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Career path</p><h1 className="mt-5 font-display text-5xl font-bold md:text-7xl">Experience timeline</h1><div className="relative mt-20 border-l border-ink/15 md:ml-44">{timeline.map((item,index)=><article key={`${item.date}-${item.title}`} className="relative pb-14 pl-8 md:pl-14"><span className={`absolute -left-2 top-1 size-4 rounded-full border-4 border-surface ${item.org==="Myme Techies"&&item.title.includes("Trainer")?"bg-lime":"bg-accent"}`}/><time className="mb-2 block text-xs font-bold uppercase text-accent md:absolute md:-left-48 md:w-40 md:text-right">{item.date}</time><div className={`${item.org==="Myme Techies"&&item.title.includes("Trainer")?"bg-lime/45":"bg-card"} rounded-md border border-ink/10 p-6`}><span className="text-xs font-bold uppercase text-ink/45">{item.org}</span><h2 className="mt-2 text-xl font-bold">{item.title}</h2><p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/65">{item.detail}</p></div></article>)}</div></div></section>}
