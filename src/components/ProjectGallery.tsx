@@ -86,8 +86,8 @@ export function ProjectGallery({ images }: Props) {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={images[openIndex].src}
-              alt={images[openIndex].alt}
+              src={images[openIndex]?.src}
+              alt={images[openIndex]?.alt ?? ""}
               className="max-h-full max-w-full object-contain"
             />
           </div>
@@ -105,7 +105,7 @@ export function ProjectGallery({ images }: Props) {
               Previous
             </button>
             <span className="truncate text-xs uppercase tracking-widest">
-              {images[openIndex].caption ?? images[openIndex].alt}
+              {images[openIndex]?.caption ?? images[openIndex]?.alt}
             </span>
             <button
               type="button"
