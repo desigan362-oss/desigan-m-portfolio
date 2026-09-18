@@ -25,7 +25,7 @@ export type GalleryImage = { src: string; alt: string; caption?: string };
 export type Project = {
   id: string; clientName: string; title: string; category: Category[]; description: string;
   overview: string; role: string; services: string[]; heroImage: string;
-  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string;
+  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; instagramUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     description: "A premium packaging system for Beez hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "Beez is a hair-care brand, not a honey brand. The identity uses botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026",
+    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientName: "Jayanthi Bakery", title: "Bakery packaging & identity system",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description: "A warm, locally rooted bakery identity across pastry boxes, bread wraps, carry bags and campaign pieces.",
     overview: "A full visual refresh created to make Jayanthi Bakery feel established, distinctive and consistent across product packaging, retail and digital communication.",
     role: "Brand & Visual Designer", services: ["Brand redesign", "Package design", "Retail collateral", "Social media"],
-    heroImage: jayanthiBakeryHero, galleryImages: [{ src: jayanthiBakeryHero, alt: "Jayanthi Bakery packaging collection", caption: "Packaging and visual identity" }], featured: true, year: "2026",
+    heroImage: jayanthiBakeryHero, galleryImages: [{ src: jayanthiBakeryHero, alt: "Jayanthi Bakery packaging collection", caption: "Packaging and visual identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
     id: "lee-digital-arts", clientName: "Lee Digital Arts", title: "Creative studio visual identity",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description: "A bold visual identity and communication system for a contemporary digital arts studio.",
     overview: "A high-energy identity designed to move confidently across posters, digital experiences, stationery and social communication.",
     role: "Visual & Brand Designer", services: ["Visual identity", "Poster system", "Digital collateral", "Social templates"],
-    heroImage: leeDigitalArtsHero, galleryImages: [{ src: leeDigitalArtsHero, alt: "Lee Digital Arts identity presentation", caption: "Creative studio identity" }], featured: true, year: "2026",
+    heroImage: leeDigitalArtsHero, galleryImages: [{ src: leeDigitalArtsHero, alt: "Lee Digital Arts identity presentation", caption: "Creative studio identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
   },
   {
     id: "kar-towers", clientName: "KAR Towers", title: "Property brand & campaign system",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description: "A premium property identity connecting architecture, print collateral, signage and campaign communication.",
     overview: "KAR Towers required an identity with architectural confidence and clarity across residential marketing, wayfinding and print applications.",
     role: "Brand & Graphic Designer", services: ["Brand identity", "Property brochure", "Campaign design", "Wayfinding"],
-    heroImage: karTowersHero, galleryImages: [{ src: karTowersHero, alt: "KAR Towers property branding", caption: "Property branding system" }], featured: true, year: "2026",
+    heroImage: karTowersHero, galleryImages: [{ src: karTowersHero, alt: "KAR Towers property branding", caption: "Property branding system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
   {
     id: "annai-mira-world-school", clientName: "Annai Mira World School", title: "Admission campaigns & school communications",
@@ -79,21 +79,21 @@ export const projects: Project[] = [
       { src: amGuidingCompasses.url, alt: "Teachers are guiding compasses poster", caption: "Guiding Compasses" },
       { src: amHeartDay.url, alt: "World Heart Day poster", caption: "World Heart Day" },
       { src: amLaughter.url, alt: "Laughter boosts learning poster", caption: "Laughter Boosts Learning" },
-    ], featured: true, year: "2025",
+    ], featured: true, year: "2025", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
   },
   {
     id: "prime-public-school", clientName: "Prime Public School", title: "CBSE circular & communication system",
     category: ["Graphic Design", "Marketing"], description: "A clear and credible CBSE circular system for notices, parent updates and academic communication.",
     overview: "A consistent layout language that makes official circulars easy to recognise and read across print and digital formats.", role: "Graphic Designer",
     services: ["CBSE circular design", "School communication", "Layout system"], heroImage: primePublicSchoolHero,
-    galleryImages: [{ src: primePublicSchoolHero, alt: "Prime Public School CBSE circular designs", caption: "CBSE circular system" }], featured: false, year: "2025",
+    galleryImages: [{ src: primePublicSchoolHero, alt: "Prime Public School CBSE circular designs", caption: "CBSE circular system" }], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
   },
   {
     id: "mapis-clinic", clientName: "MAPIS Hair, Skin & Beauty Clinic", title: "Clinic identity & beauty campaigns",
     category: ["Graphic Design", "Branding", "Social Media", "Marketing"], description: "A polished campaign system balancing clinical trust with a contemporary beauty aesthetic.",
     overview: "A confident visual presence spanning treatment communication, clinic materials and social campaigns.", role: "Brand & Visual Designer",
     services: ["Brand identity", "Campaign design", "Clinic collateral", "Social media"], heroImage: mapisClinicHero,
-    galleryImages: [{ src: mapisClinicHero, alt: "MAPIS clinic campaign identity", caption: "Clinic campaign system" }], featured: false, year: "2025",
+    galleryImages: [{ src: mapisClinicHero, alt: "MAPIS clinic campaign identity", caption: "Clinic campaign system" }], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",
