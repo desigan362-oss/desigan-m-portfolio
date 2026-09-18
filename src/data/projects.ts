@@ -101,3 +101,4 @@ export const getProject = (id: string) => projects.find((project) => project.id 
 export const featuredProjects = () => projects.filter((project) => project.featured).slice(0, 8);
 export const filterProjects = (category: string) => category === "All" ? projects : projects.filter((project) => project.category.includes(category as Category));
 export const uiUxProjects = () => projects.filter((project) => project.category.includes("UI/UX"));
+export const graphicDesignProjects = () => projects.filter((project) => project.category.includes("Graphic Design"));
