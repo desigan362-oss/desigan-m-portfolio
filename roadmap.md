@@ -15,8 +15,8 @@
 - [x] Add Instagram profiles to matching brand project cards
 - [x] Verify desktop and mobile presentation
 
-- [ ] Add validated client enquiry form with requested service options
-- [ ] Save client enquiries securely in Lovable Cloud
+- [x] Add validated client enquiry form with requested service options
+- [x] Save client enquiries securely in Lovable Cloud
 - [ ] Send each enquiry to Desigan's email after sender-domain setup
 - [ ] Send each enquiry to WhatsApp after Business connection approval
 - [ ] Verify enquiry flow on desktop and mobile
