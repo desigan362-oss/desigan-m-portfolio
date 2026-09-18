@@ -8,6 +8,16 @@ import karTowersHero from "@/assets/kar-towers-hero.jpg";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
+import amWomensDay from "@/assets/annai-mira-120.webp.asset.json";
+import amAdmissions from "@/assets/annai-mira-121.webp.asset.json";
+import amPhotographyDay from "@/assets/annai-mira-122.webp.asset.json";
+import amSportsDay from "@/assets/annai-mira-123.webp.asset.json";
+import amDreamDirection from "@/assets/annai-mira-126.webp.asset.json";
+import amBigDreams from "@/assets/annai-mira-127.webp.asset.json";
+import amCuriousMinds from "@/assets/annai-mira-128.webp.asset.json";
+import amGuidingCompasses from "@/assets/annai-mira-129.webp.asset.json";
+import amHeartDay from "@/assets/annai-mira-heart_day_29_sep.webp.asset.json";
+import amLaughter from "@/assets/annai-mira-post_podala_2.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -57,7 +67,19 @@ export const projects: Project[] = [
     description: "A bright communication system for admissions, educational announcements and the school’s social presence.",
     overview: "A cohesive campaign language designed to connect with parents and students across admissions and everyday school communication.",
     role: "Visual Designer", services: ["Admission campaigns", "Educational posters", "Social media design"], heroImage: annaiMiraHero,
-    galleryImages: [{ src: annaiMiraHero, alt: "Annai Mira World School admission campaign", caption: "Admission campaign" }], featured: true, year: "2025",
+    galleryImages: [
+      { src: annaiMiraHero, alt: "Annai Mira World School admission campaign", caption: "Admission campaign" },
+      { src: amWomensDay.url, alt: "International Women's Day poster", caption: "International Women's Day" },
+      { src: amAdmissions.url, alt: "Admissions open 2026-27 announcement", caption: "Admissions Open 2026–27" },
+      { src: amPhotographyDay.url, alt: "World Photography Day poster", caption: "World Photography Day" },
+      { src: amSportsDay.url, alt: "National Sports Day poster", caption: "National Sports Day" },
+      { src: amDreamDirection.url, alt: "Every dream deserves a direction admission poster", caption: "Every Dream Deserves a Direction" },
+      { src: amBigDreams.url, alt: "Big dreams need a big start admission poster", caption: "Big Dreams Need a Big Start" },
+      { src: amCuriousMinds.url, alt: "The brightest journeys begin with curious minds poster", caption: "Curious Minds" },
+      { src: amGuidingCompasses.url, alt: "Teachers are guiding compasses poster", caption: "Guiding Compasses" },
+      { src: amHeartDay.url, alt: "World Heart Day poster", caption: "World Heart Day" },
+      { src: amLaughter.url, alt: "Laughter boosts learning poster", caption: "Laughter Boosts Learning" },
+    ], featured: true, year: "2025",
   },
   {
     id: "prime-public-school", clientName: "Prime Public School", title: "CBSE circular & communication system",
