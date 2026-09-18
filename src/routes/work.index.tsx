@@ -14,6 +14,8 @@ export const Route = createFileRoute("/work/")({
       },
       { property: "og:title", content: "Work — Desigan M." },
       { property: "og:description", content: "Client projects across UI/UX, branding, campaigns and print." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: WorkPage,

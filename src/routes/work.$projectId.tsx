@@ -19,6 +19,8 @@ export const Route = createFileRoute("/work/$projectId")({
         { name: "description", content: project.description },
         { property: "og:title", content: `${project.clientName} — Desigan M.` },
         { property: "og:description", content: project.description },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },
