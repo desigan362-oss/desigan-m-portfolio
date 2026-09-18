@@ -26,6 +26,7 @@ export type Database = {
           phone: string
           project_brief: string
           service: string
+          submission_token: string
           timeline: string
           whatsapp_status: string
         }
@@ -40,6 +41,7 @@ export type Database = {
           phone: string
           project_brief: string
           service: string
+          submission_token: string
           timeline: string
           whatsapp_status?: string
         }
@@ -54,6 +56,7 @@ export type Database = {
           phone?: string
           project_brief?: string
           service?: string
+          submission_token?: string
           timeline?: string
           whatsapp_status?: string
         }
