@@ -29,7 +29,7 @@ function Index() {
     <>
       <section className="px-6 pt-24 pb-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-end gap-16 lg:grid-cols-[1fr_380px]">
+          <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
             <div>
               <h1 className="mb-8 font-display text-5xl font-medium leading-none text-balance md:text-7xl lg:text-8xl">
                 Visual architecture for human experiences.
@@ -39,13 +39,13 @@ function Index() {
                 identity, campaigns and digital product design.
               </p>
             </div>
-            <div>
+            <div className="w-32 justify-self-start sm:w-36 lg:w-40 lg:justify-self-end">
               <img
                 src={portrait.url}
                 alt="Portrait of Desigan M."
                 width={800}
                 height={1000}
-                className="aspect-4/5 w-full rounded-[12px] object-cover object-top outline outline-1 -outline-offset-1 outline-ink/5"
+                className="aspect-4/5 w-full rounded-[8px] object-cover object-top outline outline-1 -outline-offset-1 outline-ink/5"
               />
             </div>
           </div>

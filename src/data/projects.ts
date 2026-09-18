@@ -1,5 +1,8 @@
 import beezHero from "@/assets/beez-hero.jpg";
-import happyMindsHero from "@/assets/happy-minds-hero.jpg";
+import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
+import primePublicSchoolHero from "@/assets/prime-public-school-hero.jpg";
+import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
+import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import alMubeenHero from "@/assets/almubeen-hero.jpg";
 import bestSchoolHero from "@/assets/best-school-hero.jpg";
 import ottHero from "@/assets/ott-hero.jpg";
@@ -73,19 +76,73 @@ export const projects: Project[] = [
     year: "2024",
   },
   {
-    id: "happy-minds-school",
-    clientName: "Happy Minds School",
-    title: "Admission campaigns and educational creatives",
+    id: "annai-mira-world-school",
+    clientName: "Annai Mira World School",
+    title: "Admission campaigns and school communications",
     category: ["Graphic Design", "Social Media", "Marketing", "Posters"],
     description:
-      "Admission drives, educational posters and an ongoing social presence for a school built around warmth and clarity.",
+      "A bright, welcoming visual system for admissions, educational communication and the school's social presence.",
     overview:
-      "A yearly admission campaign supported by educational posters and a consistent social calendar, designed to speak to parents while staying friendly to students.",
+      "A cohesive campaign system designed to connect with parents and students across admission posters, digital announcements and everyday school communication.",
     role: "Visual Designer",
     services: ["Admission campaigns", "Educational posters", "Social media design"],
-    heroImage: happyMindsHero,
+    heroImage: annaiMiraHero,
     galleryImages: [
-      { src: happyMindsHero, alt: "Happy Minds School admission poster", caption: "Admission campaign" },
+      { src: annaiMiraHero, alt: "Annai Mira World School admission campaign", caption: "Admission campaign" },
+    ],
+    featured: true,
+    year: "2024",
+  },
+  {
+    id: "prime-public-school",
+    clientName: "Prime Public School",
+    title: "CBSE circular and communication system",
+    category: ["Graphic Design", "Marketing"],
+    description:
+      "A clear, credible CBSE circular system for school notices, parent updates and academic communication.",
+    overview:
+      "Prime Public School needed a consistent communication language that made official circulars easy to recognise and read across print and digital formats.",
+    role: "Graphic Designer",
+    services: ["CBSE circular design", "School communications", "Layout system"],
+    heroImage: primePublicSchoolHero,
+    galleryImages: [
+      { src: primePublicSchoolHero, alt: "Prime Public School CBSE circular designs", caption: "CBSE circular system" },
+    ],
+    featured: true,
+    year: "2024",
+  },
+  {
+    id: "jayanthi-bakery",
+    clientName: "Jayanthi Bakery",
+    title: "Bakery identity and campaign design",
+    category: ["Branding", "Graphic Design", "Social Media", "Marketing"],
+    description:
+      "A warm bakery identity carried across packaging, menus, in-store touchpoints and social campaigns.",
+    overview:
+      "A distinctive visual system that brings Jayanthi Bakery's craft and local character together across packaging, retail and digital communication.",
+    role: "Brand & Visual Designer",
+    services: ["Brand identity", "Packaging", "Menu design", "Social media design"],
+    heroImage: jayanthiBakeryHero,
+    galleryImages: [
+      { src: jayanthiBakeryHero, alt: "Jayanthi Bakery brand and packaging designs", caption: "Brand and packaging system" },
+    ],
+    featured: true,
+    year: "2024",
+  },
+  {
+    id: "mapis-clinic",
+    clientName: "MAPIS Hair, Skin and Beauty Clinic",
+    title: "Clinic identity and beauty campaigns",
+    category: ["Branding", "Graphic Design", "Social Media", "Marketing"],
+    description:
+      "A polished identity and campaign system balancing clinical trust with a contemporary beauty aesthetic.",
+    overview:
+      "MAPIS needed a confident, refined visual presence spanning clinic materials, treatment communication and social media campaigns.",
+    role: "Brand & Visual Designer",
+    services: ["Brand identity", "Campaign design", "Clinic collateral", "Social media design"],
+    heroImage: mapisClinicHero,
+    galleryImages: [
+      { src: mapisClinicHero, alt: "MAPIS Hair, Skin and Beauty Clinic identity", caption: "Clinic identity and campaign system" },
     ],
     featured: true,
     year: "2024",
