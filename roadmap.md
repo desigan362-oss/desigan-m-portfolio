@@ -13,4 +13,4 @@
 - [x] Add persistent light/dark theme control
 - [x] Refine professional contact language and primary action
 - [x] Add Instagram profiles to matching brand project cards
-- [ ] Verify desktop and mobile presentation
+- [x] Verify desktop and mobile presentation
