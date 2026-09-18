@@ -4,4 +4,4 @@
 - [x] Update project data and add Beez, Jayanthi, Lee Digital Arts, and KAR Towers work
 - [x] Reorder and enhance Work page; add UI/UX Projects page
 - [x] Expand About, Experience, Skills, Contact, and add Education page
-- [ ] Complete metadata and verify desktop/mobile interactions
+- [x] Complete metadata and verify desktop/mobile interactions
