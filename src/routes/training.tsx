@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, Award, Presentation, Sparkles, Users } from "lucide-react";
+import { ArrowDown, Award, Bot, Heart, Palette, Presentation, Sparkles, Triangle, Users } from "lucide-react";
+import { SiClaude, SiFigma, SiMiro } from "@icons-pack/react-simple-icons";
 import { PageHero } from "@/components/PageHero";
 import focusAsset from "@/assets/training-workshop-focus.jpeg.asset.json";
 import wideAsset from "@/assets/training-workshop-wide.jpeg.asset.json";
@@ -15,13 +16,13 @@ import guidedAsset from "@/assets/training-guided-workshop.jpeg.asset.json";
 const tools = [
   { mark: "Ps", name: "Photoshop", tone: "bg-pastel-blue" },
   { mark: "Ai", name: "Illustrator", tone: "bg-pastel-peach" },
-  { mark: "C", name: "Canva", tone: "bg-accent-soft" },
-  { mark: "A", name: "Affinity", tone: "bg-coral/20" },
-  { mark: "F", name: "Figma", tone: "bg-pastel-lilac" },
-  { mark: "M", name: "Miro", tone: "bg-lime/35" },
-  { mark: "✦", name: "ChatGPT", tone: "bg-pastel-mint" },
-  { mark: "C", name: "Claude", tone: "bg-pastel-peach" },
-  { mark: "L", name: "Lovable", tone: "bg-accent-soft" },
+  { icon: Palette, name: "Canva", tone: "bg-accent-soft" },
+  { icon: Triangle, name: "Affinity", tone: "bg-coral/20" },
+  { icon: SiFigma, name: "Figma", tone: "bg-pastel-lilac" },
+  { icon: SiMiro, name: "Miro", tone: "bg-lime/35" },
+  { icon: Bot, name: "ChatGPT", tone: "bg-pastel-mint" },
+  { icon: SiClaude, name: "Claude", tone: "bg-pastel-peach" },
+  { icon: Heart, name: "Lovable", tone: "bg-accent-soft" },
 ] as const;
 
 const photos = [
@@ -80,12 +81,14 @@ function TrainingPage() {
 
       <section className="overflow-hidden border-y border-ink/10 bg-card py-8" aria-label="Training tools">
         <div className="flex w-max animate-tool-marquee gap-4 px-2">
-          {[...tools, ...tools].map((tool, index) => (
+          {[...tools, ...tools].map((tool, index) => {
+            const ToolIcon = "icon" in tool ? tool.icon : null;
+            return (
             <div key={`${tool.name}-${index}`} className={`${tool.tone} flex w-44 shrink-0 items-center gap-3 rounded-md border border-ink/10 p-3 shadow-sm`}>
-              <span className="animate-tool-float grid size-11 place-items-center rounded-md border border-ink/15 bg-surface font-display text-lg font-extrabold text-ink" style={{ animationDelay: `${(index % tools.length) * 120}ms` }}>{tool.mark}</span>
+              <span className="animate-tool-float grid size-11 place-items-center rounded-md border border-ink/15 bg-surface font-display text-lg font-extrabold text-ink" style={{ animationDelay: `${(index % tools.length) * 120}ms` }}>{ToolIcon ? <ToolIcon className="size-5" aria-hidden="true" /> : tool.mark}</span>
               <span className="text-sm font-bold text-ink">{tool.name}</span>
             </div>
-          ))}
+          )})}
         </div>
       </section>
 
