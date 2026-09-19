@@ -6,7 +6,7 @@ import { SolarSystemBackground } from "@/components/SolarSystemBackground";
 import portrait from "@/assets/desigan-portrait.png.asset.json";
 import { featuredProjects } from "@/data/projects";
 
-const clients = ["Beez Haircare", "Jayanthi Bakery", "Annai Mira World School", "Prime Public School", "MAPIS Clinic", "Lee Digital Arts", "KAR Towers"];
+const clients = ["Annai Mira World School", "Prime Public School", "KAR Towers", "Lee Digital Arts", "MAPIS Clinic", "Jayanthi Bakery", "Beez Haircare", "Design Training"];
 const certificates = [
   ["Jul—Aug 2025", "UI/UX Design Internship", "Untik"],
   ["Sep—Nov 2025", "Graphic Designing Internship", "Myme Techies"],
