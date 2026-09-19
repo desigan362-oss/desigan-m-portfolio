@@ -85,7 +85,7 @@ function TrainingPage() {
             const ToolIcon = "icon" in tool ? tool.icon : null;
             return (
             <div key={`${tool.name}-${index}`} className={`${tool.tone} flex w-44 shrink-0 items-center gap-3 rounded-md border border-ink/10 p-3 shadow-sm`}>
-              <span className="animate-tool-float grid size-11 place-items-center rounded-md border border-ink/15 bg-surface font-display text-lg font-extrabold text-ink" style={{ animationDelay: `${(index % tools.length) * 120}ms` }}>{ToolIcon ? <ToolIcon className="size-5" aria-hidden="true" /> : tool.mark}</span>
+              <span className="animate-tool-float grid size-11 place-items-center rounded-md border border-ink/15 bg-surface font-display text-lg font-extrabold text-ink" style={{ animationDelay: `${(index % tools.length) * 120}ms` }}>{ToolIcon ? <ToolIcon className="size-5" aria-hidden="true" /> : "mark" in tool ? tool.mark : null}</span>
               <span className="text-sm font-bold text-ink">{tool.name}</span>
             </div>
           )})}
