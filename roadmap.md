@@ -32,4 +32,4 @@
 - [x] Replace green accents with a premium purple theme and add celestial animation to every page hero
 - [x] Shorten résumé actions to “Résumé” across the portfolio
 
-- [ ] Add funky Training page with animated tools and workshop photo cards
+- [x] Add funky Training page with animated tools and workshop photo cards
