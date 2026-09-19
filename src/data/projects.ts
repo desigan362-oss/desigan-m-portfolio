@@ -1,4 +1,8 @@
-import beezHero from "@/assets/beez-haircare-hero.jpg";
+import beezAlmondSerum from "@/assets/beez-almond-serum.webp.asset.json";
+import beezRakshaBandhan from "@/assets/beez-raksha-bandhan-campaign.webp.asset.json";
+import beezOilLaunch from "@/assets/beez-brightening-oil-launch.webp.asset.json";
+import beezFaceOil from "@/assets/beez-brightening-face-oil.webp.asset.json";
+import beezFaceOilLabel from "@/assets/beez-face-oil-label.webp.asset.json";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
@@ -44,7 +48,14 @@ export const projects: Project[] = [
     description: "A premium packaging system for Beez hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "Beez is a hair-care brand, not a honey brand. The identity uses botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    heroImage: beezAlmondSerum.url,
+    galleryImages: [
+      { src: beezAlmondSerum.url, alt: "Beez almond serum bottle packaging", caption: "Almond Serum Packaging" },
+      { src: beezRakshaBandhan.url, alt: "Beez hair oil Raksha Bandhan social media campaign", caption: "Raksha Bandhan Campaign" },
+      { src: beezOilLaunch.url, alt: "Beez brightening hair oil new product launch design", caption: "Brightening Oil Product Launch" },
+      { src: beezFaceOil.url, alt: "Beez brightening face oil product presentation", caption: "Brightening Face Oil" },
+      { src: beezFaceOilLabel.url, alt: "Beez brightening face oil packaging label design", caption: "Face Oil Label Design" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientName: "Jayanthi Bakery", title: "Bakery packaging & identity system",
