@@ -25,3 +25,4 @@
 - [x] Add 8 additional KAR Towers designs to the gallery without changing its cover
 - [x] Add 5 real Beez product and packaging designs without changing its cover
 - [x] Add 10 real Lee Digital Arts promotional designs without changing its cover
+- [x] Add 9 real Jayanthi Bakery packaging and campaign designs without changing its cover

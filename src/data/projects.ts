@@ -60,6 +60,15 @@ import leeCustomCup from "@/assets/lee-custom-cup.webp.asset.json";
 import leeHighQualityPrints from "@/assets/lee-high-quality-prints.webp.asset.json";
 import leeFlagsUmbrella from "@/assets/lee-flags-umbrella.webp.asset.json";
 import leeAcrylicLedSign from "@/assets/lee-acrylic-led-sign.webp.asset.json";
+import jayanthiThinaiBadamPack from "@/assets/jayanthi-thinai-badam-cookie-pack.webp.asset.json";
+import jayanthiHoneyOatsLabel from "@/assets/jayanthi-honey-oats-raisin-label.webp.asset.json";
+import jayanthiKambuPeanutLabel from "@/assets/jayanthi-kambu-peanut-label.webp.asset.json";
+import jayanthiPistaBitesLabel from "@/assets/jayanthi-pista-bites-label.webp.asset.json";
+import jayanthiThinaiJackfruitLabel from "@/assets/jayanthi-thinai-badam-jackfruit-label.webp.asset.json";
+import jayanthiEidMubarak from "@/assets/jayanthi-eid-mubarak.webp.asset.json";
+import jayanthiBirthdayOffer from "@/assets/jayanthi-birthday-cake-offer.webp.asset.json";
+import jayanthiArrestHunger from "@/assets/jayanthi-arrest-your-hunger.webp.asset.json";
+import jayanthiRechargeBiscuit from "@/assets/jayanthi-recharge-biscuit.png.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -92,7 +101,18 @@ export const projects: Project[] = [
     description: "A warm, locally rooted bakery identity across pastry boxes, bread wraps, carry bags and campaign pieces.",
     overview: "A full visual refresh created to make Jayanthi Bakery feel established, distinctive and consistent across product packaging, retail and digital communication.",
     role: "Brand & Visual Designer", services: ["Brand redesign", "Package design", "Retail collateral", "Social media"],
-    heroImage: jayanthiBakeryHero, galleryImages: [{ src: jayanthiBakeryHero, alt: "Jayanthi Bakery packaging collection", caption: "Packaging and visual identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
+    heroImage: jayanthiBakeryHero, galleryImages: [
+      { src: jayanthiBakeryHero, alt: "Jayanthi Bakery packaging collection", caption: "Packaging and Visual Identity" },
+      { src: jayanthiThinaiBadamPack.url, alt: "Jayanthi Bakery Thinai with Badam cookies in branded clear containers", caption: "Thinai with Badam Cookie Packaging" },
+      { src: jayanthiHoneyOatsLabel.url, alt: "Jayanthi Bakery honey oats raisin cookie packaging label", caption: "Honey Oats Raisin Label" },
+      { src: jayanthiKambuPeanutLabel.url, alt: "Jayanthi Bakery Kambu and peanut cookie packaging label", caption: "Kambu & Peanut Label" },
+      { src: jayanthiPistaBitesLabel.url, alt: "Jayanthi Bakery pista bites packaging label", caption: "Pista Bites Label" },
+      { src: jayanthiThinaiJackfruitLabel.url, alt: "Jayanthi Bakery Thinai badam and jackfruit cookie packaging label", caption: "Thinai, Badam & Jackfruit Label" },
+      { src: jayanthiEidMubarak.url, alt: "Jayanthi Bakery Eid Mubarak social media campaign featuring a crescent cookie", caption: "Eid Mubarak Campaign" },
+      { src: jayanthiBirthdayOffer.url, alt: "Jayanthi Bakery birthday cake discount campaign", caption: "Birthday Cake Offer" },
+      { src: jayanthiArrestHunger.url, alt: "Jayanthi Bakery arrest your hunger doughnut campaign", caption: "Arrest Your Hunger" },
+      { src: jayanthiRechargeBiscuit.url, alt: "Jayanthi Bakery recharge biscuit social media campaign", caption: "Recharge Biscuit Campaign" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
     id: "lee-digital-arts", clientName: "Lee Digital Arts", title: "Creative studio visual identity",
