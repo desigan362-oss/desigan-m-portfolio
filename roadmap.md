@@ -23,3 +23,4 @@
 - [x] Replace Prime Public School placeholders with 10 real campaign designs
 - [x] Add 10 real campaign designs to the KAR Towers gallery without changing its cover
 - [x] Add 8 additional KAR Towers designs to the gallery without changing its cover
+- [x] Add 5 real Beez product and packaging designs without changing its cover

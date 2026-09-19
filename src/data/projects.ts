@@ -7,6 +7,11 @@ import karTowersHero from "@/assets/kar-towers-hero.jpg";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
+import beezAlmondSerum from "@/assets/beez-almond-serum.png.asset.json";
+import beezRakshaBandhan from "@/assets/beez-raksha-bandhan.webp.asset.json";
+import beezBrighteningOilLaunch from "@/assets/beez-brightening-oil-launch.webp.asset.json";
+import beezBrighteningFaceOil from "@/assets/beez-brightening-face-oil.webp.asset.json";
+import beezFaceOilLabel from "@/assets/beez-face-oil-label.png.asset.json";
 import amWomensDay from "@/assets/annai-mira-120.webp.asset.json";
 import amAdmissions from "@/assets/annai-mira-121.webp.asset.json";
 import amPhotographyDay from "@/assets/annai-mira-122.webp.asset.json";
@@ -62,7 +67,14 @@ export const projects: Project[] = [
     description: "A premium packaging system for Beez hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "Beez is a hair-care brand, not a honey brand. The identity uses botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    heroImage: beezHero, galleryImages: [
+      { src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" },
+      { src: beezAlmondSerum.url, alt: "Beez almond serum bottle packaging presented on a clean white background", caption: "Almond Serum Packaging" },
+      { src: beezRakshaBandhan.url, alt: "Beez Raksha Bandhan hair oil gift campaign", caption: "Raksha Bandhan — Gift Care, Gift Strength" },
+      { src: beezBrighteningOilLaunch.url, alt: "Beez brightening face oil new product launch campaign", caption: "Brightening Face Oil Launch" },
+      { src: beezBrighteningFaceOil.url, alt: "Beez brightening face oil bottle and label design", caption: "Brightening Face Oil Packaging" },
+      { src: beezFaceOilLabel.url, alt: "Beez brightening face oil packaging label with ingredients and directions", caption: "Face Oil Label Design" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientName: "Jayanthi Bakery", title: "Bakery packaging & identity system",
