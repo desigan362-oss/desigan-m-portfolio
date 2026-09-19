@@ -56,7 +56,6 @@ function Index() {
           </Link>
         </div>
       </div>
-      </div>
     </section>
 
     <section id="proof" className="overflow-hidden border-y border-ink/10 bg-accent py-5 text-accent-foreground">
