@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CATEGORIES, filterProjects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -26,8 +27,8 @@ function WorkPage() {
   const visible = filterProjects(active);
 
   return (
-    <section className="px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl">
+    <>
+      <PageHero>
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Graphic design · UI/UX · Training</p>
         <h1 className="mt-5 font-display text-5xl font-bold leading-none md:text-7xl">Client work & design practice</h1>
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink/65">Graphic design leads the collection, followed by independent UI/UX projects and a training practice built with 50+ learners.</p>
@@ -35,9 +36,10 @@ function WorkPage() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <div className="rounded-md border border-ink/10 bg-coral/20 p-5"><span className="text-xs font-bold text-ink/45">01</span><strong className="mt-5 block text-xl">Graphic Design</strong><p className="mt-2 text-sm text-ink/60">Branding, packaging, campaigns and communication.</p></div>
           <div className="rounded-md border border-ink/10 bg-accent-soft p-5"><span className="text-xs font-bold text-ink/45">02</span><strong className="mt-5 block text-xl">UI/UX Design</strong><p className="mt-2 text-sm text-ink/60">Flows, interfaces, prototypes and design systems.</p></div>
-          <div className="rounded-md border border-ink/10 bg-lime/55 p-5"><span className="text-xs font-bold text-ink/45">03 · Highlight</span><strong className="mt-5 block text-xl">Design Training</strong><p className="mt-2 text-sm text-ink/60">50+ students mentored through practical projects.</p></div>
+          <div className="rounded-md border border-ink/10 bg-pastel-lilac p-5"><span className="text-xs font-bold text-ink/45">03 · Highlight</span><strong className="mt-5 block text-xl">Design Training</strong><p className="mt-2 text-sm text-ink/60">50+ students mentored through practical projects.</p></div>
         </div>
-
+      </PageHero>
+      <section className="px-6 py-20 md:py-24"><div className="mx-auto max-w-7xl">
         <div className="mt-14 mb-14 flex flex-wrap gap-2 border-b border-ink/10 pb-8">
           {CATEGORIES.map((c) => (
             <button
@@ -60,7 +62,7 @@ function WorkPage() {
             ))}
           </div>
         )}
-      </div>
-    </section>
+      </div></section>
+    </>
   );
 }
