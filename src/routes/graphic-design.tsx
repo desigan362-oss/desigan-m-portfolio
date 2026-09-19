@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Palette } from "lucide-react";
 import { ProjectCard } from "@/components/ProjectCard";
 import { graphicDesignProjects } from "@/data/projects";
+import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/graphic-design")({
   head: () => ({
@@ -21,15 +22,13 @@ function GraphicDesignPage() {
   const projects = graphicDesignProjects();
   return (
     <>
-      <section className="bg-pastel-peach px-6 py-24 text-ink md:py-32">
-        <div className="mx-auto max-w-7xl">
+      <PageHero>
           <Palette className="size-8 text-coral" />
           <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-coral">Primary design practice</p>
           <h1 className="mt-5 max-w-5xl font-display text-5xl font-bold leading-tight md:text-7xl">Graphic design that gives brands a clear, memorable voice.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink/80">Packaging, identity, campaigns, posters and social communication developed for growing brands and institutions.</p>
           <Link to="/work" className="mt-8 inline-flex items-center gap-2 border-b border-ink/40 pb-1 text-sm font-bold">View every project <ArrowUpRight className="size-4" /></Link>
-        </div>
-      </section>
+      </PageHero>
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex items-end justify-between gap-6">

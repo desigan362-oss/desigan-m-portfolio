@@ -28,3 +28,6 @@
 - [x] Add 9 real Jayanthi Bakery packaging and campaign designs without changing its cover
 - [x] Add 5 additional Jayanthi Bakery campaign designs without changing its cover
 - [x] Add 5 MAPIS clinic and campaign designs without changing its cover
+- [x] Restore the original Prime Public School cover and standardize all project cards to 2026
+- [x] Replace green accents with a premium purple theme and add celestial animation to every page hero
+- [x] Shorten résumé actions to “Résumé” across the portfolio

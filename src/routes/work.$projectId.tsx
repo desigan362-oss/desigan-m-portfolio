@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 import { getProject } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { SolarSystemBackground } from "@/components/SolarSystemBackground";
 
 export const Route = createFileRoute("/work/$projectId")({
   loader: ({ params }) => {
@@ -32,13 +33,15 @@ function ProjectPage() {
   const { project } = Route.useLoaderData();
 
   return (
-    <article className="px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl">
+    <article>
+      <section className="relative isolate overflow-hidden bg-panel px-6 py-24 md:py-32">
+        <SolarSystemBackground />
+        <div className="relative z-10 mx-auto max-w-7xl">
         <Link to="/work" className="text-xs font-medium uppercase tracking-[0.2em] text-ink/40 hover:text-ink">
           ← All work
         </Link>
 
-        <div className="mt-10 mb-16 grid gap-16 lg:grid-cols-2">
+        <div className="mt-10 grid gap-16 lg:grid-cols-2">
           <div>
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {project.clientName} · {project.year}
@@ -84,7 +87,11 @@ function ProjectPage() {
           </div>
         </div>
 
-        <img
+        </div>
+      </section>
+      <section className="px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <img
           src={project.heroImage}
           alt={`${project.clientName} hero design`}
           width={1536}
@@ -94,7 +101,8 @@ function ProjectPage() {
 
         <h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2>
         <ProjectGallery images={project.galleryImages} />
-      </div>
+        </div>
+      </section>
     </article>
   );
 }

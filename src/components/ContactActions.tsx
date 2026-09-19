@@ -1,4 +1,4 @@
-import { Download, Linkedin, Mail, Phone } from "lucide-react";
+import { FileText, Linkedin, Mail, Phone } from "lucide-react";
 import resumeAsset from "@/assets/desigan-resume.pdf.asset.json";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ export function ContactActions({ compact = false }: { compact?: boolean }) {
       <a href="mailto:desigan362@gmail.com" className={base}><Mail className="size-4" /> Send an email</a>
       <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className={base}><Linkedin className="size-4" /> View LinkedIn</a>
       <a href="tel:+919384952112" className={base}><Phone className="size-4" /> Call me</a>
-      <a href={resumeAsset.url} download="Desigan-M-Resume.pdf" className={base}><Download className="size-4" /> Download résumé</a>
+      <a href={resumeAsset.url} download="Desigan-M-Resume.pdf" className={base}><FileText className="size-4" /> Résumé</a>
     </div>
   );
 }
