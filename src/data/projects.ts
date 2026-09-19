@@ -107,7 +107,7 @@ export type Project = {
   galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; instagramUrl?: string; itemLabel?: string;
 };
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     id: "beez-haircare", clientName: "Beez", title: "Hair oil & serum packaging design",
     category: ["Graphic Design", "Branding", "Packaging", "Marketing"],
@@ -301,8 +301,27 @@ export const projects: Project[] = [
   },
 ];
 
+// Display order used everywhere (home, work page, filters).
+const projectOrder = [
+  "annai-mira-world-school",
+  "prime-public-school",
+  "kar-towers",
+  "lee-digital-arts",
+  "mapis-clinic",
+  "jayanthi-bakery",
+  "beez-haircare",
+  "ux-learning-platform",
+  "ott-streaming-platform",
+  "bakery-app",
+  "design-training",
+] as const;
+
+export const projects: Project[] = projectOrder
+  .map((id) => allProjects.find((project) => project.id === id))
+  .filter((project): project is Project => Boolean(project));
+
 export const getProject = (id: string) => projects.find((project) => project.id === id);
-export const featuredProjects = () => projects.filter((project) => project.featured).slice(0, 8);
+export const featuredProjects = () => projects.slice(0, 6);
 export const filterProjects = (category: string) => category === "All" ? projects : projects.filter((project) => project.category.includes(category as Category));
 export const uiUxProjects = () => projects.filter((project) => project.category.includes("UI/UX"));
 export const graphicDesignProjects = () => projects.filter((project) => project.category.includes("Graphic Design"));
