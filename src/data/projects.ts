@@ -37,6 +37,14 @@ import karGaneshChaturthi from "@/assets/kar-towers-ganesh-chaturthi.webp.asset.
 import karHotelStays from "@/assets/kar-towers-hotel-stays.webp.asset.json";
 import karInvitationDesign from "@/assets/kar-towers-invitation-design.webp.asset.json";
 import karPerfectMoments from "@/assets/kar-towers-perfect-moments.webp.asset.json";
+import karOneStay from "@/assets/kar-towers-one-stay.webp.asset.json";
+import karPerfectRoom from "@/assets/kar-towers-perfect-room.webp.asset.json";
+import karRelaxRepeat from "@/assets/kar-towers-relax-repeat.webp.asset.json";
+import karService from "@/assets/kar-towers-service.webp.asset.json";
+import karServingRooms from "@/assets/kar-towers-serving-rooms.webp.asset.json";
+import karWeekendHero from "@/assets/kar-towers-weekend-hero.webp.asset.json";
+import karVenue from "@/assets/kar-towers-venue.webp.asset.json";
+import karStories from "@/assets/kar-towers-stories.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -90,6 +98,14 @@ export const projects: Project[] = [
       { src: karHotelStays.url, alt: "KAR Towers 24 hour hotel stay campaign", caption: "Where Every Stay Feels Right" },
       { src: karInvitationDesign.url, alt: "KAR Towers event venue invitation design", caption: "From Yes to Every Milestone" },
       { src: karPerfectMoments.url, alt: "KAR Towers decorated celebration venue campaign", caption: "The Perfect Space for Every Moment" },
+      { src: karOneStay.url, alt: "KAR Towers guest room amenities and one stay booking campaign", caption: "Everything You Need, One Stay" },
+      { src: karPerfectRoom.url, alt: "KAR Towers hotel room campaign for daily, weekly and monthly stays", caption: "The Perfect Room for You" },
+      { src: karRelaxRepeat.url, alt: "KAR Towers restful hotel stay campaign featuring a guest relaxing in her room", caption: "Relax. Explore. Repeat." },
+      { src: karService.url, alt: "KAR Towers thoughtful service campaign featuring a prepared guest room", caption: "Thoughtful Service, Restful Stay" },
+      { src: karServingRooms.url, alt: "KAR Towers comfort and convenience hospitality campaign", caption: "Comfort & Convenience" },
+      { src: karWeekendHero.url, alt: "KAR Towers weekend break campaign featuring a superhero relaxing in a hotel room", caption: "Even Heroes Need a Weekend Off" },
+      { src: karVenue.url, alt: "KAR Towers banquet hall campaign for celebrations and professional events", caption: "A Flawless Venue for Every Occasion" },
+      { src: karStories.url, alt: "KAR Towers night stay campaign showing a warmly lit guest room", caption: "Beyond Stays, Beyond Stories" },
     ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
   {
