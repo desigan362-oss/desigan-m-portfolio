@@ -7,6 +7,7 @@ import karTowersHero from "@/assets/kar-towers-hero.jpg";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
+import primePublicSchoolHero from "@/assets/prime-public-school-hero.jpg";
 import beezAlmondSerum from "@/assets/beez-almond-serum.png.asset.json";
 import beezRakshaBandhan from "@/assets/beez-raksha-bandhan.webp.asset.json";
 import beezBrighteningOilLaunch from "@/assets/beez-brightening-oil-launch.webp.asset.json";
@@ -195,13 +196,13 @@ export const projects: Project[] = [
       { src: amGuidingCompasses.url, alt: "Teachers are guiding compasses poster", caption: "Guiding Compasses" },
       { src: amHeartDay.url, alt: "World Heart Day poster", caption: "World Heart Day" },
       { src: amLaughter.url, alt: "Laughter boosts learning poster", caption: "Laughter Boosts Learning" },
-    ], featured: true, year: "2025", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
   },
   {
     id: "prime-public-school", clientName: "Prime Public School", title: "School campaigns & social communication",
     category: ["Graphic Design", "Social Media", "Marketing", "Posters"], description: "A vibrant campaign system for admissions, parent communication and educational storytelling.",
     overview: "A recognisable visual language for Prime Public School that turns learning values, admissions messages and school strengths into clear, engaging social campaigns.", role: "Graphic Designer",
-    services: ["Admission campaigns", "Educational posters", "Social media design", "School communication"], heroImage: primeHappyChild.url,
+    services: ["Admission campaigns", "Educational posters", "Social media design", "School communication"], heroImage: primePublicSchoolHero,
     galleryImages: [
       { src: primeHappyChild.url, alt: "Prime Public School happy confident successful child campaign", caption: "A Happy, Confident, Successful Child" },
       { src: primeCoreBasics.url, alt: "Prime Public School strengthen core basics campaign", caption: "Strengthen Core Basics" },
@@ -227,7 +228,7 @@ export const projects: Project[] = [
       { src: mapisWorldOceanDay.url, alt: "MAPIS World Ocean Day awareness campaign", caption: "World Ocean Day" },
       { src: mapisMuharramHealthcare.url, alt: "Dr. Madhan's ECMO Health Care Islamic New Year Muharram greeting", caption: "Muharram Healthcare Greeting" },
       { src: mapisVijayadashami.url, alt: "MAPIS Vijayadashami greeting combining healthcare and beauty services", caption: "Vijayadashami Campaign" },
-    ], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
+    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",
@@ -241,14 +242,14 @@ export const projects: Project[] = [
     id: "ott-streaming-platform", clientName: "OTT Streaming Platform", title: "Content discovery for a streaming app",
     category: ["UI/UX"], description: "Wireframes and high-fidelity prototypes focused on intuitive content discovery and navigation.", overview: "An end-to-end interface exploration for browsing, evaluating and returning to streaming content across a modern entertainment platform.",
     role: "UI/UX Designer", services: ["User flows", "Wireframing", "UI design", "Prototyping"], heroImage: ottHero,
-    galleryImages: [{ src: ottHero, alt: "OTT streaming platform interface", caption: "Browse and detail screens" }], featured: true, year: "2025",
+    galleryImages: [{ src: ottHero, alt: "OTT streaming platform interface", caption: "Browse and detail screens" }], featured: true, year: "2026",
     externalUrl: "https://www.figma.com/design/00R6TZWrsYTvR2LRkStxpf/website?node-id=2137-1764&t=JmPVHss2e2Xd5stF-1",
   },
   {
     id: "bakery-app", clientName: "Bakery App", title: "End-to-end ordering experience",
     category: ["UI/UX"], description: "An ordering experience developed from early wireframes through a polished high-fidelity prototype.", overview: "A focused mobile journey covering product discovery, ordering, cart management and order tracking for a neighbourhood bakery.",
     role: "UI/UX Designer", services: ["User flows", "Wireframing", "UI design", "Prototyping"], heroImage: bakeryHero,
-    galleryImages: [{ src: bakeryHero, alt: "Bakery ordering app screens", caption: "Ordering flow" }], featured: true, year: "2025",
+    galleryImages: [{ src: bakeryHero, alt: "Bakery ordering app screens", caption: "Ordering flow" }], featured: true, year: "2026",
     externalUrl: "https://www.figma.com/design/00R6TZWrsYTvR2LRkStxpf/website?node-id=2082-2&t=JmPVHss2e2Xd5stF-1",
   },
 ];

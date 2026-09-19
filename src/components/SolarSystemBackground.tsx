@@ -13,7 +13,7 @@ const stars = [
 export function SolarSystemBackground() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,var(--color-pastel-blue),transparent_42%),radial-gradient(circle_at_20%_20%,var(--color-pastel-peach),transparent_36%)] opacity-80" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,var(--color-pastel-lilac),transparent_42%),radial-gradient(circle_at_20%_20%,var(--color-accent-soft),transparent_36%)] opacity-80" />
       {stars.map((position) => (
         <span key={position} className={`absolute ${position} size-1.5 rounded-full bg-accent shadow-[0_0_14px_var(--color-accent)] animate-twinkle`} />
       ))}
@@ -23,7 +23,7 @@ export function SolarSystemBackground() {
           <span className="absolute left-[9%] top-[12%] size-5 rounded-full bg-coral shadow-lg md:size-7" />
         </div>
         <div className="absolute inset-[20%] rounded-full border border-ink/20 animate-solar-spin-slow">
-          <span className="absolute bottom-[5%] right-[18%] size-8 rounded-full bg-lime shadow-lg md:size-11" />
+          <span className="absolute bottom-[5%] right-[18%] size-8 rounded-full bg-pastel-lilac shadow-lg md:size-11" />
         </div>
         <div className="absolute inset-[34%] rounded-full border border-ink/20 animate-solar-spin">
           <span className="absolute -left-2 top-1/2 size-4 rounded-full bg-accent shadow-lg md:size-6" />
