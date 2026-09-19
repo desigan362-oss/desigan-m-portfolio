@@ -33,3 +33,5 @@
 - [x] Shorten résumé actions to “Résumé” across the portfolio
 
 - [x] Add funky Training page with animated tools and workshop photo cards
+- [x] Add 5 more workshop photos and 1 workshop video to Training
+- [x] Add Training to Work as a project card with a separate illustrated cover
