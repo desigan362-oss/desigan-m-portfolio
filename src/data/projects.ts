@@ -69,6 +69,11 @@ import jayanthiEidMubarak from "@/assets/jayanthi-eid-mubarak.webp.asset.json";
 import jayanthiBirthdayOffer from "@/assets/jayanthi-birthday-cake-offer.webp.asset.json";
 import jayanthiArrestHunger from "@/assets/jayanthi-arrest-your-hunger.webp.asset.json";
 import jayanthiRechargeBiscuit from "@/assets/jayanthi-recharge-biscuit.png.asset.json";
+import jayanthiSayItWithLove from "@/assets/jayanthi-say-it-with-love.webp.asset.json";
+import jayanthiFathersDay from "@/assets/jayanthi-fathers-day.webp.asset.json";
+import jayanthiMiniPizza from "@/assets/jayanthi-mini-pizza.webp.asset.json";
+import jayanthiChocolateBrownie from "@/assets/jayanthi-chocolate-brownie.webp.asset.json";
+import jayanthiCustomerReview from "@/assets/jayanthi-customer-review.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -112,6 +117,11 @@ export const projects: Project[] = [
       { src: jayanthiBirthdayOffer.url, alt: "Jayanthi Bakery birthday cake discount campaign", caption: "Birthday Cake Offer" },
       { src: jayanthiArrestHunger.url, alt: "Jayanthi Bakery arrest your hunger doughnut campaign", caption: "Arrest Your Hunger" },
       { src: jayanthiRechargeBiscuit.url, alt: "Jayanthi Bakery recharge biscuit social media campaign", caption: "Recharge Biscuit Campaign" },
+      { src: jayanthiSayItWithLove.url, alt: "Jayanthi Bakery chocolate cake campaign presented in a ring box", caption: "Say It With Love" },
+      { src: jayanthiFathersDay.url, alt: "Jayanthi Bakery Father's Day cupcake campaign", caption: "Father's Day Campaign" },
+      { src: jayanthiMiniPizza.url, alt: "Jayanthi Bakery mini pizza product campaign", caption: "Mini Pizza Campaign" },
+      { src: jayanthiChocolateBrownie.url, alt: "Jayanthi Bakery premium chocolate brownie product campaign", caption: "Chocolate Brownie Campaign" },
+      { src: jayanthiCustomerReview.url, alt: "Jayanthi Bakery customer review campaign featuring freshly baked puffs", caption: "Customer Review Campaign" },
     ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
