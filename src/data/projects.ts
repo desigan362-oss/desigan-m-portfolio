@@ -50,6 +50,16 @@ import karServingRooms from "@/assets/kar-towers-serving-rooms.webp.asset.json";
 import karWeekendHero from "@/assets/kar-towers-weekend-hero.webp.asset.json";
 import karVenue from "@/assets/kar-towers-venue.webp.asset.json";
 import karStories from "@/assets/kar-towers-stories.webp.asset.json";
+import leeCustomIdCards from "@/assets/lee-custom-id-cards.webp.asset.json";
+import leeCustomTshirtPrinting from "@/assets/lee-custom-tshirt-printing.webp.asset.json";
+import leeBusinessCards from "@/assets/lee-business-cards.webp.asset.json";
+import leeCustomMugPrinting from "@/assets/lee-custom-mug-printing.webp.asset.json";
+import leePersonalizedLanyard from "@/assets/lee-personalized-lanyard.webp.asset.json";
+import leeCustomTableTent from "@/assets/lee-custom-table-tent.webp.asset.json";
+import leeCustomCup from "@/assets/lee-custom-cup.webp.asset.json";
+import leeHighQualityPrints from "@/assets/lee-high-quality-prints.webp.asset.json";
+import leeFlagsUmbrella from "@/assets/lee-flags-umbrella.webp.asset.json";
+import leeAcrylicLedSign from "@/assets/lee-acrylic-led-sign.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -90,7 +100,19 @@ export const projects: Project[] = [
     description: "A bold visual identity and communication system for a contemporary digital arts studio.",
     overview: "A high-energy identity designed to move confidently across posters, digital experiences, stationery and social communication.",
     role: "Visual & Brand Designer", services: ["Visual identity", "Poster system", "Digital collateral", "Social templates"],
-    heroImage: leeDigitalArtsHero, galleryImages: [{ src: leeDigitalArtsHero, alt: "Lee Digital Arts identity presentation", caption: "Creative studio identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
+    heroImage: leeDigitalArtsHero, galleryImages: [
+      { src: leeDigitalArtsHero, alt: "Lee Digital Arts identity presentation", caption: "Creative Studio Identity" },
+      { src: leeCustomIdCards.url, alt: "Lee Digital Arts customized identity card promotional design", caption: "Customized ID Cards" },
+      { src: leeCustomTshirtPrinting.url, alt: "Lee Digital Arts custom T-shirt printing promotional design", caption: "Custom T-Shirt Printing" },
+      { src: leeBusinessCards.url, alt: "Lee Digital Arts personalized business card promotional design", caption: "Personalized Business Cards" },
+      { src: leeCustomMugPrinting.url, alt: "Lee Digital Arts custom mug printing promotional design", caption: "Custom Mug Printing" },
+      { src: leePersonalizedLanyard.url, alt: "Lee Digital Arts personalized lanyard promotional design", caption: "Personalized Lanyards" },
+      { src: leeCustomTableTent.url, alt: "Lee Digital Arts custom table tent promotional design", caption: "Custom Table Tents" },
+      { src: leeCustomCup.url, alt: "Lee Digital Arts personalized cup printing promotional design", caption: "Personalized Cup Printing" },
+      { src: leeHighQualityPrints.url, alt: "Lee Digital Arts high-quality product printing promotional design", caption: "High-Quality Prints" },
+      { src: leeFlagsUmbrella.url, alt: "Lee Digital Arts flag pole banner and branded umbrella promotional design", caption: "Branded Flags & Umbrellas" },
+      { src: leeAcrylicLedSign.url, alt: "Lee Digital Arts acrylic LED sign promotional design", caption: "Acrylic LED Signs" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
   },
   {
     id: "kar-towers", clientName: "KAR Towers", title: "Property brand & campaign system",
