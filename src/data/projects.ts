@@ -27,6 +27,16 @@ import primeAdmissions from "@/assets/prime-public-school-28.webp.asset.json";
 import primePlayLearnGrow from "@/assets/prime-public-school-29.webp.asset.json";
 import primeCaringTeachers from "@/assets/prime-public-school-30.webp.asset.json";
 import primeLearningSuccess from "@/assets/prime-public-school-31.webp.asset.json";
+import karUnexpected from "@/assets/kar-towers-unexpected.webp.asset.json";
+import karCelebrationHome from "@/assets/kar-towers-celebration-home.webp.asset.json";
+import karCrownExperience from "@/assets/kar-towers-crown-experience.webp.asset.json";
+import karCelebrations from "@/assets/kar-towers-celebrations.webp.asset.json";
+import karWeekendStay from "@/assets/kar-towers-weekend-stay.webp.asset.json";
+import karFeelLikeHome from "@/assets/kar-towers-feel-like-home.webp.asset.json";
+import karGaneshChaturthi from "@/assets/kar-towers-ganesh-chaturthi.webp.asset.json";
+import karHotelStays from "@/assets/kar-towers-hotel-stays.webp.asset.json";
+import karInvitationDesign from "@/assets/kar-towers-invitation-design.webp.asset.json";
+import karPerfectMoments from "@/assets/kar-towers-perfect-moments.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -68,7 +78,19 @@ export const projects: Project[] = [
     description: "A premium property identity connecting architecture, print collateral, signage and campaign communication.",
     overview: "KAR Towers required an identity with architectural confidence and clarity across residential marketing, wayfinding and print applications.",
     role: "Brand & Graphic Designer", services: ["Brand identity", "Property brochure", "Campaign design", "Wayfinding"],
-    heroImage: karTowersHero, galleryImages: [{ src: karTowersHero, alt: "KAR Towers property branding", caption: "Property branding system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
+    heroImage: karTowersHero, galleryImages: [
+      { src: karTowersHero, alt: "KAR Towers property branding", caption: "Property branding system" },
+      { src: karUnexpected.url, alt: "KAR Towers expect the unexpected hotel amenities campaign", caption: "Expect the Unexpected" },
+      { src: karCelebrationHome.url, alt: "KAR Towers grand venue celebration campaign", caption: "Every Celebration Finds Its Perfect Home" },
+      { src: karCrownExperience.url, alt: "KAR Towers crown experience room campaign", caption: "Feel the Crown Experience" },
+      { src: karCelebrations.url, alt: "KAR Towers spectacular celebrations banquet hall campaign", caption: "Celebrations Made Spectacular" },
+      { src: karWeekendStay.url, alt: "KAR Towers warm and cozy weekend stay campaign", caption: "A Warm, Cozy Weekend" },
+      { src: karFeelLikeHome.url, alt: "KAR Towers family hotel stay campaign", caption: "Every Stay Feels Like Home" },
+      { src: karGaneshChaturthi.url, alt: "KAR Towers Ganesh Chaturthi festival greeting", caption: "Ganesh Chaturthi" },
+      { src: karHotelStays.url, alt: "KAR Towers 24 hour hotel stay campaign", caption: "Where Every Stay Feels Right" },
+      { src: karInvitationDesign.url, alt: "KAR Towers event venue invitation design", caption: "From Yes to Every Milestone" },
+      { src: karPerfectMoments.url, alt: "KAR Towers decorated celebration venue campaign", caption: "The Perfect Space for Every Moment" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
   {
     id: "annai-mira-world-school", clientName: "Annai Mira World School", title: "Admission campaigns & school communications",
