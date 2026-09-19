@@ -12,6 +12,12 @@ import mentoringAsset from "@/assets/training-mentoring.jpeg.asset.json";
 import practiceAsset from "@/assets/training-student-practice.jpeg.asset.json";
 import fullWorkshopAsset from "@/assets/training-full-workshop.jpeg.asset.json";
 import guidedAsset from "@/assets/training-guided-workshop.jpeg.asset.json";
+import tableAsset from "@/assets/training-workshop-table.jpeg.asset.json";
+import roomVerticalAsset from "@/assets/training-workshop-room-vertical.jpeg.asset.json";
+import roomWideAsset from "@/assets/training-workshop-room-wide.jpeg.asset.json";
+import fullClassAsset from "@/assets/training-workshop-full-class.jpeg.asset.json";
+import certificateAsset from "@/assets/training-certificate-presentation.jpeg.asset.json";
+import workshopVideoAsset from "@/assets/training-workshop-session.mp4.asset.json";
 
 const tools = [
   { mark: "Ps", name: "Photoshop", tone: "bg-pastel-blue" },
@@ -36,6 +42,11 @@ const photos = [
   { src: practiceAsset.url, alt: "Students practising digital design skills on laptops", caption: "Hands-on learning", shape: "" },
   { src: fullWorkshopAsset.url, alt: "A busy design workshop with students working across the studio", caption: "Creative workshop energy", shape: "md:col-span-2" },
   { src: guidedAsset.url, alt: "Trainer leading students through a classroom design session", caption: "Guided classroom session", shape: "md:col-span-2" },
+  { src: tableAsset.url, alt: "Design trainees working together around a shared table", caption: "Collaborative table session", shape: "md:col-span-2" },
+  { src: roomVerticalAsset.url, alt: "Students working on laptops throughout the training room", caption: "Studio practice", shape: "" },
+  { src: roomWideAsset.url, alt: "Trainer guiding a full classroom during a practical session", caption: "In-class guidance", shape: "md:col-span-2" },
+  { src: fullClassAsset.url, alt: "A full class completing practical design work on laptops", caption: "Workshop in progress", shape: "md:col-span-2" },
+  { src: certificateAsset.url, alt: "Certificate presentation at the conclusion of a design training programme", caption: "Certificate presentation", shape: "" },
 ] as const;
 
 const pillars = [
@@ -106,6 +117,10 @@ function TrainingPage() {
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Workshop moments</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Learning in action.</h2></div><p className="max-w-md text-sm leading-relaxed text-ink/65">Real sessions with students exploring design tools, solving briefs and developing practical creative confidence.</p></div>
           <div className="mt-12 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-4">
             {photos.map((photo, index) => <figure key={photo.src} className={`${photo.shape} group overflow-hidden rounded-md border border-ink/10 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}><div className="overflow-hidden bg-muted"><img src={photo.src} alt={photo.alt} loading="lazy" className="h-auto w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" /></div><figcaption className="flex items-center justify-between gap-4 p-4 text-sm font-bold"><span>{photo.caption}</span><span className="text-xs text-accent">{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}
+            <figure className="overflow-hidden rounded-md border border-ink/10 bg-card shadow-sm md:col-span-2 lg:col-span-2">
+              <video src={workshopVideoAsset.url} controls preload="metadata" playsInline aria-label="Short video from a live design workshop" className="h-auto w-full" />
+              <figcaption className="flex items-center justify-between gap-4 p-4 text-sm font-bold"><span>Live workshop moment</span><span className="text-xs text-accent">16</span></figcaption>
+            </figure>
           </div>
         </div>
       </section>

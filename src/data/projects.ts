@@ -80,14 +80,31 @@ import mapisHydraFacial from "@/assets/mapis-hydra-facial.webp.asset.json";
 import mapisWorldOceanDay from "@/assets/mapis-world-ocean-day.webp.asset.json";
 import mapisMuharramHealthcare from "@/assets/mapis-muharram-healthcare.webp.asset.json";
 import mapisVijayadashami from "@/assets/mapis-vijayadashami.webp.asset.json";
+import trainingProjectCover from "@/assets/training-project-cover.jpg";
+import trainingWorkshopFocus from "@/assets/training-workshop-focus.jpeg.asset.json";
+import trainingWorkshopWide from "@/assets/training-workshop-wide.jpeg.asset.json";
+import trainingWorkshopStudio from "@/assets/training-workshop-studio.jpeg.asset.json";
+import trainingLiveSession from "@/assets/training-live-session.jpeg.asset.json";
+import trainingOneToOne from "@/assets/training-one-to-one.jpeg.asset.json";
+import trainingPracticalSession from "@/assets/training-practical-session.jpeg.asset.json";
+import trainingMentoring from "@/assets/training-mentoring.jpeg.asset.json";
+import trainingStudentPractice from "@/assets/training-student-practice.jpeg.asset.json";
+import trainingFullWorkshop from "@/assets/training-full-workshop.jpeg.asset.json";
+import trainingGuidedWorkshop from "@/assets/training-guided-workshop.jpeg.asset.json";
+import trainingWorkshopTable from "@/assets/training-workshop-table.jpeg.asset.json";
+import trainingWorkshopRoomVertical from "@/assets/training-workshop-room-vertical.jpeg.asset.json";
+import trainingWorkshopRoomWide from "@/assets/training-workshop-room-wide.jpeg.asset.json";
+import trainingWorkshopFullClass from "@/assets/training-workshop-full-class.jpeg.asset.json";
+import trainingCertificatePresentation from "@/assets/training-certificate-presentation.jpeg.asset.json";
+import trainingWorkshopVideo from "@/assets/training-workshop-session.mp4.asset.json";
 
-export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
+export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Training", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
-export type GalleryImage = { src: string; alt: string; caption?: string };
+export type GalleryImage = { src: string; alt: string; caption?: string; mediaType?: "image" | "video" };
 export type Project = {
   id: string; clientName: string; title: string; category: Category[]; description: string;
   overview: string; role: string; services: string[]; heroImage: string;
-  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; instagramUrl?: string;
+  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; instagramUrl?: string; itemLabel?: string;
 };
 
 export const projects: Project[] = [
@@ -251,6 +268,36 @@ export const projects: Project[] = [
     role: "UI/UX Designer", services: ["User flows", "Wireframing", "UI design", "Prototyping"], heroImage: bakeryHero,
     galleryImages: [{ src: bakeryHero, alt: "Bakery ordering app screens", caption: "Ordering flow" }], featured: true, year: "2026",
     externalUrl: "https://www.figma.com/design/00R6TZWrsYTvR2LRkStxpf/website?node-id=2082-2&t=JmPVHss2e2Xd5stF-1",
+  },
+  {
+    id: "design-training", clientName: "Design Training", title: "Practical creative learning & mentorship",
+    category: ["Training"],
+    description: "Hands-on UI/UX and graphic design workshops shaped around live demonstrations, practical briefs and individual guidance.",
+    overview: "A training practice built to make design tools and thinking approachable. Sessions combine clear explanations, live demonstrations, guided exercises and useful feedback for emerging creatives.",
+    role: "UI/UX & Graphic Design Trainer",
+    services: ["Workshop facilitation", "Curriculum development", "Practical demonstrations", "Student mentorship"],
+    heroImage: trainingProjectCover,
+    galleryImages: [
+      { src: trainingWorkshopWide.url, alt: "Students participating in a practical design workshop", caption: "Collaborative Design Practice" },
+      { src: trainingWorkshopFocus.url, alt: "Students working closely on design exercises using laptops", caption: "Focused Tool Practice" },
+      { src: trainingWorkshopStudio.url, alt: "A full classroom of students working on design projects", caption: "Independent Project Time" },
+      { src: trainingLiveSession.url, alt: "Trainer presenting a live design lesson to students", caption: "Live Demonstrations" },
+      { src: trainingOneToOne.url, alt: "Trainer giving one-to-one guidance during a workshop", caption: "Personal Mentoring" },
+      { src: trainingPracticalSession.url, alt: "Students completing practical design activities", caption: "Learning by Making" },
+      { src: trainingMentoring.url, alt: "Trainer discussing a student's design work", caption: "Clear, Practical Feedback" },
+      { src: trainingStudentPractice.url, alt: "Students practising digital design skills on laptops", caption: "Hands-on Learning" },
+      { src: trainingFullWorkshop.url, alt: "A busy design workshop with students working across the studio", caption: "Creative Workshop Energy" },
+      { src: trainingGuidedWorkshop.url, alt: "Trainer leading students through a classroom design session", caption: "Guided Classroom Session" },
+      { src: trainingWorkshopTable.url, alt: "Design trainees working together around a shared table", caption: "Collaborative Table Session" },
+      { src: trainingWorkshopRoomVertical.url, alt: "Students working on laptops throughout the training room", caption: "Studio Practice" },
+      { src: trainingWorkshopRoomWide.url, alt: "Trainer guiding a full classroom during a practical session", caption: "In-class Guidance" },
+      { src: trainingWorkshopFullClass.url, alt: "A full class completing practical design work on laptops", caption: "Workshop in Progress" },
+      { src: trainingCertificatePresentation.url, alt: "Certificate presentation at the conclusion of a design training programme", caption: "Certificate Presentation" },
+      { src: trainingWorkshopVideo.url, alt: "Short video from a live design workshop", caption: "Live Workshop Moment", mediaType: "video" },
+    ],
+    featured: false,
+    year: "2026",
+    itemLabel: "workshop moment",
   },
 ];
 
