@@ -74,6 +74,11 @@ import jayanthiFathersDay from "@/assets/jayanthi-fathers-day.webp.asset.json";
 import jayanthiMiniPizza from "@/assets/jayanthi-mini-pizza.webp.asset.json";
 import jayanthiChocolateBrownie from "@/assets/jayanthi-chocolate-brownie.webp.asset.json";
 import jayanthiCustomerReview from "@/assets/jayanthi-customer-review.webp.asset.json";
+import mapisBrandLogo from "@/assets/mapis-brand-logo.png.asset.json";
+import mapisHydraFacial from "@/assets/mapis-hydra-facial.webp.asset.json";
+import mapisWorldOceanDay from "@/assets/mapis-world-ocean-day.webp.asset.json";
+import mapisMuharramHealthcare from "@/assets/mapis-muharram-healthcare.webp.asset.json";
+import mapisVijayadashami from "@/assets/mapis-vijayadashami.webp.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -215,7 +220,14 @@ export const projects: Project[] = [
     category: ["Graphic Design", "Branding", "Social Media", "Marketing"], description: "A polished campaign system balancing clinical trust with a contemporary beauty aesthetic.",
     overview: "A confident visual presence spanning treatment communication, clinic materials and social campaigns.", role: "Brand & Visual Designer",
     services: ["Brand identity", "Campaign design", "Clinic collateral", "Social media"], heroImage: mapisClinicHero,
-    galleryImages: [{ src: mapisClinicHero, alt: "MAPIS clinic campaign identity", caption: "Clinic campaign system" }], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
+    galleryImages: [
+      { src: mapisClinicHero, alt: "MAPIS clinic campaign identity", caption: "Clinic Campaign System" },
+      { src: mapisBrandLogo.url, alt: "MAPIS Beauty, Hair and Skin Clinic brand logo", caption: "Brand Identity" },
+      { src: mapisHydraFacial.url, alt: "MAPIS Hydra Facial skin treatment campaign", caption: "Hydra Facial Campaign" },
+      { src: mapisWorldOceanDay.url, alt: "MAPIS World Ocean Day awareness campaign", caption: "World Ocean Day" },
+      { src: mapisMuharramHealthcare.url, alt: "Dr. Madhan's ECMO Health Care Islamic New Year Muharram greeting", caption: "Muharram Healthcare Greeting" },
+      { src: mapisVijayadashami.url, alt: "MAPIS Vijayadashami greeting combining healthcare and beauty services", caption: "Vijayadashami Campaign" },
+    ], featured: false, year: "2025", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",

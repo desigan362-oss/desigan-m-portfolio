@@ -27,3 +27,4 @@
 - [x] Add 10 real Lee Digital Arts promotional designs without changing its cover
 - [x] Add 9 real Jayanthi Bakery packaging and campaign designs without changing its cover
 - [x] Add 5 additional Jayanthi Bakery campaign designs without changing its cover
+- [x] Add 5 MAPIS clinic and campaign designs without changing its cover
