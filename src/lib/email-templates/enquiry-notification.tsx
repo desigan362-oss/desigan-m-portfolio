@@ -49,7 +49,7 @@ const EnquiryNotification = ({ clientName, email, phone, service, budget, timeli
 
 export const template = {
   component: EnquiryNotification,
-  subject: (data: Record<string, any>) => `New enquiry: ${data.service ?? "Design project"} — ${data.clientName ?? "Client"}`,
+  subject: (data: Record<string, any>) => `New enquiry: ${data["service"] ?? "Design project"} — ${data["clientName"] ?? "Client"}`,
   displayName: "Client enquiry notification",
   to: "desigan362@gmail.com",
   previewData: {
