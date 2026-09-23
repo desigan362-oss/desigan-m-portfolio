@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: Project; index?: number }) {
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-5 flex items-center justify-between gap-4 text-[11px] font-bold uppercase text-ink/70">
-          <span>{project.category[0]}</span><span>{project.year}</span>
+          <span>{project.clientType ?? project.category[0]}</span><span>{project.year}</span>
         </div>
         <h3 className="font-display text-xl font-bold">{project.clientName}</h3>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink/80">{project.description}</p>

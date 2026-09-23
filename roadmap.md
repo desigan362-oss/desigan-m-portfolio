@@ -35,3 +35,8 @@
 - [x] Add funky Training page with animated tools and workshop photo cards
 - [x] Add 5 more workshop photos and 1 workshop video to Training
 - [x] Add Training to Work as a project card with a separate illustrated cover
+- [x] Remove additional galleries from seven client projects while preserving covers
+- [x] Apply consistent client-type labels across cards and project pages
+- [x] Remove the homepage Show more action
+- [x] Add a consistent animated back button to inner pages
+
