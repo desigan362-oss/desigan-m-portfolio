@@ -99,8 +99,7 @@ function ProjectPage() {
           className="mb-20 w-full rounded-md outline outline-1 -outline-offset-1 outline-ink/10"
         />
 
-        <h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2>
-        <ProjectGallery images={project.galleryImages} />
+        {project.galleryImages.length > 0 && <><h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2><ProjectGallery images={project.galleryImages} /></>}
         </div>
       </section>
     </article>

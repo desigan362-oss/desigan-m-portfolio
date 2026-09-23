@@ -42,7 +42,7 @@ const allProjects: Project[] = [
     description: "A premium packaging system for Beez hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "Beez is a hair-care brand, not a honey brand. The identity uses botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [{ src: beezHero, alt: "Beez hair oil and serum packaging", caption: "Hair oil & serum packaging system" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    heroImage: beezHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientType: "Bakery", clientName: "Jayanthi Bakery", title: "Bakery packaging & identity system",
@@ -50,7 +50,7 @@ const allProjects: Project[] = [
     description: "A warm, locally rooted bakery identity across pastry boxes, bread wraps, carry bags and campaign pieces.",
     overview: "A full visual refresh created to make Jayanthi Bakery feel established, distinctive and consistent across product packaging, retail and digital communication.",
     role: "Brand & Visual Designer", services: ["Brand redesign", "Package design", "Retail collateral", "Social media"],
-    heroImage: jayanthiBakeryHero, galleryImages: [{ src: jayanthiBakeryHero, alt: "Jayanthi Bakery packaging collection", caption: "Packaging and Visual Identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
+    heroImage: jayanthiBakeryHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
     id: "lee-digital-arts", clientType: "Digital Printing Studio", clientName: "Lee Digital Arts", title: "Creative studio visual identity",
@@ -58,7 +58,7 @@ const allProjects: Project[] = [
     description: "A bold visual identity and communication system for a contemporary digital arts studio.",
     overview: "A high-energy identity designed to move confidently across posters, digital experiences, stationery and social communication.",
     role: "Visual & Brand Designer", services: ["Visual identity", "Poster system", "Digital collateral", "Social templates"],
-    heroImage: leeDigitalArtsHero, galleryImages: [{ src: leeDigitalArtsHero, alt: "Lee Digital Arts identity presentation", caption: "Creative Studio Identity" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
+    heroImage: leeDigitalArtsHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
   },
   {
     id: "kar-towers", clientType: "Accommodation & Event Spaces", clientName: "KAR Towers", title: "Property brand & campaign system",
@@ -66,7 +66,7 @@ const allProjects: Project[] = [
     description: "A premium property identity connecting architecture, print collateral, signage and campaign communication.",
     overview: "KAR Towers required an identity with architectural confidence and clarity across residential marketing, wayfinding and print applications.",
     role: "Brand & Graphic Designer", services: ["Brand identity", "Property brochure", "Campaign design", "Wayfinding"],
-    heroImage: karTowersHero, galleryImages: [{ src: karTowersHero, alt: "KAR Towers accommodation and event-space branding", caption: "Accommodation & Event Campaign System" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
+    heroImage: karTowersHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
   {
     id: "annai-mira-world-school", clientType: "Educational Institution", clientName: "Annai Mira World School", title: "Admission campaigns & school communications",
@@ -74,21 +74,21 @@ const allProjects: Project[] = [
     description: "A bright communication system for admissions, educational announcements and the school’s social presence.",
     overview: "A cohesive campaign language designed to connect with parents and students across admissions and everyday school communication.",
     role: "Visual Designer", services: ["Admission campaigns", "Educational posters", "Social media design"], heroImage: annaiMiraHero,
-    galleryImages: [{ src: annaiMiraHero, alt: "Annai Mira World School admission campaign", caption: "Admission Campaign" }], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
+    galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
   },
   {
     id: "prime-public-school", clientType: "CBSE PUBLIC SCHOOL", clientName: "Prime Public School", title: "School campaigns & social communication",
     category: ["Graphic Design", "Social Media", "Marketing", "Posters"], description: "A vibrant campaign system for admissions, parent communication and educational storytelling.",
     overview: "A recognisable visual language for Prime Public School that turns learning values, admissions messages and school strengths into clear, engaging social campaigns.", role: "Graphic Designer",
     services: ["Admission campaigns", "Educational posters", "Social media design", "School communication"], heroImage: primePublicSchoolHero,
-    galleryImages: [{ src: primePublicSchoolHero, alt: "Prime Public School campaign identity", caption: "School Campaign System" }], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
+    galleryImages: [], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
   },
   {
     id: "mapis-clinic", clientType: "Beauty & Wellness Clinic", clientName: "MAPIS Hair, Skin & Beauty Clinic", title: "Clinic identity & beauty campaigns",
     category: ["Graphic Design", "Branding", "Social Media", "Marketing"], description: "A polished campaign system balancing clinical trust with a contemporary beauty aesthetic.",
     overview: "A confident visual presence spanning treatment communication, clinic materials and social campaigns.", role: "Brand & Visual Designer",
     services: ["Brand identity", "Campaign design", "Clinic collateral", "Social media"], heroImage: mapisClinicHero,
-    galleryImages: [{ src: mapisClinicHero, alt: "MAPIS clinic campaign identity", caption: "Clinic Campaign System" }], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
+    galleryImages: [], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",
