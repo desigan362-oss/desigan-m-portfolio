@@ -1,5 +1,6 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
+import { BackButton } from "@/components/BackButton";
 import { getProject } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { SolarSystemBackground } from "@/components/SolarSystemBackground";
@@ -37,9 +38,7 @@ function ProjectPage() {
       <section className="relative isolate overflow-hidden bg-panel px-6 py-24 md:py-32">
         <SolarSystemBackground />
         <div className="relative z-10 mx-auto max-w-7xl">
-        <Link to="/work" className="text-xs font-medium uppercase tracking-[0.2em] text-ink/40 hover:text-ink">
-          ← All work
-        </Link>
+        <BackButton to="/work" label="Back to work" />
 
         <div className="mt-10 grid gap-16 lg:grid-cols-2">
           <div>
@@ -64,6 +63,7 @@ function ProjectPage() {
                 </h2>
                 <p className="text-sm">{project.category.join(" · ")}</p>
               </div>
+              {project.clientType && <div className="col-span-2 min-w-0"><h2 className="mb-2 text-[10px] font-medium uppercase tracking-wider text-ink/40">Client type</h2><p className="text-sm">{project.clientType}</p></div>}
             </div>
           </div>
           <div className="flex flex-col justify-center gap-6">
@@ -99,8 +99,7 @@ function ProjectPage() {
           className="mb-20 w-full rounded-md outline outline-1 -outline-offset-1 outline-ink/10"
         />
 
-        <h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2>
-        <ProjectGallery images={project.galleryImages} />
+        {project.galleryImages.length > 0 && <><h2 className="mb-10 font-display text-3xl font-medium">Gallery</h2><ProjectGallery images={project.galleryImages} /></>}
         </div>
       </section>
     </article>

@@ -49,12 +49,6 @@ function Index() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Portfolio highlights</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Selected collaborations</h2></div><Link to="/work" className="flex items-center gap-2 border-b border-ink/30 pb-1 text-sm font-bold">Explore all work <ArrowUpRight className="size-4" /></Link></div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{featured.slice(0, 6).map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
-        <div className="mt-14 flex justify-center">
-          <Link to="/work" className="group inline-flex items-center gap-3 rounded-full border border-accent/40 bg-accent-soft px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-accent-foreground hover:shadow-md">
-            Show more
-            <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
-          </Link>
-        </div>
       </div>
     </section>
 
