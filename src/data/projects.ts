@@ -10,6 +10,15 @@ import annaiMiraHeartDay from "@/assets/annai-mira-heart_day_29_sep-2.webp.asset
 import annaiMiraLaughter from "@/assets/annai-mira-post_podala_2-2.webp.asset.json";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
+import jayanthiSayItWithLove from "@/assets/jayanthi-say-it-with-love.webp.asset.json";
+import jayanthiFathersDay from "@/assets/jayanthi-fathers-day.webp.asset.json";
+import jayanthiMiniPizza from "@/assets/jayanthi-mini-pizza.webp.asset.json";
+import jayanthiChocolateBrownie from "@/assets/jayanthi-chocolate-brownie.webp.asset.json";
+import jayanthiCustomerReview from "@/assets/jayanthi-customer-review.webp.asset.json";
+import jayanthiEidMubarak from "@/assets/jayanthi-eid-mubarak.webp.asset.json";
+import jayanthiBirthdayOffer from "@/assets/jayanthi-birthday-cake-offer.webp.asset.json";
+import jayanthiArrestHunger from "@/assets/jayanthi-arrest-your-hunger.webp.asset.json";
+import jayanthiRechargeBiscuit from "@/assets/jayanthi-recharge-biscuit.png.asset.json";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
 import leeIdCards from "@/assets/lee-digital-arts-1-2.webp.asset.json";
@@ -93,7 +102,18 @@ const allProjects: Project[] = [
     description: "A warm, locally rooted bakery identity across pastry boxes, bread wraps, carry bags and campaign pieces.",
     overview: "A full visual refresh created to make the bakery feel established, distinctive and consistent across product packaging, retail and digital communication.",
     role: "Brand & Visual Designer", services: ["Brand redesign", "Package design", "Retail collateral", "Social media"],
-    heroImage: jayanthiBakeryHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
+    heroImage: jayanthiBakeryHero,
+    galleryImages: [
+      { src: jayanthiSayItWithLove.url, alt: "Jayanthi Bakery Say it with Love chocolate cake gift poster", caption: "Say it with Love" },
+      { src: jayanthiFathersDay.url, alt: "Happy Father's Day cupcake poster for Jayanthi Bakery", caption: "Father's Day" },
+      { src: jayanthiMiniPizza.url, alt: "Jayanthi Bakery Mini Pizza offer poster with chicken pizza", caption: "Mini Pizza" },
+      { src: jayanthiChocolateBrownie.url, alt: "Chocolate Brownie poster with flying brownie slices for Jayanthi Bakery", caption: "Chocolate Brownie" },
+      { src: jayanthiCustomerReview.url, alt: "Jayanthi Bakery Google customer review social post with puffs", caption: "Customer Review" },
+      { src: jayanthiEidMubarak.url, alt: "Eid Mubarak crescent cookie poster for Jayanthi Bakery", caption: "Eid Mubarak" },
+      { src: jayanthiBirthdayOffer.url, alt: "10% discount birthday cake offer poster for students and medical professionals", caption: "Birthday Cake Offer" },
+      { src: jayanthiArrestHunger.url, alt: "Arrest Your Hunger doughnut handcuffs poster for Jayanthi Bakery", caption: "Arrest Your Hunger" },
+      { src: jayanthiRechargeBiscuit.url, alt: "Your Recharge Biscuit fuel gauge poster for Jayanthi Bakery", caption: "Recharge Biscuit" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
     id: "lee-digital-arts", clientType: "Digital Printing Studio", clientName: "Digital Printing Studio", title: "Creative studio visual identity",
