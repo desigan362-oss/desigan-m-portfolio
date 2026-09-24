@@ -23,6 +23,16 @@ import leeQualityPrints from "@/assets/lee-digital-arts-8-3.webp.asset.json";
 import leeCustomPrinting from "@/assets/lee-digital-arts-9-3.webp.asset.json";
 import leeBrandedUmbrella from "@/assets/lee-digital-arts-10-4.webp.asset.json";
 import karTowersHero from "@/assets/kar-towers-hero.jpg";
+import karFeelTheCrown from "@/assets/kar-towers-33.webp.asset.json";
+import karCelebrations from "@/assets/kar-towers-kar_celebrations-2.webp.asset.json";
+import karChatting from "@/assets/kar-towers-kar_chatting-2.webp.asset.json";
+import karFeelLikeHome from "@/assets/kar-towers-kar_feel_like_home-2.webp.asset.json";
+import karGaneshChaturthi from "@/assets/kar-towers-kar_Ganesh_chaturthi-2.webp.asset.json";
+import karHotelStays from "@/assets/kar-towers-kar_hotel_stays-2.webp.asset.json";
+import karInvitation from "@/assets/kar-towers-kar_invitation_design-2.webp.asset.json";
+import karJanmashtami from "@/assets/kar-towers-15.webp.asset.json";
+import karUnexpected from "@/assets/kar-towers-16.webp.asset.json";
+import karPerfectHome from "@/assets/kar-towers-17.webp.asset.json";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
@@ -103,7 +113,20 @@ const allProjects: Project[] = [
     description: "A premium property identity connecting architecture, print collateral, signage and campaign communication.",
     overview: "The accommodation and event spaces required an identity with architectural confidence and clarity across marketing, wayfinding and print applications.",
     role: "Brand & Graphic Designer", services: ["Brand identity", "Property brochure", "Campaign design", "Wayfinding"],
-    heroImage: karTowersHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
+    heroImage: karTowersHero,
+    galleryImages: [
+      { src: karFeelTheCrown.url, alt: "Feel the Crown Experience hotel stay poster with twin room", caption: "Feel the Crown Experience" },
+      { src: karCelebrations.url, alt: "Celebrations Made Spectacular banquet hall poster for weddings and events", caption: "Celebrations, Made Spectacular" },
+      { src: karChatting.url, alt: "Cozy weekend stay poster with chat bubbles in a warm hotel room", caption: "Weekend Stay Conversations" },
+      { src: karFeelLikeHome.url, alt: "Making every stay feel like home — family in a hotel room poster", caption: "Every Stay, Feel Like Home" },
+      { src: karGaneshChaturthi.url, alt: "Happy Ganesh Chaturthi greeting poster with idol and modern interior", caption: "Ganesh Chaturthi Greeting" },
+      { src: karHotelStays.url, alt: "Where Every Stay Feels Right poster with 24 hour check in badge", caption: "Where Every Stay Feels Right" },
+      { src: karInvitation.url, alt: "From Yes to Every Milestone event invitation poster in an envelope", caption: "Event Invitation Design" },
+      { src: karJanmashtami.url, alt: "Happy Krishna Janmashtami poster with little Krishna behind a curtain", caption: "Krishna Janmashtami" },
+      { src: karUnexpected.url, alt: "Expect the Unexpected amenities poster with cleanliness and room service checklist", caption: "Expect the Unexpected" },
+      { src: karPerfectHome.url, alt: "Where every celebration finds its perfect home venue poster", caption: "The Perfect Celebration Home" },
+    ],
+    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
   {
     id: "annai-mira-world-school", clientType: "Educational Institution", clientName: "Educational Institution", title: "Admission campaigns & school communications",
