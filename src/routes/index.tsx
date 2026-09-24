@@ -47,8 +47,8 @@ function Index() {
 
     <section id="highlights" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 flex flex-wrap items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Portfolio highlights</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Selected collaborations</h2></div><Link to="/work" className="flex items-center gap-2 border-b border-ink/30 pb-1 text-sm font-bold">Explore all work <ArrowUpRight className="size-4" /></Link></div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{featured.slice(0, 6).map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
+        <div className="mb-14 flex flex-wrap items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Portfolio highlights</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Selected collaborations</h2></div></div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{featured.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
       </div>
     </section>
 

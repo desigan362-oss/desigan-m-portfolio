@@ -329,7 +329,7 @@ export const projects: Project[] = projectOrder
   .filter((project): project is Project => Boolean(project));
 
 export const getProject = (id: string) => projects.find((project) => project.id === id);
-export const featuredProjects = () => projects.slice(0, 6);
+export const featuredProjects = () => projects;
 export const filterProjects = (category: string) => category === "All" ? projects : projects.filter((project) => project.category.includes(category as Category));
 export const uiUxProjects = () => projects.filter((project) => project.category.includes("UI/UX"));
 export const graphicDesignProjects = () => projects.filter((project) => project.category.includes("Graphic Design"));
