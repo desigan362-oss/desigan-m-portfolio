@@ -90,6 +90,11 @@ import trainingWorkshopRoomWide from "@/assets/training-workshop-room-wide.jpeg.
 import trainingWorkshopFullClass from "@/assets/training-workshop-full-class.jpeg.asset.json";
 import trainingCertificatePresentation from "@/assets/training-certificate-presentation.jpeg.asset.json";
 import trainingWorkshopVideo from "@/assets/training-workshop-session.mp4.asset.json";
+import logoDesignCover from "@/assets/logo-design-cover.jpg";
+import beezCreativeLogoBlackMix from "@/assets/beez-creative-logo-black-mix.png.asset.json";
+import beezCreativeLogoBlackWhite from "@/assets/beez-creative-logo-black-white.png.asset.json";
+import beezCreativeLogoWhiteBlack from "@/assets/beez-creative-logo-white-black.png.asset.json";
+import beezCreativeLogoWhiteMix from "@/assets/beez-creative-logo-white-mix.png.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Training", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
@@ -116,6 +121,21 @@ const allProjects: Project[] = [
       { src: beezBrighteningFaceOilLabel.url, alt: "Full wrap label design for Beez Brightening Face Oil with ingredients and usage details", caption: "Face Oil Label Design" },
     ],
     featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+  },
+  {
+    id: "beez-creative-logo", clientType: "Logo Design", clientName: "Logo Design", title: "Beez Creative brand logo — sketched, storied, designed",
+    category: ["Graphic Design", "Branding"],
+    description: "My own brand logo, designed from scratch — starting as a pencil sketch, carrying a story in every shape, and finished as a polished identity.",
+    overview: "A personal logo created end to end for Beez Creative. It began as a hand sketch, grew into a story where a pen nib becomes the bee and every mark stands for building, exploring and elevating, and was completed as a flexible identity with light, dark and monochrome editions.",
+    role: "Logo Designer", services: ["Logo design", "Sketch development", "Visual storytelling", "Brand identity"],
+    heroImage: logoDesignCover,
+    galleryImages: [
+      { src: beezCreativeLogoBlackMix.url, alt: "Beez Creative logo on a black background with golden and white marks — Build, Explore, Elevate", caption: "Signature Edition — Black & Gold" },
+      { src: beezCreativeLogoBlackWhite.url, alt: "All-white monochrome Beez Creative logo on a black background", caption: "Monochrome on Black" },
+      { src: beezCreativeLogoWhiteBlack.url, alt: "All-black monochrome Beez Creative logo on a white background", caption: "Monochrome on White" },
+      { src: beezCreativeLogoWhiteMix.url, alt: "Beez Creative logo on a white background with black and golden marks", caption: "Light Edition — Black & Gold" },
+    ],
+    featured: false, year: "2026", itemLabel: "logo edition",
   },
   {
     id: "jayanthi-bakery", clientType: "Bakery", clientName: "Bakery", title: "Bakery packaging & identity system",
@@ -297,6 +317,7 @@ const projectOrder = [
   "mapis-clinic",
   "jayanthi-bakery",
   "beez-haircare",
+  "beez-creative-logo",
   "ux-learning-platform",
   "ott-streaming-platform",
   "bakery-app",
