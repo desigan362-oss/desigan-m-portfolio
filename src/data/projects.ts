@@ -123,6 +123,21 @@ const allProjects: Project[] = [
     featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
+    id: "beez-creative-logo", clientType: "Logo Design", clientName: "Logo Design", title: "Beez Creative brand logo — sketched, storied, designed",
+    category: ["Graphic Design", "Branding"],
+    description: "My own brand logo, designed from scratch — starting as a pencil sketch, carrying a story in every shape, and finished as a polished identity.",
+    overview: "A personal logo created end to end for Beez Creative. It began as a hand sketch, grew into a story where a pen nib becomes the bee and every mark stands for building, exploring and elevating, and was completed as a flexible identity with light, dark and monochrome editions.",
+    role: "Logo Designer", services: ["Logo design", "Sketch development", "Visual storytelling", "Brand identity"],
+    heroImage: logoDesignCover,
+    galleryImages: [
+      { src: beezCreativeLogoBlackMix.url, alt: "Beez Creative logo on a black background with golden and white marks — Build, Explore, Elevate", caption: "Signature Edition — Black & Gold" },
+      { src: beezCreativeLogoBlackWhite.url, alt: "All-white monochrome Beez Creative logo on a black background", caption: "Monochrome on Black" },
+      { src: beezCreativeLogoWhiteBlack.url, alt: "All-black monochrome Beez Creative logo on a white background", caption: "Monochrome on White" },
+      { src: beezCreativeLogoWhiteMix.url, alt: "Beez Creative logo on a white background with black and golden marks", caption: "Light Edition — Black & Gold" },
+    ],
+    featured: false, year: "2026", itemLabel: "logo edition",
+  },
+  {
     id: "jayanthi-bakery", clientType: "Bakery", clientName: "Bakery", title: "Bakery packaging & identity system",
     category: ["Graphic Design", "Branding", "Packaging", "Social Media"],
     description: "A warm, locally rooted bakery identity across pastry boxes, bread wraps, carry bags and campaign pieces.",
