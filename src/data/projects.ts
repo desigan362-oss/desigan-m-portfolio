@@ -19,6 +19,11 @@ import jayanthiEidMubarak from "@/assets/jayanthi-eid-mubarak.webp.asset.json";
 import jayanthiBirthdayOffer from "@/assets/jayanthi-birthday-cake-offer.webp.asset.json";
 import jayanthiArrestHunger from "@/assets/jayanthi-arrest-your-hunger.webp.asset.json";
 import jayanthiRechargeBiscuit from "@/assets/jayanthi-recharge-biscuit.png.asset.json";
+import jayanthiThinaiBadamCookies from "@/assets/bakery-thinai-badam-cookies.webp.asset.json";
+import jayanthiHoneyOatsRaisen from "@/assets/bakery-honey-oats-raisen.webp.asset.json";
+import jayanthiKambuPeanut from "@/assets/bakery-kambu-peanut.webp.asset.json";
+import jayanthiPistaBites from "@/assets/bakery-pista-bites.webp.asset.json";
+import jayanthiThinaiBadamJackfruit from "@/assets/bakery-thinai-badam-jackfruit.webp.asset.json";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
 import leeIdCards from "@/assets/lee-digital-arts-1-2.webp.asset.json";
@@ -113,6 +118,11 @@ const allProjects: Project[] = [
       { src: jayanthiBirthdayOffer.url, alt: "10% discount birthday cake offer poster for students and medical professionals", caption: "Birthday Cake Offer" },
       { src: jayanthiArrestHunger.url, alt: "Arrest Your Hunger doughnut handcuffs poster for Jayanthi Bakery", caption: "Arrest Your Hunger" },
       { src: jayanthiRechargeBiscuit.url, alt: "Your Recharge Biscuit fuel gauge poster for Jayanthi Bakery", caption: "Recharge Biscuit" },
+      { src: jayanthiThinaiBadamCookies.url, alt: "Thinai with Badam Cookies jar packaging label for Jayanthi Bakery", caption: "Thinai with Badam Cookies" },
+      { src: jayanthiHoneyOatsRaisen.url, alt: "Honey Oats Raisen cookie packaging label for Jayanthi Bakery", caption: "Honey Oats Raisen" },
+      { src: jayanthiKambuPeanut.url, alt: "Kambu & Peanut cookie packaging label for Jayanthi Bakery", caption: "Kambu & Peanut" },
+      { src: jayanthiPistaBites.url, alt: "Pista Bites biscuit packaging label for Jayanthi Bakery", caption: "Pista Bites" },
+      { src: jayanthiThinaiBadamJackfruit.url, alt: "Thinai Badam & Jack fruit cookie packaging label for Jayanthi Bakery", caption: "Thinai Badam & Jack Fruit" },
     ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
   },
   {
