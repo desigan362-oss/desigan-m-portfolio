@@ -317,6 +317,7 @@ const projectOrder = [
   "mapis-clinic",
   "jayanthi-bakery",
   "beez-haircare",
+  "beez-creative-logo",
   "ux-learning-platform",
   "ott-streaming-platform",
   "bakery-app",
