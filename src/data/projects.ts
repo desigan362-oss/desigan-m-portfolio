@@ -12,6 +12,16 @@ import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
+import leeIdCards from "@/assets/lee-digital-arts-1-2.webp.asset.json";
+import leeTshirtPrinting from "@/assets/lee-digital-arts-2-3.webp.asset.json";
+import leeBusinessCards from "@/assets/lee-digital-arts-3-2.webp.asset.json";
+import leeMugPrinting from "@/assets/lee-digital-arts-4-3.webp.asset.json";
+import leeLanyard from "@/assets/lee-digital-arts-5-6.webp.asset.json";
+import leeTableTent from "@/assets/lee-digital-arts-6-5.webp.asset.json";
+import leeCustomMugs from "@/assets/lee-digital-arts-7-6.webp.asset.json";
+import leeQualityPrints from "@/assets/lee-digital-arts-8-3.webp.asset.json";
+import leeCustomPrinting from "@/assets/lee-digital-arts-9-3.webp.asset.json";
+import leeBrandedUmbrella from "@/assets/lee-digital-arts-10-4.webp.asset.json";
 import karTowersHero from "@/assets/kar-towers-hero.jpg";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
@@ -67,7 +77,20 @@ const allProjects: Project[] = [
     description: "A bold visual identity and communication system for a contemporary digital arts studio.",
     overview: "A high-energy identity designed to move confidently across posters, digital experiences, stationery and social communication.",
     role: "Visual & Brand Designer", services: ["Visual identity", "Poster system", "Digital collateral", "Social templates"],
-    heroImage: leeDigitalArtsHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
+    heroImage: leeDigitalArtsHero,
+    galleryImages: [
+      { src: leeIdCards.url, alt: "Customized ID cards poster with lanyard and card mockup", caption: "Customized ID Cards" },
+      { src: leeTshirtPrinting.url, alt: "Custom T-shirt printing poster with three printed polo shirts", caption: "Custom T-Shirt Printing" },
+      { src: leeBusinessCards.url, alt: "Personalized business cards poster with premium green cards", caption: "Personalized Business Cards" },
+      { src: leeMugPrinting.url, alt: "Custom mug printing poster with two printed mugs on blue", caption: "Custom Mug Printing" },
+      { src: leeLanyard.url, alt: "Personalized lanyard poster with custom printed lanyards", caption: "Personalized Lanyard" },
+      { src: leeTableTent.url, alt: "Custom table tent poster for restaurants, cafés and events", caption: "Custom Table Tent" },
+      { src: leeCustomMugs.url, alt: "Make it yours custom mug poster with three personalized mugs", caption: "Customized Mugs" },
+      { src: leeQualityPrints.url, alt: "High quality prints poster with apparel, bags and gift items", caption: "High Quality Prints" },
+      { src: leeCustomPrinting.url, alt: "Custom printing poster with branded bottle, box, bag and notebook", caption: "Corporate Custom Printing" },
+      { src: leeBrandedUmbrella.url, alt: "Branded flag pole banner and umbrella poster for Lee Digital Arts", caption: "Branded Banners & Umbrellas" },
+    ],
+    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
   },
   {
     id: "kar-towers", clientType: "Accommodation & Event Spaces", clientName: "Accommodation & Event Spaces", title: "Property brand & campaign system",
