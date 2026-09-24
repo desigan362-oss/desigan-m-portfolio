@@ -33,6 +33,15 @@ import karInvitation from "@/assets/kar-towers-kar_invitation_design-2.webp.asse
 import karJanmashtami from "@/assets/kar-towers-15.webp.asset.json";
 import karUnexpected from "@/assets/kar-towers-16.webp.asset.json";
 import karPerfectHome from "@/assets/kar-towers-17.webp.asset.json";
+import karMoments from "@/assets/kar-towers-kar_moments-2.webp.asset.json";
+import karOneStay from "@/assets/kar-towers-kar_one_stay-2.webp.asset.json";
+import karPerfectRoom from "@/assets/kar-towers-kar_perfect_room-2.webp.asset.json";
+import karRelaxRepeat from "@/assets/kar-towers-kar_relax_repeat-2.webp.asset.json";
+import karService from "@/assets/kar-towers-kar_service-2.webp.asset.json";
+import karServingRooms from "@/assets/kar-towers-kar_serving_rooms-2.webp.asset.json";
+import karSpiderMan from "@/assets/kar-towers-kar_spider_man-2.webp.asset.json";
+import karVenue from "@/assets/kar-towers-kar_venue-2.webp.asset.json";
+import karStories from "@/assets/kar-towers-stories_at_kar-2.webp.asset.json";
 import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
@@ -125,6 +134,15 @@ const allProjects: Project[] = [
       { src: karJanmashtami.url, alt: "Happy Krishna Janmashtami poster with little Krishna behind a curtain", caption: "Krishna Janmashtami" },
       { src: karUnexpected.url, alt: "Expect the Unexpected amenities poster with cleanliness and room service checklist", caption: "Expect the Unexpected" },
       { src: karPerfectHome.url, alt: "Where every celebration finds its perfect home venue poster", caption: "The Perfect Celebration Home" },
+      { src: karMoments.url, alt: "The moments you celebrate deserve the perfect space — wedding stage decoration poster", caption: "The Perfect Space for Your Moments" },
+      { src: karOneStay.url, alt: "Everything You Need, One Stay poster with hotel room amenities and traveller", caption: "Everything You Need, One Stay" },
+      { src: karPerfectRoom.url, alt: "A day, a week or a month — perfect room door hanger poster", caption: "A Day, a Week, a Month" },
+      { src: karRelaxRepeat.url, alt: "Relax, Explore, Repeat poster with guest enjoying coffee in a hotel room", caption: "Relax. Explore. Repeat." },
+      { src: karService.url, alt: "Behind every restful stay is thoughtful service — housekeeping poster", caption: "Thoughtful Service, Restful Stays" },
+      { src: karServingRooms.url, alt: "We serve comfort and convenience — butler tray with bed poster", caption: "Comfort & Convenience, Served" },
+      { src: karSpiderMan.url, alt: "Even heroes need a weekend off — superhero relaxing on a hotel bed", caption: "Even Heroes Need a Weekend Off" },
+      { src: karVenue.url, alt: "Flawless venue for every occasion — banquet hall seating poster", caption: "Flawless Venue for Every Occasion" },
+      { src: karStories.url, alt: "Beyond stays, beyond stories — moonlit hotel room door opening poster", caption: "Beyond Stays, Beyond Stories" },
     ],
     featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
   },
