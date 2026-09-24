@@ -104,7 +104,14 @@ const allProjects: Project[] = [
     description: "A premium packaging system for hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "A skin and hair care identity using botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
-    heroImage: beezHero, galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    galleryImages: [
+      { src: beezAlmondSerumBottle.url, alt: "Beez Almond Serum dropper bottle packaging mockup with botanical gold emblem", caption: "Almond Serum Packaging" },
+      { src: beezRakshaBandhanHairOil.url, alt: "Raksha Bandhan campaign poster for Beez Brightening Hair Oil — Gift Care, Gift Strength", caption: "Raksha Bandhan Campaign" },
+      { src: beezBrighteningHairOilLaunch.url, alt: "New Product launch poster for Beez Brightening Hair Oil with Almonds and Carrots", caption: "New Product Launch" },
+      { src: beezBrighteningFaceOilBottle.url, alt: "Beez Brightening Face Oil bottle label design — almonds and carrots", caption: "Face Oil Bottle" },
+      { src: beezBrighteningFaceOilLabel.url, alt: "Full wrap label design for Beez Brightening Face Oil with ingredients and usage details", caption: "Face Oil Label Design" },
+    ],
+    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
   },
   {
     id: "jayanthi-bakery", clientType: "Bakery", clientName: "Bakery", title: "Bakery packaging & identity system",
