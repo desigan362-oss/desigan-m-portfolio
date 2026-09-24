@@ -30,6 +30,9 @@ import jayanthiKambuPeanut from "@/assets/bakery-kambu-peanut.webp.asset.json";
 import jayanthiPistaBites from "@/assets/bakery-pista-bites.webp.asset.json";
 import jayanthiThinaiBadamJackfruit from "@/assets/bakery-thinai-badam-jackfruit.webp.asset.json";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
+import mapisHydraFacial from "@/assets/mapis-hydra-facial.webp.asset.json";
+import mapisMuharram from "@/assets/mapis-muharram.webp.asset.json";
+import mapisVijayadashami from "@/assets/mapis-vijayadashami.webp.asset.json";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
 import leeIdCards from "@/assets/lee-digital-arts-1-2.webp.asset.json";
 import leeTshirtPrinting from "@/assets/lee-digital-arts-2-3.webp.asset.json";
@@ -225,7 +228,11 @@ const allProjects: Project[] = [
     category: ["Graphic Design", "Branding", "Social Media", "Marketing"], description: "A polished campaign system balancing clinical trust with a contemporary beauty aesthetic.",
     overview: "A confident visual presence spanning treatment communication, clinic materials and social campaigns.", role: "Brand & Visual Designer",
     services: ["Brand identity", "Campaign design", "Clinic collateral", "Social media"], heroImage: mapisClinicHero,
-    galleryImages: [], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
+    galleryImages: [
+      { src: mapisHydraFacial.url, alt: "Hydra Facial — your skin's new best friend clinic campaign poster", caption: "Hydra Facial Campaign" },
+      { src: mapisVijayadashami.url, alt: "Happy Vijayadashami clinic greeting poster featuring beauty and wellness care", caption: "Vijayadashami Greeting" },
+      { src: mapisMuharram.url, alt: "Islamic New Year Muharram greeting poster with medical care theme", caption: "Muharram Greeting" },
+    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",
