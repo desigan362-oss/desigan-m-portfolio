@@ -27,6 +27,11 @@ import ottHero from "@/assets/ott-hero.jpg";
 import bakeryHero from "@/assets/bakery-hero.jpg";
 import uxLearnHero from "@/assets/uxlearn-hero.jpg";
 import primePublicSchoolHero from "@/assets/prime-public-school-hero.jpg";
+import primeHappyChild from "@/assets/prime-public-school-22-2.webp.asset.json";
+import primeCoreBasics from "@/assets/prime-public-school-23-2.webp.asset.json";
+import primeHealthyHabits from "@/assets/prime-public-school-24-2.webp.asset.json";
+import primeStrongFoundations from "@/assets/prime-public-school-25-2.webp.asset.json";
+import primeFromICan from "@/assets/prime-public-school-26-3.webp.asset.json";
 import trainingProjectCover from "@/assets/training-project-cover.jpg";
 import trainingWorkshopFocus from "@/assets/training-workshop-focus.jpeg.asset.json";
 import trainingWorkshopWide from "@/assets/training-workshop-wide.jpeg.asset.json";
@@ -123,7 +128,13 @@ const allProjects: Project[] = [
     category: ["Graphic Design", "Social Media", "Marketing", "Posters"], description: "A vibrant campaign system for admissions, parent communication and educational storytelling.",
     overview: "A recognisable visual language for a CBSE public school that turns learning values, admissions messages and school strengths into clear, engaging social campaigns.", role: "Graphic Designer",
     services: ["Admission campaigns", "Educational posters", "Social media design", "School communication"], heroImage: primePublicSchoolHero,
-    galleryImages: [], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
+    galleryImages: [
+      { src: primeHappyChild.url, alt: "A happy, confident, successful child — Prime Public School admission poster", caption: "A Happy, Confident, Successful Child" },
+      { src: primeCoreBasics.url, alt: "Strengthen core basics — build a strong foundation school poster", caption: "Strengthen Core Basics" },
+      { src: primeHealthyHabits.url, alt: "Healthy student habits — strong routines support learning poster", caption: "Healthy Student Habits" },
+      { src: primeStrongFoundations.url, alt: "Strong foundations matter — early support makes a difference poster", caption: "Strong Foundations Matter" },
+      { src: primeFromICan.url, alt: "From 'I can't' to 'I can' — student confidence campaign poster", caption: "From 'I Can't' to 'I Can'" },
+    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
   },
   {
     id: "mapis-clinic", clientType: "Beauty & Wellness Clinic", clientName: "Beauty & Wellness Clinic", title: "Clinic identity & beauty campaigns",
