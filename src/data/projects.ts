@@ -1,4 +1,13 @@
 import beezHero from "@/assets/beez-haircare-hero.jpg";
+import annaiMiraWomensDay from "@/assets/annai-mira-121-2.webp.asset.json";
+import annaiMiraRebrand from "@/assets/annai-mira-122-2.webp.asset.json";
+import annaiMiraPhotographyDay from "@/assets/annai-mira-123-2.webp.asset.json";
+import annaiMiraSportsDay from "@/assets/annai-mira-124.webp.asset.json";
+import annaiMiraDirection from "@/assets/annai-mira-127-2.webp.asset.json";
+import annaiMiraBigStart from "@/assets/annai-mira-128-2.webp.asset.json";
+import annaiMiraCuriousMinds from "@/assets/annai-mira-129-2.webp.asset.json";
+import annaiMiraHeartDay from "@/assets/annai-mira-heart_day_29_sep-2.webp.asset.json";
+import annaiMiraLaughter from "@/assets/annai-mira-post_podala_2-2.webp.asset.json";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
@@ -74,7 +83,17 @@ const allProjects: Project[] = [
     description: "A bright communication system for admissions, educational announcements and the school’s social presence.",
     overview: "A cohesive campaign language designed to connect with parents and students across admissions and everyday school communication.",
     role: "Visual Designer", services: ["Admission campaigns", "Educational posters", "Social media design"], heroImage: annaiMiraHero,
-    galleryImages: [], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
+    galleryImages: [
+      { src: annaiMiraRebrand.url, alt: "Annai Mira World School rebrand announcement poster", caption: "School Rebrand Announcement" },
+      { src: annaiMiraDirection.url, alt: "Every dream deserves a direction — school admission poster", caption: "Every Dream Deserves a Direction" },
+      { src: annaiMiraBigStart.url, alt: "Big dreams need a big start — admissions open campaign poster", caption: "Big Dreams, Big Start" },
+      { src: annaiMiraCuriousMinds.url, alt: "The brightest journeys begin with curious minds — admission poster", caption: "Curious Minds Campaign" },
+      { src: annaiMiraLaughter.url, alt: "Laughter boosts learning chemicals — classroom communication poster", caption: "Happy Classrooms Post" },
+      { src: annaiMiraWomensDay.url, alt: "International Women's Day school poster", caption: "Women's Day Tribute" },
+      { src: annaiMiraPhotographyDay.url, alt: "World Photography Day poster", caption: "World Photography Day" },
+      { src: annaiMiraSportsDay.url, alt: "National Sports Day celebration poster", caption: "National Sports Day" },
+      { src: annaiMiraHeartDay.url, alt: "World Heart Day wellness poster", caption: "World Heart Day" },
+    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
   },
   {
     id: "prime-public-school", clientType: "CBSE PUBLIC SCHOOL", clientName: "CBSE PUBLIC SCHOOL", title: "School campaigns & social communication",
