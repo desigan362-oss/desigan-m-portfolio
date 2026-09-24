@@ -104,6 +104,7 @@ const allProjects: Project[] = [
     description: "A premium packaging system for hair oil and serum, balancing botanical care with a modern shelf presence.",
     overview: "A skin and hair care identity using botanical cues, premium dark packaging and a flexible visual language across oil, serum and campaign touchpoints.",
     role: "Brand & Packaging Designer", services: ["Packaging design", "Visual identity", "Product presentation", "Campaign assets"],
+    heroImage: beezHero,
     galleryImages: [
       { src: beezAlmondSerumBottle.url, alt: "Beez Almond Serum dropper bottle packaging mockup with botanical gold emblem", caption: "Almond Serum Packaging" },
       { src: beezRakshaBandhanHairOil.url, alt: "Raksha Bandhan campaign poster for Beez Brightening Hair Oil — Gift Care, Gift Strength", caption: "Raksha Bandhan Campaign" },
