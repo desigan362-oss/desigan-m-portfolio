@@ -38,7 +38,7 @@ function ProjectPage() {
       <section className="relative isolate overflow-hidden bg-panel px-6 py-24 md:py-32">
         <SolarSystemBackground />
         <div className="relative z-10 mx-auto max-w-7xl">
-        <BackButton to="/work" label="Back to work" />
+        <BackButton to="/" label="Back home" />
 
         <div className="mt-10 grid gap-16 lg:grid-cols-2">
           <div>

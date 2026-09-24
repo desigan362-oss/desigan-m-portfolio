@@ -27,7 +27,7 @@ function GraphicDesignPage() {
           <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-coral">Primary design practice</p>
           <h1 className="mt-5 max-w-5xl font-display text-5xl font-bold leading-tight md:text-7xl">Graphic design that gives brands a clear, memorable voice.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink/80">Packaging, identity, campaigns, posters and social communication developed for growing brands and institutions.</p>
-          <Link to="/work" className="mt-8 inline-flex items-center gap-2 border-b border-ink/40 pb-1 text-sm font-bold">View every project <ArrowUpRight className="size-4" /></Link>
+          <Link to="/" className="mt-8 inline-flex items-center gap-2 border-b border-ink/40 pb-1 text-sm font-bold">View every project <ArrowUpRight className="size-4" /></Link>
       </PageHero>
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">

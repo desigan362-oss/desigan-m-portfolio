@@ -18,7 +18,6 @@ import { Route as GraphicDesignRouteImport } from './routes/graphic-design'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UiUxProjectsRouteImport } from './routes/ui-ux-projects'
-import { Route as WorkIndexRouteImport } from './routes/work.index'
 import { Route as WorkProjectIdRouteImport } from './routes/work.$projectId'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 
@@ -67,11 +66,6 @@ const UiUxProjectsRoute = UiUxProjectsRouteImport.update({
   path: '/ui-ux-projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkIndexRoute = WorkIndexRouteImport.update({
-  id: '/work/',
-  path: '/work/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WorkProjectIdRoute = WorkProjectIdRouteImport.update({
   id: '/work/$projectId',
   path: '/work/$projectId',
@@ -95,7 +89,6 @@ export interface FileRoutesByFullPath {
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
-  '/work/': typeof WorkIndexRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
 export interface FileRoutesByTo {
@@ -109,7 +102,6 @@ export interface FileRoutesByTo {
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
-  '/work': typeof WorkIndexRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
 export interface FileRoutesById {
@@ -124,7 +116,6 @@ export interface FileRoutesById {
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
   '/work/$projectId': typeof WorkProjectIdRoute
-  '/work/': typeof WorkIndexRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
 export interface FileRouteTypes {
@@ -140,7 +131,6 @@ export interface FileRouteTypes {
     | '/training'
     | '/ui-ux-projects'
     | '/work/$projectId'
-    | '/work/'
     | '/lovable/email/transactional/preview'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -154,7 +144,6 @@ export interface FileRouteTypes {
     | '/training'
     | '/ui-ux-projects'
     | '/work/$projectId'
-    | '/work'
     | '/lovable/email/transactional/preview'
   id:
     | '__root__'
@@ -168,7 +157,6 @@ export interface FileRouteTypes {
     | '/training'
     | '/ui-ux-projects'
     | '/work/$projectId'
-    | '/work/'
     | '/lovable/email/transactional/preview'
   fileRoutesById: FileRoutesById
 }
@@ -183,7 +171,6 @@ export interface RootRouteChildren {
   TrainingRoute: typeof TrainingRoute
   UiUxProjectsRoute: typeof UiUxProjectsRoute
   WorkProjectIdRoute: typeof WorkProjectIdRoute
-  WorkIndexRoute: typeof WorkIndexRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
 }
 
@@ -252,13 +239,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UiUxProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work/': {
-      id: '/work/'
-      path: '/work'
-      fullPath: '/work/'
-      preLoaderRoute: typeof WorkIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/work/$projectId': {
       id: '/work/$projectId'
       path: '/work/$projectId'
@@ -287,7 +267,6 @@ const rootRouteChildren: RootRouteChildren = {
   TrainingRoute: TrainingRoute,
   UiUxProjectsRoute: UiUxProjectsRoute,
   WorkProjectIdRoute: WorkProjectIdRoute,
-  WorkIndexRoute: WorkIndexRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
 }
 export const routeTree = rootRouteImport
