@@ -10,6 +10,15 @@ import annaiMiraHeartDay from "@/assets/annai-mira-heart_day_29_sep-2.webp.asset
 import annaiMiraLaughter from "@/assets/annai-mira-post_podala_2-2.webp.asset.json";
 import annaiMiraHero from "@/assets/annai-mira-hero.jpg";
 import jayanthiBakeryHero from "@/assets/jayanthi-bakery-hero.jpg";
+import jayanthiSayItWithLove from "@/assets/jayanthi-say-it-with-love.webp.asset.json";
+import jayanthiFathersDay from "@/assets/jayanthi-fathers-day.webp.asset.json";
+import jayanthiMiniPizza from "@/assets/jayanthi-mini-pizza.webp.asset.json";
+import jayanthiChocolateBrownie from "@/assets/jayanthi-chocolate-brownie.webp.asset.json";
+import jayanthiCustomerReview from "@/assets/jayanthi-customer-review.webp.asset.json";
+import jayanthiEidMubarak from "@/assets/jayanthi-eid-mubarak.webp.asset.json";
+import jayanthiBirthdayOffer from "@/assets/jayanthi-birthday-cake-offer.webp.asset.json";
+import jayanthiArrestHunger from "@/assets/jayanthi-arrest-your-hunger.webp.asset.json";
+import jayanthiRechargeBiscuit from "@/assets/jayanthi-recharge-biscuit.png.asset.json";
 import mapisClinicHero from "@/assets/mapis-clinic-hero.jpg";
 import leeDigitalArtsHero from "@/assets/lee-digital-arts-hero.jpg";
 import leeIdCards from "@/assets/lee-digital-arts-1-2.webp.asset.json";
