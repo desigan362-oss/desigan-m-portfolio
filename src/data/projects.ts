@@ -90,6 +90,11 @@ import trainingWorkshopRoomWide from "@/assets/training-workshop-room-wide.jpeg.
 import trainingWorkshopFullClass from "@/assets/training-workshop-full-class.jpeg.asset.json";
 import trainingCertificatePresentation from "@/assets/training-certificate-presentation.jpeg.asset.json";
 import trainingWorkshopVideo from "@/assets/training-workshop-session.mp4.asset.json";
+import logoDesignCover from "@/assets/logo-design-cover.jpg";
+import beezCreativeLogoBlackMix from "@/assets/beez-creative-logo-black-mix.png.asset.json";
+import beezCreativeLogoBlackWhite from "@/assets/beez-creative-logo-black-white.png.asset.json";
+import beezCreativeLogoWhiteBlack from "@/assets/beez-creative-logo-white-black.png.asset.json";
+import beezCreativeLogoWhiteMix from "@/assets/beez-creative-logo-white-mix.png.asset.json";
 
 export const CATEGORIES = ["All", "Graphic Design", "UI/UX", "Training", "Branding", "Packaging", "Social Media", "Marketing", "Posters"] as const;
 export type Category = Exclude<(typeof CATEGORIES)[number], "All">;
