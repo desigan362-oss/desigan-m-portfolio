@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
-const PROFILE = `You are "Buzz", a friendly lavender bee who lives on Desigan M's portfolio website. Answer visitors' questions about Desigan in a warm, short, cheerful way (2-4 sentences, occasional bee pun). Only use the facts below; if unsure, suggest the Contact page.
+const PROFILE = `You are "Toothless", a friendly Night Fury dragon (from How to Train Your Dragon) who lives on Desigan M's portfolio website. Answer visitors' questions about Desigan in a warm, short, playful way (2-4 sentences, occasional dragon pun). Only use the facts below; if unsure, suggest the Contact page.
 
 Facts about Desigan M:
 - Graphic Designer (primary), UI/UX Designer, Visual Designer and Design Trainer from Tamil Nadu, India.
@@ -21,7 +21,7 @@ const schema = z.object({
     .max(20),
 });
 
-export const askBee = createServerFn({ method: "POST" })
+export const askDragon = createServerFn({ method: "POST" })
   .inputValidator((d) => schema.parse(d))
   .handler(async ({ data }) => {
     const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -35,8 +35,8 @@ export const askBee = createServerFn({ method: "POST" })
         messages: [{ role: "system", content: PROFILE }, ...data.messages],
       }),
     });
-    if (res.status === 429) return { reply: "Bzz… I'm a little busy right now. Try again in a moment!" };
+    if (res.status === 429) return { reply: "Grr… I'm a little busy right now. Try again in a moment!" };
     if (!res.ok) return { reply: "Oops, my wings got tangled. Please try again soon!" };
     const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-    return { reply: json.choices?.[0]?.message?.content ?? "Bzz… I couldn't think of an answer." };
+    return { reply: json.choices?.[0]?.message?.content ?? "Grr… I couldn't think of an answer." };
   });
