@@ -4,7 +4,7 @@ import { PageHero } from "@/components/PageHero";
 const groups=[
   {icon:MonitorSmartphone,title:"UI/UX",level:"Advanced",items:["User-centred design","UX research","Wireframing & prototyping","UI design","Design systems"]},
   {icon:Brush,title:"Visual craft",level:"Advanced",items:["Brand identity","Packaging","Print & poster design","Campaign creatives","Visual communication"]},
-  {icon:Boxes,title:"Tools",level:"Daily practice",items:["Figma","Adobe Photoshop","Adobe Illustrator","Canva"]},
+  {icon:Boxes,title:"Tools",level:"Daily practice",items:["Figma","Adobe Photoshop","Adobe Illustrator","Adobe InDesign","Adobe XD","Canva","Miro","Affinity"]},
   {icon:MessageSquareText,title:"Training",level:"35+ students",items:["Workshop facilitation","Curriculum development","Mentorship","Client communication","English & Tamil"]},
 ];
 export const Route=createFileRoute("/skills")({head:()=>({meta:[{title:"Skills — Desigan M."},{name:"description",content:"UI/UX, graphic design, visual communication, design tools, training and mentoring skills."},{property:"og:title",content:"Skills — Desigan M."},{property:"og:description",content:"Design craft, tools, systems and teaching capabilities."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Skills});

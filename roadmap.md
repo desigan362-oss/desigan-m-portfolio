@@ -43,4 +43,5 @@
 - [x] Keep the back button visible beneath the navigation on every inner page
 - [x] Update Myme Techies experience and all training totals to 35+ students
 - [x] Harden enquiry validation against hidden-field autofill and show the exact validation error
+- [x] Refine back label, GPA prominence, Skills tools, Experience touch feedback, and page transition speed
 
