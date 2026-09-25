@@ -67,7 +67,7 @@ export function DragonBuddy() {
       )}
       <button onClick={() => setOpen((o) => !o)} aria-label="Ask Toothless the dragon about Desigan" className="dragon-float relative">
         {!open && <span className="absolute -top-8 right-2 whitespace-nowrap rounded-full bg-card px-3 py-1 text-xs font-semibold text-foreground shadow-md">Ask me! 🐉</span>}
-        <img src={dragonImg} alt="Toothless the dragon" width={1024} height={1024} className="dragon-flap h-20 w-auto drop-shadow-lg md:h-24" />
+        <img src={dragonImg} alt="Toothless the dragon" width={1535} height={1920} className="dragon-flap h-20 w-auto drop-shadow-lg md:h-24" />
       </button>
     </div>
   );
