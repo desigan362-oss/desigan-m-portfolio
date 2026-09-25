@@ -105,7 +105,7 @@ export function EnquiryForm() {
       </Field>
 
       <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
-        <Label htmlFor="company-website">Website</Label>
+        <Label htmlFor="additional-info-confirmation">Additional information</Label>
         <Input id="additional-info-confirmation" name="additional-info-confirmation" value={values.website} onChange={(event) => update("website", event.target.value)} tabIndex={-1} autoComplete="new-password" />
       </div>
 
