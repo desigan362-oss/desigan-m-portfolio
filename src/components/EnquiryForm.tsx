@@ -48,8 +48,20 @@ export function EnquiryForm() {
         if (field && !nextErrors[field]) nextErrors[field] = issue.message;
       }
       setErrors(nextErrors);
-      setMessage("Please review the highlighted fields.");
+      const firstIssue = parsed.error.issues[0];
+      setMessage(firstIssue?.message ?? "Please review the highlighted fields.");
       setStatus("error");
+      const firstField = firstIssue?.path[0];
+      if (typeof firstField === "string") {
+        const fieldIds: Partial<Record<keyof FormValues, string>> = {
+          clientName: "client-name",
+          email: "client-email",
+          phone: "client-phone",
+          projectBrief: "project-brief",
+        };
+        const fieldId = fieldIds[firstField as keyof FormValues];
+        if (fieldId) document.getElementById(fieldId)?.focus();
+      }
       return;
     }
 
@@ -94,7 +106,7 @@ export function EnquiryForm() {
 
       <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
         <Label htmlFor="company-website">Website</Label>
-        <Input id="company-website" value={values.website} onChange={(event) => update("website", event.target.value)} tabIndex={-1} autoComplete="off" />
+        <Input id="additional-info-confirmation" name="additional-info-confirmation" value={values.website} onChange={(event) => update("website", event.target.value)} tabIndex={-1} autoComplete="new-password" />
       </div>
 
       {message && <Alert variant={status === "error" ? "destructive" : "default"} className={status === "success" ? "border-accent bg-accent-soft" : undefined}>{status === "success" && <CheckCircle2 className="size-4" />}<AlertTitle>{status === "success" ? "Enquiry received" : "Please check your enquiry"}</AlertTitle><AlertDescription>{message}</AlertDescription></Alert>}

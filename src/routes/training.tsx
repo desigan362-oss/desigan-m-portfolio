@@ -83,7 +83,7 @@ function TrainingPage() {
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink/75">Practical UI/UX and graphic design training built around live demos, real briefs, honest feedback and confident creative thinking.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="rotate-2 rounded-md border border-ink/10 bg-pastel-lilac p-5 shadow-lg"><strong className="font-display text-4xl">50+</strong><span className="mt-2 block text-sm font-semibold text-ink/65">Students mentored</span></div>
+            <div className="rotate-2 rounded-md border border-ink/10 bg-pastel-lilac p-5 shadow-lg"><strong className="font-display text-4xl">35+</strong><span className="mt-2 block text-sm font-semibold text-ink/65">Students mentored</span></div>
             <div className="-rotate-2 rounded-md border border-ink/10 bg-pastel-peach p-5 shadow-lg"><strong className="font-display text-4xl">2</strong><span className="mt-2 block text-sm font-semibold text-ink/65">Trainer credentials</span></div>
           </div>
         </div>

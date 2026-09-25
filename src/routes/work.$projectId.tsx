@@ -1,6 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
-import { BackButton } from "@/components/BackButton";
 import { getProject } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { SolarSystemBackground } from "@/components/SolarSystemBackground";
@@ -38,9 +37,7 @@ function ProjectPage() {
       <section className="relative isolate overflow-hidden bg-panel px-6 py-24 md:py-32">
         <SolarSystemBackground />
         <div className="relative z-10 mx-auto max-w-7xl">
-        <BackButton to="/" label="Back home" />
-
-        <div className="mt-10 grid gap-16 lg:grid-cols-2">
+        <div className="grid gap-16 lg:grid-cols-2">
           <div>
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {project.clientName} · {project.year}
