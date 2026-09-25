@@ -15,7 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BackButton } from "@/components/BackButton";
-import { BeeBuddy } from "@/components/BeeBuddy";
+import { DragonBuddy } from "@/components/DragonBuddy";
 
 function NotFoundComponent() {
   return (
@@ -138,7 +138,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
-        <BeeBuddy />
+        <DragonBuddy />
       </div>
     </QueryClientProvider>
   );
