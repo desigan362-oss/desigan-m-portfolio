@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { X, Send } from "lucide-react";
 import { askDragon } from "@/lib/dragon.functions";
-import dragonImg from "@/assets/dragon-pet.png";
+import dragonImgAsset from "@/assets/night-fury.png.asset.json";
+const dragonImg = dragonImgAsset.url;
 
 type Msg = { role: "user" | "assistant"; content: string };
 
