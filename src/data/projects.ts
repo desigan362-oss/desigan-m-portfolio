@@ -102,7 +102,7 @@ export type GalleryImage = { src: string; alt: string; caption?: string; mediaTy
 export type Project = {
   id: string; clientName: string; clientType?: string; title: string; category: Category[]; description: string;
   overview: string; role: string; services: string[]; heroImage: string;
-  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; instagramUrl?: string; itemLabel?: string;
+  galleryImages: GalleryImage[]; featured: boolean; year: string; externalUrl?: string; itemLabel?: string;
 };
 
 const allProjects: Project[] = [
@@ -120,7 +120,7 @@ const allProjects: Project[] = [
       { src: beezBrighteningFaceOilBottle.url, alt: "Beez Brightening Face Oil bottle label design — almonds and carrots", caption: "Face Oil Bottle" },
       { src: beezBrighteningFaceOilLabel.url, alt: "Full wrap label design for Beez Brightening Face Oil with ingredients and usage details", caption: "Face Oil Label Design" },
     ],
-    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/beez_premium_blends",
+    featured: true, year: "2026",
   },
   {
     id: "beez-creative-logo", clientType: "Logo Design", clientName: "Logo Design", title: "Beez Creative brand logo — sketched, storied, designed",
@@ -159,7 +159,7 @@ const allProjects: Project[] = [
       { src: jayanthiKambuPeanut.url, alt: "Kambu & Peanut cookie packaging label for Jayanthi Bakery", caption: "Kambu & Peanut" },
       { src: jayanthiPistaBites.url, alt: "Pista Bites biscuit packaging label for Jayanthi Bakery", caption: "Pista Bites" },
       { src: jayanthiThinaiBadamJackfruit.url, alt: "Thinai Badam & Jack fruit cookie packaging label for Jayanthi Bakery", caption: "Thinai Badam & Jack Fruit" },
-    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/jayanthibakery_vellore",
+    ], featured: true, year: "2026",
   },
   {
     id: "lee-digital-arts", clientType: "Digital Printing Studio", clientName: "Digital Printing Studio", title: "Creative studio visual identity",
@@ -180,7 +180,7 @@ const allProjects: Project[] = [
       { src: leeCustomPrinting.url, alt: "Custom printing poster with branded bottle, box, bag and notebook", caption: "Corporate Custom Printing" },
       { src: leeBrandedUmbrella.url, alt: "Branded flag pole banner and umbrella poster for Lee Digital Arts", caption: "Branded Banners & Umbrellas" },
     ],
-    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/leedigitalarts",
+    featured: true, year: "2026",
   },
   {
     id: "kar-towers", clientType: "Accommodation & Event Spaces", clientName: "Accommodation & Event Spaces", title: "Property brand & campaign system",
@@ -210,7 +210,7 @@ const allProjects: Project[] = [
       { src: karVenue.url, alt: "Flawless venue for every occasion — banquet hall seating poster", caption: "Flawless Venue for Every Occasion" },
       { src: karStories.url, alt: "Beyond stays, beyond stories — moonlit hotel room door opening poster", caption: "Beyond Stays, Beyond Stories" },
     ],
-    featured: true, year: "2026", instagramUrl: "https://www.instagram.com/kar_towers_arni",
+    featured: true, year: "2026",
   },
   {
     id: "annai-mira-world-school", clientType: "Educational Institution", clientName: "Educational Institution", title: "Admission campaigns & school communications",
@@ -228,7 +228,7 @@ const allProjects: Project[] = [
       { src: annaiMiraPhotographyDay.url, alt: "World Photography Day poster", caption: "World Photography Day" },
       { src: annaiMiraSportsDay.url, alt: "National Sports Day celebration poster", caption: "National Sports Day" },
       { src: annaiMiraHeartDay.url, alt: "World Heart Day wellness poster", caption: "World Heart Day" },
-    ], featured: true, year: "2026", instagramUrl: "https://www.instagram.com/annai_mira_world_school",
+    ], featured: true, year: "2026",
   },
   {
     id: "prime-public-school", clientType: "CBSE PUBLIC SCHOOL", clientName: "CBSE PUBLIC SCHOOL", title: "School campaigns & social communication",
@@ -241,7 +241,7 @@ const allProjects: Project[] = [
       { src: primeHealthyHabits.url, alt: "Healthy student habits — strong routines support learning poster", caption: "Healthy Student Habits" },
       { src: primeStrongFoundations.url, alt: "Strong foundations matter — early support makes a difference poster", caption: "Strong Foundations Matter" },
       { src: primeFromICan.url, alt: "From 'I can't' to 'I can' — student confidence campaign poster", caption: "From 'I Can't' to 'I Can'" },
-    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/primepublicschool_vellore",
+    ], featured: false, year: "2026",
   },
   {
     id: "mapis-clinic", clientType: "Beauty & Wellness Clinic", clientName: "Beauty & Wellness Clinic", title: "Clinic identity & beauty campaigns",
@@ -252,7 +252,7 @@ const allProjects: Project[] = [
       { src: mapisHydraFacial.url, alt: "Hydra Facial — your skin's new best friend clinic campaign poster", caption: "Hydra Facial Campaign" },
       { src: mapisVijayadashami.url, alt: "Happy Vijayadashami clinic greeting poster featuring beauty and wellness care", caption: "Vijayadashami Greeting" },
       { src: mapisMuharram.url, alt: "Islamic New Year Muharram greeting poster with medical care theme", caption: "Muharram Greeting" },
-    ], featured: false, year: "2026", instagramUrl: "https://www.instagram.com/mapisbeautyhair_skinclinic",
+    ], featured: false, year: "2026",
   },
   {
     id: "ux-learning-platform", clientName: "UX Learning Platform", title: "AI-assisted UX awareness & learning platform",
