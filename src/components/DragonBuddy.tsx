@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { X, Send } from "lucide-react";
 import { askDragon } from "@/lib/dragon.functions";
-import dragonAsset from "@/assets/toothless-dragon.png.asset.json";
+import dragonImg from "@/assets/dragon-pet.png";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -64,7 +64,7 @@ export function DragonBuddy() {
       )}
       <button onClick={() => setOpen((o) => !o)} aria-label="Ask Toothless the dragon about Desigan" className="dragon-float relative">
         {!open && <span className="absolute -top-8 right-2 whitespace-nowrap rounded-full bg-card px-3 py-1 text-xs font-semibold text-foreground shadow-md">Ask me! 🐉</span>}
-        <img src={dragonAsset.url} alt="Toothless the dragon" className="dragon-flap h-20 w-auto mix-blend-multiply md:h-24" />
+        <img src={dragonImg} alt="Toothless the dragon" width={1024} height={1024} className="dragon-flap h-20 w-auto drop-shadow-lg md:h-24" />
       </button>
     </div>
   );
