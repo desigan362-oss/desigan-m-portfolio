@@ -13,6 +13,7 @@
 - [x] Add persistent light/dark theme control
 - [x] Refine professional contact language and primary action
 - [x] Remove Instagram links from the portfolio
+- [x] Remove only client brand names from the eight specified project covers
 - [x] Verify desktop and mobile presentation
 
 - [x] Add validated client enquiry form with requested service options
