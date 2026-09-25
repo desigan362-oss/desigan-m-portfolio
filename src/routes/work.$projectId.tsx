@@ -1,5 +1,4 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { Instagram } from "lucide-react";
 import { getProject } from "@/data/projects";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { SolarSystemBackground } from "@/components/SolarSystemBackground";
@@ -74,11 +73,6 @@ function ProjectPage() {
                 className="w-fit border-b border-ink/20 pb-1 text-sm font-medium transition-colors hover:border-ink"
               >
                 View the prototype
-              </a>
-            )}
-            {project.instagramUrl && (
-              <a href={project.instagramUrl} target="_blank" rel="noreferrer" className="flex w-fit items-center gap-2 border-b border-ink/20 pb-1 text-sm font-medium transition-colors hover:border-accent hover:text-accent">
-                <Instagram className="size-4" /> View {project.clientName} on Instagram
               </a>
             )}
           </div>

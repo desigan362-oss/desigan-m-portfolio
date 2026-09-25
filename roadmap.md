@@ -12,7 +12,7 @@
 - [x] Unify portfolio palette and matching statistic cards
 - [x] Add persistent light/dark theme control
 - [x] Refine professional contact language and primary action
-- [x] Add Instagram profiles to matching brand project cards
+- [x] Remove Instagram links from the portfolio
 - [x] Verify desktop and mobile presentation
 
 - [x] Add validated client enquiry form with requested service options
@@ -44,4 +44,6 @@
 - [x] Update Myme Techies experience and all training totals to 35+ students
 - [x] Harden enquiry validation against hidden-field autofill and show the exact validation error
 - [x] Refine back label, GPA prominence, Skills tools, Experience touch feedback, and page transition speed
+- [x] Add a blinking endpoint to the Experience timeline
+- [ ] Add the Myme Techies experience certificate (waiting for the certificate file)
 
