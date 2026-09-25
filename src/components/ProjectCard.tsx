@@ -1,4 +1,4 @@
-import { ArrowUpRight, Instagram } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Project } from "@/data/projects";
 
@@ -18,10 +18,7 @@ export function ProjectCard({ project }: { project: Project; index?: number }) {
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink/80">{project.description}</p>
         <div className="mt-6 flex items-center justify-between gap-3 border-t border-ink/10 pt-4 text-xs font-bold">
             {project.galleryImages.length > 0 ? `${project.galleryImages.length} ${project.itemLabel ?? "design"}${project.galleryImages.length === 1 ? "" : "s"}` : null}
-          <div className="flex items-center gap-3">
-            {project.instagramUrl && <a href={project.instagramUrl} target="_blank" rel="noreferrer" aria-label={`View ${project.clientName} on Instagram`} title="View Instagram" className="grid size-8 place-items-center rounded-md border border-ink/15 transition-colors hover:border-accent hover:bg-accent-soft"><Instagram className="size-4" /></a>}
-            <Link to="/work/$projectId" params={{ projectId: project.id }} className="flex items-center gap-1">View project <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
-          </div>
+          <Link to="/work/$projectId" params={{ projectId: project.id }} className="flex items-center gap-1">View project <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
         </div>
       </div>
     </article>
