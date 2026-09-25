@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Render the inner-page back button once in the root layout so it remains fixed beneath the header without duplication.
+- Preload portfolio routes on link intent with no delay so page changes feel immediate.
