@@ -16,7 +16,9 @@ export function DragonBuddy() {
   const ask = useServerFn(askDragon);
   const endRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => endRef.current?.scrollIntoView({ block: "end" }), [msgs, loading]);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ block: "end" });
+  }, [msgs, loading]);
 
   async function send(e: React.FormEvent) {
     e.preventDefault();
