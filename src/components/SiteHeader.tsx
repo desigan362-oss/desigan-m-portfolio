@@ -11,7 +11,6 @@ const links = [
   { to: "/experience", label: "Experience" },
   { to: "/skills", label: "Skills" },
   { to: "/education", label: "Education" },
-  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
