@@ -27,7 +27,7 @@ export const askBee = createServerFn({ method: "POST" })
     const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${process.env['LOVABLE_API_KEY']}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
