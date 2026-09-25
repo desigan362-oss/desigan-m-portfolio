@@ -48,8 +48,20 @@ export function EnquiryForm() {
         if (field && !nextErrors[field]) nextErrors[field] = issue.message;
       }
       setErrors(nextErrors);
-      setMessage("Please review the highlighted fields.");
+      const firstIssue = parsed.error.issues[0];
+      setMessage(firstIssue?.message ?? "Please review the highlighted fields.");
       setStatus("error");
+      const firstField = firstIssue?.path[0];
+      if (typeof firstField === "string") {
+        const fieldIds: Partial<Record<keyof FormValues, string>> = {
+          clientName: "client-name",
+          email: "client-email",
+          phone: "client-phone",
+          projectBrief: "project-brief",
+        };
+        const fieldId = fieldIds[firstField as keyof FormValues];
+        if (fieldId) document.getElementById(fieldId)?.focus();
+      }
       return;
     }
 
@@ -91,11 +103,6 @@ export function EnquiryForm() {
       <Field id="project-brief" label="Project brief" error={errors.projectBrief} detail={`${values.projectBrief.length}/3000`}>
         <Textarea id="project-brief" value={values.projectBrief} onChange={(event) => update("projectBrief", event.target.value)} maxLength={3000} rows={7} placeholder="What do you need, who is it for, and what should the final work achieve?" aria-invalid={Boolean(errors.projectBrief)} className="min-h-40 resize-y border-ink/15 bg-surface shadow-none focus-visible:ring-accent" />
       </Field>
-
-      <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
-        <Label htmlFor="company-website">Website</Label>
-        <Input id="company-website" value={values.website} onChange={(event) => update("website", event.target.value)} tabIndex={-1} autoComplete="off" />
-      </div>
 
       {message && <Alert variant={status === "error" ? "destructive" : "default"} className={status === "success" ? "border-accent bg-accent-soft" : undefined}>{status === "success" && <CheckCircle2 className="size-4" />}<AlertTitle>{status === "success" ? "Enquiry received" : "Please check your enquiry"}</AlertTitle><AlertDescription>{message}</AlertDescription></Alert>}
 

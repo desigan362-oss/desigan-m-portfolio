@@ -39,4 +39,8 @@
 - [x] Apply consistent client-type labels across cards and project pages
 - [x] Remove the homepage Show more action
 - [x] Add a consistent animated back button to inner pages
+- [x] Reorder navigation and replace the project CTA with Contact
+- [x] Keep the back button visible beneath the navigation on every inner page
+- [x] Update Myme Techies experience and all training totals to 35+ students
+- [x] Harden enquiry validation against hidden-field autofill and show the exact validation error
 

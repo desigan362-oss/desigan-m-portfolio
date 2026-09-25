@@ -5,7 +5,7 @@ const timeline = [
   { date: "10 Jul — 11 Aug 2025", title: "UI/UX Design Intern", org: "Untik", detail: "Practised user flows, wireframing and interface design through a focused product-design internship." },
   { date: "Sep — Nov 2025", title: "Graphic Designing Intern", org: "Myme Techies", detail: "Created visual communication and campaign work for real client requirements." },
   { date: "10 Dec 2025 — Mar 2026", title: "UI/UX Design Intern", org: "Least Action", detail: "Developed user-centred screens and prototypes while strengthening UX process and presentation." },
-  { date: "14 Feb 2026 — Present", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Delivering work for client accounts, leading a bakery rebrand, building UI/UX projects and training more than 50 students." },
+  { date: "Feb — Sep 2026", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Completed eight months of professional experience across graphic design, UI/UX design and training, including client projects and mentoring 35+ students." },
   { date: "Jun 2026", title: "Graphic Designing Trainer Certificate", org: "Certification", detail: "Recognition of practical graphic-design teaching and workshop facilitation." },
   { date: "Jun 2026", title: "UI/UX Designing Trainer Certificate", org: "Certification", detail: "Recognition of UI/UX curriculum delivery, mentorship and practical project guidance." },
 ];
