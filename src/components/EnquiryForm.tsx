@@ -104,11 +104,6 @@ export function EnquiryForm() {
         <Textarea id="project-brief" value={values.projectBrief} onChange={(event) => update("projectBrief", event.target.value)} maxLength={3000} rows={7} placeholder="What do you need, who is it for, and what should the final work achieve?" aria-invalid={Boolean(errors.projectBrief)} className="min-h-40 resize-y border-ink/15 bg-surface shadow-none focus-visible:ring-accent" />
       </Field>
 
-      <div className="absolute -left-[10000px] top-auto size-px overflow-hidden" aria-hidden="true">
-        <Label htmlFor="additional-info-confirmation">Additional information</Label>
-        <Input id="additional-info-confirmation" name="additional-info-confirmation" value={values.website} onChange={(event) => update("website", event.target.value)} tabIndex={-1} autoComplete="new-password" />
-      </div>
-
       {message && <Alert variant={status === "error" ? "destructive" : "default"} className={status === "success" ? "border-accent bg-accent-soft" : undefined}>{status === "success" && <CheckCircle2 className="size-4" />}<AlertTitle>{status === "success" ? "Enquiry received" : "Please check your enquiry"}</AlertTitle><AlertDescription>{message}</AlertDescription></Alert>}
 
       <Button type="submit" size="lg" disabled={status === "sending" || status === "success"} className="h-12 w-full bg-accent font-bold text-accent-foreground shadow-[0_8px_24px_var(--accent-shadow)] hover:bg-accent-strong">
