@@ -267,7 +267,13 @@
     color-mix(in oklab, var(--accent-soft) 75%, transparent),
     var(--card) 45%,
     color-mix(in oklab, var(--accent-soft) 75%, transparent));
-  box-shadow: 0 20px 40px -15px var(--accent-shadow);
+  animation: cert-glow 2.8s ease-in-out infinite;
+  motion-reduce: ;
+}
+
+@keyframes cert-glow {
+  0%, 100% { box-shadow: 0 16px 36px -18px var(--accent-shadow); }
+  50% { box-shadow: 0 22px 55px -12px color-mix(in oklab, var(--accent) 42%, transparent); }
 }
 
 .cert-highlight::before {
