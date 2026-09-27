@@ -54,12 +54,20 @@ function Experience() {
       <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="relative border-l border-ink/15 md:ml-44">
-            {timeline.map((item) => {
+            {timeline.map((item, index) => {
               const hasCert = Boolean(item.cert);
               const openThis = () => item.cert && setOpenCert(item.cert);
+              const isLast = index === timeline.length - 1;
               return (
                 <article key={`${item.date}-${item.title}`} className="group relative pb-14 pl-8 md:pl-14">
-                  <span className={`absolute -left-2 top-1 size-4 rounded-full border-4 border-surface transition-transform duration-200 group-hover:scale-125 group-active:scale-150 ${item.org === "Myme Techies" && item.title.includes("Trainer") ? "bg-accent-strong" : "bg-accent"}`} />
+                  <span className={`absolute -left-2 top-1 size-4 rounded-full border-4 border-surface transition-transform duration-200 group-hover:scale-125 group-active:scale-150 ${item.org === "Myme Techies" && item.title.includes("Trainer") ? "bg-accent-strong" : "bg-accent"}`}>
+                    {isLast && (
+                      <>
+                        <span aria-hidden className="timeline-ring absolute -inset-1 rounded-full border-2 border-accent-strong motion-reduce:animate-none" />
+                        <span aria-hidden className="timeline-ring absolute -inset-1 rounded-full border-2 border-accent-strong motion-reduce:animate-none" style={{ animationDelay: "0.9s" }} />
+                      </>
+                    )}
+                  </span>
                   <time className="mb-2 block text-xs font-bold uppercase text-accent md:absolute md:-left-48 md:w-40 md:text-right">{item.date}</time>
                   <div
                     {...(hasCert

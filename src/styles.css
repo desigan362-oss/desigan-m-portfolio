@@ -250,3 +250,11 @@
 }
 
 .ask-me-bounce { animation: ask-me-bounce 1.4s ease-in-out infinite; }
+
+@keyframes timeline-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.timeline-ring { animation: timeline-ring 1.8s ease-out infinite; }
