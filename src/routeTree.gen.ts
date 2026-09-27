@@ -15,10 +15,12 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as GraphicDesignRouteImport } from './routes/graphic-design'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UiUxProjectsRouteImport } from './routes/ui-ux-projects'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as CertificatesSlugRouteImport } from './routes/certificates.$slug'
 import { Route as WorkProjectIdRouteImport } from './routes/work.$projectId'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
@@ -53,6 +55,11 @@ const GraphicDesignRoute = GraphicDesignRouteImport.update({
   path: '/graphic-design',
   getParentRoute: () => rootRouteImport,
 } as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -73,6 +80,12 @@ const UiUxProjectsRoute = UiUxProjectsRouteImport.update({
   path: '/ui-ux-projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CertificatesSlugRoute = CertificatesSlugRouteImport.update({
   id: '/certificates/$slug',
   path: '/certificates/$slug',
@@ -97,10 +110,12 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -112,10 +127,12 @@ export interface FileRoutesByTo {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -128,10 +145,12 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -145,10 +164,12 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/mcp'
     | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/.well-known/oauth-protected-resource'
     | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
@@ -160,10 +181,12 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/mcp'
     | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/.well-known/oauth-protected-resource'
     | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
@@ -175,10 +198,12 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/mcp'
     | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/.well-known/oauth-protected-resource'
     | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
@@ -191,10 +216,12 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   ExperienceRoute: typeof ExperienceRoute
   GraphicDesignRoute: typeof GraphicDesignRoute
+  McpRoute: typeof McpRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SkillsRoute: typeof SkillsRoute
   TrainingRoute: typeof TrainingRoute
   UiUxProjectsRoute: typeof UiUxProjectsRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   CertificatesSlugRoute: typeof CertificatesSlugRoute
   WorkProjectIdRoute: typeof WorkProjectIdRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
@@ -244,6 +271,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GraphicDesignRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -270,6 +304,13 @@ declare module '@tanstack/react-router' {
       path: '/ui-ux-projects'
       fullPath: '/ui-ux-projects'
       preLoaderRoute: typeof UiUxProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/certificates/$slug': {
@@ -303,10 +344,13 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   ExperienceRoute: ExperienceRoute,
   GraphicDesignRoute: GraphicDesignRoute,
+  McpRoute: McpRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SkillsRoute: SkillsRoute,
   TrainingRoute: TrainingRoute,
   UiUxProjectsRoute: UiUxProjectsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   CertificatesSlugRoute: CertificatesSlugRoute,
   WorkProjectIdRoute: WorkProjectIdRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
