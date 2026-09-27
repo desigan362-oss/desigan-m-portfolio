@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { certSlugByUrl } from "@/data/certificates";
 import { PageHero } from "@/components/PageHero";
-import { CertificateModal } from "@/components/CertificateModal";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
 import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
 import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
@@ -45,7 +44,7 @@ export const Route = createFileRoute("/experience")({
 });
 
 function Experience() {
-  const [openCert, setOpenCert] = useState<{ url: string; alt: string } | null>(null);
+  const navigate = useNavigate();
   return (
     <>
       <PageHero>
@@ -57,7 +56,7 @@ function Experience() {
           <div className="relative md:ml-44">
             {timeline.map((item, index) => {
               const hasCert = Boolean(item.cert);
-              const openThis = () => item.cert && setOpenCert(item.cert);
+              const openThis = () => { const slug = item.cert && certSlugByUrl(item.cert.url); if (slug) navigate({ to: "/certificates/$slug", params: { slug } }); };
               const isLast = index === timeline.length - 1;
               return (
                 <article key={`${item.date}-${item.title}`} className="group relative pb-14 pl-8 md:pl-14">
@@ -116,7 +115,6 @@ function Experience() {
           </div>
         </div>
       </section>
-      {openCert && <CertificateModal src={openCert.url} alt={openCert.alt} onClose={() => setOpenCert(null)} />}
     </>
   );
 }

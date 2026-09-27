@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CertificateModal } from "@/components/CertificateModal";
+import { certSlugByUrl } from "@/data/certificates";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
 import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
 import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
@@ -38,7 +38,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const featured = featuredProjects();
-  const [openCert, setOpenCert] = useState<null | { url: string; alt: string }>(null);
   const certFor = (title: string | undefined, place: string | undefined) =>
     title === "UI/UX Design Internship" && place === "Untik"
       ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
@@ -100,9 +99,8 @@ function Index() {
 
     <section className="px-6 pb-24 pt-8 md:pb-32 md:pt-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place,subtitle]) => { const cert = certFor(title, place); const highlight = title === "Experience Certificate"; return <div key={`${period}-${title}`} className={`${highlight ? "cert-highlight my-2 px-4 sm:px-6" : "border-b border-ink/15"} grid gap-3 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center`}><span className="text-xs font-bold text-accent">{period}</span><strong>{title}{subtitle && <span className="mt-1 block text-sm font-normal text-ink/50">{subtitle}</span>}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{cert && <button type="button" onClick={() => setOpenCert(cert)} className="rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-md transition hover:-translate-y-0.5 hover:bg-accent-strong active:scale-95">View</button>}</span></div>; })}</div></div>
+        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place,subtitle]) => { const cert = certFor(title, place); const highlight = title === "Experience Certificate"; return <div key={`${period}-${title}`} className={`${highlight ? "cert-highlight my-2 px-4 sm:px-6" : "border-b border-ink/15"} grid gap-3 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center`}><span className="text-xs font-bold text-accent">{period}</span><strong>{title}{subtitle && <span className="mt-1 block text-sm font-normal text-ink/50">{subtitle}</span>}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{cert && <Link to="/certificates/$slug" params={{ slug: certSlugByUrl(cert.url) ?? "" }} className="rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-md transition hover:-translate-y-0.5 hover:bg-accent-strong active:scale-95">View</Link>}</span></div>; })}</div></div>
       </div>
     </section>
-    {openCert && <CertificateModal src={openCert.url} alt={openCert.alt} onClose={() => setOpenCert(null)} />}
   </>;
 }
