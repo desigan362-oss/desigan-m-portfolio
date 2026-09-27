@@ -16,6 +16,7 @@ const certificates = [
   ["Jul—Aug 2025", "UI/UX Design Internship", "Untik"],
   ["Sep—Nov 2025", "Graphic Designing Internship", "Myme Techies"],
   ["Dec 2025—Mar 2026", "UI/UX Design Internship", "Least Action"],
+  ["Feb — Sep 2026", "Graphic Designer · UI/UX Designer · Trainer", "Myme Techies"],
   ["Jun 2026", "Graphic Designing Trainer Certificate", "Trainer credential"],
   ["Jun 2026", "UI/UX Designing Trainer Certificate", "Trainer credential"],
 ];
