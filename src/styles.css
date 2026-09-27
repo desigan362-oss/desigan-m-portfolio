@@ -268,7 +268,6 @@
     var(--card) 45%,
     color-mix(in oklab, var(--accent-soft) 75%, transparent));
   animation: cert-glow 2.8s ease-in-out infinite;
-  motion-reduce: ;
 }
 
 @keyframes cert-glow {
@@ -290,4 +289,12 @@
   width: 4px;
   border-radius: 0 999px 999px 0;
   background: var(--accent);
+  animation: cert-bar 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-highlight,
+  .cert-highlight::before {
+    animation: none;
+  }
 }
