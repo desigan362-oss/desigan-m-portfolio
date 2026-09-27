@@ -104,7 +104,7 @@ function Experience() {
                             loading="lazy"
                             className="h-32 w-auto rounded-md border border-ink/15 bg-surface object-cover shadow-sm transition-transform duration-200 group-hover:scale-[1.02] group-hover:border-accent/40"
                           />
-                          <span className="mt-3 inline-block text-[11px] font-bold uppercase tracking-[0.16em] text-accent">Click the card to view the certificate</span>
+                          <span className="mt-3 inline-block text-[11px] font-bold uppercase tracking-[0.16em] text-accent">Click to view the certificate</span>
                         </div>
                       )}
                     </div>
