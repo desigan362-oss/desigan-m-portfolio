@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { CertificateModal } from "@/components/CertificateModal";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
 import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
+import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
 
 type TimelineItem = {
   date: string;
@@ -17,7 +18,7 @@ const timeline: TimelineItem[] = [
   { date: "10 Jul — 11 Aug 2025", title: "UI/UX Design Intern", org: "Untik", detail: "Practised user flows, wireframing and interface design through a focused product-design internship.", cert: { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" } },
   { date: "Sep — Nov 2025", title: "Graphic Designing Intern", org: "Myme Techies", detail: "Created visual communication and campaign work for real client requirements.", cert: { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" } },
   { date: "10 Dec 2025 — Mar 2026", title: "UI/UX Design Intern", org: "Least Action", detail: "Developed user-centred screens and prototypes while strengthening UX process and presentation." },
-  { date: "Feb — Sep 2026", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Completed eight months of professional experience across graphic design, UI/UX design and training, including client projects and mentoring 35+ students." },
+  { date: "Feb — Sep 2026", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Completed eight months of professional experience across graphic design, UI/UX design and training, including client projects and mentoring 35+ students.", cert: { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" } },
   { date: "Jun 2026", title: "Graphic Designing Trainer Certificate", org: "Certification", detail: "Recognition of practical graphic-design teaching and workshop facilitation." },
   { date: "Jun 2026", title: "UI/UX Designing Trainer Certificate", org: "Certification", detail: "Recognition of UI/UX curriculum delivery, mentorship and practical project guidance." },
   { date: "Jul 2026", title: "UI/UX & Graphic Design Trainer", org: "Certification · Online", detail: "Trained students online in UI/UX design and graphic design, covering design fundamentals, tools and hands-on project guidance." },
