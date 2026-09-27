@@ -13,6 +13,7 @@ import uiuxGraphicTrainerCertificate from "@/assets/uiux-graphic-trainer-certifi
 type TimelineItem = {
   date: string;
   title: string;
+  subtitle?: string;
   org: string;
   detail: string;
   cert?: { url: string; alt: string };
@@ -22,7 +23,7 @@ const timeline: TimelineItem[] = [
   { date: "10 Jul — 11 Aug 2025", title: "UI/UX Design Intern", org: "Untik", detail: "Practised user flows, wireframing and interface design through a focused product-design internship.", cert: { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" } },
   { date: "Sep — Nov 2025", title: "Graphic Designing Intern", org: "Myme Techies", detail: "Created visual communication and campaign work for real client requirements.", cert: { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" } },
   { date: "10 Dec 2025 — Mar 2026", title: "UI/UX Design Intern", org: "Least Action", detail: "Developed user-centred screens and prototypes while strengthening UX process and presentation.", cert: { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" } },
-  { date: "Feb — Sep 2026", title: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Completed eight months of professional experience across graphic design, UI/UX design and training, including client projects and mentoring 35+ students.", cert: { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" } },
+  { date: "Feb — Sep 2026", title: "Experience Certificate", subtitle: "Graphic Designer · UI/UX Designer · Trainer", org: "Myme Techies", detail: "Completed eight months of professional experience across graphic design, UI/UX design and training, including client projects and mentoring 35+ students.", cert: { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" } },
   { date: "Jun 2026", title: "Graphic Designing Trainer Certificate", org: "Certification", detail: "Recognition of practical graphic-design teaching and workshop facilitation.", cert: { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" } },
   { date: "Jun 2026", title: "UI/UX Designing Trainer Certificate", org: "Certification", detail: "Recognition of UI/UX curriculum delivery, mentorship and practical project guidance.", cert: { url: uiuxTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX Design Trainer, Desigan M" } },
   { date: "Jul 2026", title: "UI/UX & Graphic Design Trainer", org: "Certification · Online", detail: "Trained students online in UI/UX design and graphic design, covering design fundamentals, tools and hands-on project guidance.", cert: { url: uiuxGraphicTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX & Graphic Design Trainer, Desigan M" } },
@@ -90,6 +91,7 @@ function Experience() {
                       <div className="min-w-0 md:flex-1">
                         <span className="text-xs font-bold uppercase text-ink/45">{item.org}</span>
                         <h2 className="mt-2 text-xl font-bold transition-colors duration-200 group-hover:text-accent-strong">{item.title}</h2>
+                        {item.subtitle && <p className="mt-1 text-sm font-semibold text-ink/55">{item.subtitle}</p>}
                         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/65">{item.detail}</p>
                       </div>
                       {item.cert && (
