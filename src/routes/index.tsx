@@ -7,6 +7,7 @@ import mymeExperienceCertificate from "@/assets/myme-techies-experience-certific
 import leastActionCertificate from "@/assets/least-action-internship-certificate.png.asset.json";
 import gdTrainerCertificate from "@/assets/graphic-design-trainer-certificate.png.asset.json";
 import uiuxTrainerCertificate from "@/assets/uiux-trainer-certificate.png.asset.json";
+import uiuxGraphicTrainerCertificate from "@/assets/uiux-graphic-trainer-certificate.png.asset.json";
 import { ArrowDown, ArrowUpRight, GraduationCap, Palette, PenTool, Users } from "lucide-react";
 import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -22,6 +23,7 @@ const certificates = [
   ["Feb — Sep 2026", "Graphic Designer · UI/UX Designer · Trainer", "Myme Techies"],
   ["Jun 2026", "Graphic Designing Trainer Certificate", "Trainer credential"],
   ["Jun 2026", "UI/UX Designing Trainer Certificate", "Trainer credential"],
+  ["Jul 2026", "UI/UX & Graphic Design Trainer", "Certification · Online"],
 ];
 
 export const Route = createFileRoute("/")({
@@ -48,9 +50,11 @@ function Index() {
             ? { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" }
             : title === "UI/UX Designing Trainer Certificate"
               ? { url: uiuxTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX Design Trainer, Desigan M" }
-              : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
-                ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
-                : null;
+              : title === "UI/UX & Graphic Design Trainer"
+                ? { url: uiuxGraphicTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX & Graphic Design Trainer, Desigan M" }
+                : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
+                  ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+                  : null;
   return <>
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
