@@ -54,13 +54,14 @@ function Experience() {
       </PageHero>
       <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <div className="relative border-l border-ink/15 md:ml-44">
+          <div className="relative md:ml-44">
             {timeline.map((item, index) => {
               const hasCert = Boolean(item.cert);
               const openThis = () => item.cert && setOpenCert(item.cert);
               const isLast = index === timeline.length - 1;
               return (
                 <article key={`${item.date}-${item.title}`} className="group relative pb-14 pl-8 md:pl-14">
+                  <span aria-hidden className={`absolute left-0 top-0 w-px bg-ink/15 ${isLast ? "h-3" : "bottom-0"}`} />
                   <span className={`absolute -left-2 top-1 size-4 rounded-full border-4 border-surface transition-transform duration-200 group-hover:scale-125 group-active:scale-150 ${item.org === "Myme Techies" && item.title.includes("Trainer") ? "bg-accent-strong" : "bg-accent"}`}>
                     {isLast && (
                       <>
@@ -85,7 +86,7 @@ function Experience() {
                           },
                         }
                       : {})}
-                    className={`${hasCert ? "cursor-pointer" : ""} ${item.org === "Myme Techies" && item.title.includes("Trainer") ? "bg-pastel-lilac" : "bg-card"} rounded-md border border-ink/10 p-6 transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:border-accent/40 group-hover:shadow-xl group-active:scale-[0.98] group-active:border-accent group-active:shadow-md`}
+                    className={`${hasCert ? "cursor-pointer" : ""} ${item.org === "Myme Techies" && item.title.includes("Trainer") || item.title === "Experience Certificate" || isLast ? "bg-pastel-lilac border-accent/30" : "bg-card"} rounded-md border border-ink/10 p-6 transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:border-accent/40 group-hover:shadow-xl group-active:scale-[0.98] group-active:border-accent group-active:shadow-md`}
                   >
                     <div className="md:flex md:items-center md:gap-6">
                       <div className="min-w-0 md:flex-1">
