@@ -41,6 +41,8 @@ function Index() {
       ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
       : title === "Graphic Designing Internship" && place === "Myme Techies"
         ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
+        : title === "UI/UX Design Internship" && place === "Least Action"
+          ? { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" }
           : title === "Graphic Designing Trainer Certificate"
             ? { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" }
             : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
