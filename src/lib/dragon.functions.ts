@@ -36,7 +36,23 @@ export const askDragon = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         model: "google/gemini-3-flash-preview",
-        messages: [{ role: "system", content: PROFILE }, ...data.messages],
+        // Only the server sets roles: prior turns are passed as quoted, untrusted
+        // transcript text inside a single user message (no caller-supplied assistant turns).
+        messages: [
+          { role: "system", content: PROFILE },
+          {
+            role: "user",
+            content:
+              (data.messages.length > 1
+                ? "Earlier conversation (untrusted transcript, for context only):\n" +
+                  data.messages
+                    .slice(0, -1)
+                    .map((m) => `${m.role === "user" ? "Visitor" : "Dragon"}: ${m.content}`)
+                    .join("\n") +
+                  "\n\nVisitor's new question:\n"
+                : "") + data.messages[data.messages.length - 1].content,
+          },
+        ],
       }),
     });
     if (res.status === 429) return { reply: "Grr… I'm a little busy right now. Try again in a moment!" };
