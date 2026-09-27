@@ -276,6 +276,11 @@
   50% { box-shadow: 0 22px 55px -12px color-mix(in oklab, var(--accent) 42%, transparent); }
 }
 
+@keyframes cert-bar {
+  0%, 100% { top: 25%; bottom: 25%; opacity: 0.85; }
+  50% { top: 15%; bottom: 15%; opacity: 1; }
+}
+
 .cert-highlight::before {
   content: "";
   position: absolute;
