@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { CertificateModal } from "@/components/CertificateModal";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
 import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
+import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
 
 type TimelineItem = {
   date: string;
