@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CertificateModal } from "@/components/CertificateModal";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
+import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
 import { ArrowDown, ArrowUpRight, GraduationCap, Palette, PenTool, Users } from "lucide-react";
 import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -30,7 +31,13 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const featured = featuredProjects();
-  const [untikCertOpen, setUntikCertOpen] = useState(false);
+  const [openCert, setOpenCert] = useState<null | { url: string; alt: string }>(null);
+  const certFor = (title: string | undefined, place: string | undefined) =>
+    title === "UI/UX Design Internship" && place === "Untik"
+      ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
+      : title === "Graphic Designing Internship" && place === "Myme Techies"
+        ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
+        : null;
   return <>
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
@@ -74,9 +81,9 @@ function Index() {
 
     <section className="px-6 pb-24 pt-8 md:pb-32 md:pt-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place]) => <div key={`${period}-${title}`} className="grid gap-3 border-b border-ink/15 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center"><span className="text-xs font-bold text-accent">{period}</span><strong>{title}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{title === "UI/UX Design Internship" && place === "Untik" && <button type="button" onClick={() => setUntikCertOpen(true)} className="rounded-md bg-accent px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-accent-strong">View</button>}</span></div>)}</div></div>
+        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place]) => { const cert = certFor(title, place); return <div key={`${period}-${title}`} className="grid gap-3 border-b border-ink/15 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center"><span className="text-xs font-bold text-accent">{period}</span><strong>{title}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{cert && <button type="button" onClick={() => setOpenCert(cert)} className="rounded-md bg-accent px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-accent-strong">View</button>}</span></div>; })}</div></div>
       </div>
     </section>
-    {untikCertOpen && <CertificateModal src={untikCertificate.url} alt="Untik Certificate of Internship — UI/UX Design, Desigan M" onClose={() => setUntikCertOpen(false)} />}
+    {openCert && <CertificateModal src={openCert.url} alt={openCert.alt} onClose={() => setOpenCert(null)} />}
   </>;
 }

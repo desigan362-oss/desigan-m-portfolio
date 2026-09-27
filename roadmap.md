@@ -1,50 +1,6 @@
-# Portfolio refresh roadmap
-- [x] Rebuild home hero and expanded landing content
-- [x] Refresh global style, navigation, footer, contact actions, and résumé download
-- [x] Update project data and add Beez, Jayanthi, Lee Digital Arts, and KAR Towers work
-- [x] Reorder and enhance Work page; add UI/UX Projects page
-- [x] Expand About, Experience, Skills, Contact, and add Education page
-- [x] Complete metadata and verify desktop/mobile interactions
-- [x] Add dedicated Graphic Design page and navigation
-- [x] Replace hero illustration with a full celestial animation
-- [x] Refresh figures, card colors, spacing, and text contrast
-- [x] Verify desktop and mobile presentation
-- [x] Unify portfolio palette and matching statistic cards
-- [x] Add persistent light/dark theme control
-- [x] Refine professional contact language and primary action
-- [x] Remove Instagram links from the portfolio
-- [x] Remove only client brand names from the eight specified project covers
-- [x] Verify desktop and mobile presentation
+# Roadmap
 
-- [x] Add validated client enquiry form with requested service options
-- [x] Save client enquiries securely in Lovable Cloud
-- [ ] Send each enquiry to Desigan's email after sender-domain setup
-- [ ] Send each enquiry to WhatsApp after Business connection approval
-- [x] Verify enquiry flow on desktop and mobile
-- [x] Replace Prime Public School placeholders with 10 real campaign designs
-- [x] Add 10 real campaign designs to the KAR Towers gallery without changing its cover
-- [x] Add 8 additional KAR Towers designs to the gallery without changing its cover
-- [x] Add 5 real Beez product and packaging designs without changing its cover
-- [x] Add 10 real Lee Digital Arts promotional designs without changing its cover
-- [x] Add 9 real Jayanthi Bakery packaging and campaign designs without changing its cover
-- [x] Add 5 additional Jayanthi Bakery campaign designs without changing its cover
-- [x] Add 5 MAPIS clinic and campaign designs without changing its cover
-- [x] Restore the original Prime Public School cover and standardize all project cards to 2026
-- [x] Replace green accents with a premium purple theme and add celestial animation to every page hero
-- [x] Shorten résumé actions to “Résumé” across the portfolio
-
-- [x] Add funky Training page with animated tools and workshop photo cards
-- [x] Add 5 more workshop photos and 1 workshop video to Training
-- [x] Add Training to Work as a project card with a separate illustrated cover
-- [x] Remove additional galleries from seven client projects while preserving covers
-- [x] Apply consistent client-type labels across cards and project pages
-- [x] Remove the homepage Show more action
-- [x] Add a consistent animated back button to inner pages
-- [x] Reorder navigation and replace the project CTA with Contact
-- [x] Keep the back button visible beneath the navigation on every inner page
-- [x] Update Myme Techies experience and all training totals to 35+ students
-- [x] Harden enquiry validation against hidden-field autofill and show the exact validation error
-- [x] Refine back label, GPA prominence, Skills tools, Experience touch feedback, and page transition speed
-- [x] Add a blinking endpoint to the Experience timeline
-- [ ] Add the Myme Techies experience certificate (waiting for the certificate file)
-
+- [x] Add Untik internship certificate to Experience card + landing "Certified through practice" row with View button
+- [x] Add Myme Techies Graphic Designing Intern certificate to Experience card + landing row with View button
+- [x] Add final Experience card: learning video editing, motion design, WordPress, Wix, InDesign, Blender
+- [ ] Add Least Action UI/UX Design Intern certificate (Experience card + landing row View button) — BLOCKED: waiting for user to upload the certificate image
