@@ -4,6 +4,7 @@ import { ProjectGallery } from "@/components/ProjectGallery";
 import { SolarSystemBackground } from "@/components/SolarSystemBackground";
 
 export const Route = createFileRoute("/work/$projectId")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const project = getProject(params.projectId);
     if (!project) throw notFound();

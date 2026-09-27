@@ -57,6 +57,7 @@ const pillars = [
 ] as const;
 
 export const Route = createFileRoute("/training")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Design Training — Desigan M." },

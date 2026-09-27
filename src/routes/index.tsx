@@ -26,6 +26,7 @@ const certificates = [
 ];
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({ meta: [
     { title: "Desigan M. — Designer & Trainer Portfolio" },
     { name: "description", content: "Portfolio of Desigan M., a UI/UX, graphic and visual designer and trainer creating brand, packaging and digital experiences." },

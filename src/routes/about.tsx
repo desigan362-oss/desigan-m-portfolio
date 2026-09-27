@@ -3,7 +3,7 @@ import { BrainCircuit, Users, Workflow } from "lucide-react";
 import portrait from "@/assets/desigan-portrait.png.asset.json";
 import { PageHero } from "@/components/PageHero";
 
-export const Route = createFileRoute("/about")({ head: () => ({ meta: [
+export const Route = createFileRoute("/about")({ staticData: { sitemap: true }, head: () => ({ meta: [
   { title: "About Desigan M. — Designer & Trainer" }, { name: "description", content: "Learn about Desigan M.'s design practice, client experience, training work and human-centred approach to AI." },
   { property: "og:title", content: "About Desigan M. — Designer & Trainer" }, { property: "og:description", content: "Designer and trainer bridging UI/UX, graphic design, branding and mentorship." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ]}), component: About });
