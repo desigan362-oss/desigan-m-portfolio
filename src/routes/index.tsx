@@ -20,7 +20,7 @@ const certificates = [
   ["Jul—Aug 2025", "UI/UX Design Internship", "Untik"],
   ["Sep—Nov 2025", "Graphic Designing Internship", "Myme Techies"],
   ["Dec 2025—Mar 2026", "UI/UX Design Internship", "Least Action"],
-  ["Feb — Sep 2026", "Graphic Designer · UI/UX Designer · Trainer", "Myme Techies"],
+  ["Feb — Sep 2026", "Experience Certificate", "Myme Techies", "Graphic Designer · UI/UX Designer · Trainer"],
   ["Jun 2026", "Graphic Designing Trainer Certificate", "Trainer credential"],
   ["Jun 2026", "UI/UX Designing Trainer Certificate", "Trainer credential"],
   ["Jul 2026", "UI/UX & Graphic Design Trainer", "Certification · Online"],
@@ -46,7 +46,9 @@ function Index() {
         ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
         : title === "UI/UX Design Internship" && place === "Least Action"
           ? { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" }
-          : title === "Graphic Designing Trainer Certificate"
+            : title === "Experience Certificate" && place === "Myme Techies"
+              ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+              : title === "Graphic Designing Trainer Certificate"
             ? { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" }
             : title === "UI/UX Designing Trainer Certificate"
               ? { url: uiuxTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX Design Trainer, Desigan M" }
