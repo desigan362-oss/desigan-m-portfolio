@@ -86,27 +86,30 @@ function Experience() {
                       : {})}
                     className={`${hasCert ? "cursor-pointer" : ""} ${item.org === "Myme Techies" && item.title.includes("Trainer") ? "bg-pastel-lilac" : "bg-card"} rounded-md border border-ink/10 p-6 transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:border-accent/40 group-hover:shadow-xl group-active:scale-[0.98] group-active:border-accent group-active:shadow-md`}
                   >
-                    <span className="text-xs font-bold uppercase text-ink/45">{item.org}</span>
-                    <h2 className="mt-2 text-xl font-bold transition-colors duration-200 group-hover:text-accent-strong">{item.title}</h2>
-                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/65">{item.detail}</p>
-                    {item.cert && (
-                      <>
-                        <img
-                          src={item.cert.url}
-                          alt={item.cert.alt}
-                          width={1600}
-                          height={1131}
-                          loading="lazy"
-                          className="mt-5 h-32 w-auto rounded-md border border-ink/15 bg-surface object-cover shadow-sm transition-transform duration-200 group-hover:scale-[1.02] group-hover:border-accent/40"
-                        />
-                        <span className="mt-3 inline-block text-[11px] font-bold uppercase tracking-[0.16em] text-accent">Click the card to view the certificate</span>
-                      </>
-                    )}
+                    <div className="md:flex md:items-center md:gap-6">
+                      <div className="min-w-0 md:flex-1">
+                        <span className="text-xs font-bold uppercase text-ink/45">{item.org}</span>
+                        <h2 className="mt-2 text-xl font-bold transition-colors duration-200 group-hover:text-accent-strong">{item.title}</h2>
+                        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/65">{item.detail}</p>
+                      </div>
+                      {item.cert && (
+                        <div className="mt-5 md:mt-0 md:shrink-0 md:text-right">
+                          <img
+                            src={item.cert.url}
+                            alt={item.cert.alt}
+                            width={1600}
+                            height={1131}
+                            loading="lazy"
+                            className="h-32 w-auto rounded-md border border-ink/15 bg-surface object-cover shadow-sm transition-transform duration-200 group-hover:scale-[1.02] group-hover:border-accent/40"
+                          />
+                          <span className="mt-3 inline-block text-[11px] font-bold uppercase tracking-[0.16em] text-accent">Click the card to view the certificate</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </article>
               );
             })}
-            <span aria-label="Timeline continues" className="absolute -bottom-2 -left-2 size-4 animate-pulse rounded-full border-4 border-surface bg-accent-strong motion-reduce:animate-none" />
           </div>
         </div>
       </section>
