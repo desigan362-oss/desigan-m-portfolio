@@ -18,6 +18,7 @@ import { Route as GraphicDesignRouteImport } from './routes/graphic-design'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UiUxProjectsRouteImport } from './routes/ui-ux-projects'
+import { Route as CertificatesSlugRouteImport } from './routes/certificates.$slug'
 import { Route as WorkProjectIdRouteImport } from './routes/work.$projectId'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 
@@ -66,6 +67,11 @@ const UiUxProjectsRoute = UiUxProjectsRouteImport.update({
   path: '/ui-ux-projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CertificatesSlugRoute = CertificatesSlugRouteImport.update({
+  id: '/certificates/$slug',
+  path: '/certificates/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkProjectIdRoute = WorkProjectIdRouteImport.update({
   id: '/work/$projectId',
   path: '/work/$projectId',
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
+  '/certificates/$slug': typeof CertificatesSlugRoute
   '/work/$projectId': typeof WorkProjectIdRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
 }
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
   fileRoutesByTo: FileRoutesByTo
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
   id:
@@ -156,6 +167,7 @@ export interface FileRouteTypes {
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
+    | '/certificates/$slug'
     | '/work/$projectId'
     | '/lovable/email/transactional/preview'
   fileRoutesById: FileRoutesById
@@ -170,6 +182,7 @@ export interface RootRouteChildren {
   SkillsRoute: typeof SkillsRoute
   TrainingRoute: typeof TrainingRoute
   UiUxProjectsRoute: typeof UiUxProjectsRoute
+  CertificatesSlugRoute: typeof CertificatesSlugRoute
   WorkProjectIdRoute: typeof WorkProjectIdRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
 }
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UiUxProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/certificates/$slug': {
+      id: '/certificates/$slug'
+      path: '/certificates/$slug'
+      fullPath: '/certificates/$slug'
+      preLoaderRoute: typeof CertificatesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/$projectId': {
       id: '/work/$projectId'
       path: '/work/$projectId'
@@ -266,6 +286,7 @@ const rootRouteChildren: RootRouteChildren = {
   SkillsRoute: SkillsRoute,
   TrainingRoute: TrainingRoute,
   UiUxProjectsRoute: UiUxProjectsRoute,
+  CertificatesSlugRoute: CertificatesSlugRoute,
   WorkProjectIdRoute: WorkProjectIdRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
 }
