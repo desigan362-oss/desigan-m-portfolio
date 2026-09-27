@@ -50,7 +50,7 @@ export const askDragon = createServerFn({ method: "POST" })
                     .map((m) => `${m.role === "user" ? "Visitor" : "Dragon"}: ${m.content}`)
                     .join("\n") +
                   "\n\nVisitor's new question:\n"
-                : "") + data.messages[data.messages.length - 1].content,
+                : "") + (data.messages[data.messages.length - 1]?.content ?? ""),
           },
         ],
       }),
