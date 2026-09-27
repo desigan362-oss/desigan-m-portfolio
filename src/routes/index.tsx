@@ -20,7 +20,7 @@ const certificates = [
   ["Jul—Aug 2025", "UI/UX Design Internship", "Untik"],
   ["Sep—Nov 2025", "Graphic Designing Internship", "Myme Techies"],
   ["Dec 2025—Mar 2026", "UI/UX Design Internship", "Least Action"],
-  ["Feb — Sep 2026", "Graphic Designer · UI/UX Designer · Trainer", "Myme Techies"],
+  ["Feb — Sep 2026", "Experience Certificate", "Myme Techies", "Graphic Designer · UI/UX Designer · Trainer"],
   ["Jun 2026", "Graphic Designing Trainer Certificate", "Trainer credential"],
   ["Jun 2026", "UI/UX Designing Trainer Certificate", "Trainer credential"],
   ["Jul 2026", "UI/UX & Graphic Design Trainer", "Certification · Online"],
@@ -46,7 +46,9 @@ function Index() {
         ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
         : title === "UI/UX Design Internship" && place === "Least Action"
           ? { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" }
-          : title === "Graphic Designing Trainer Certificate"
+            : title === "Experience Certificate" && place === "Myme Techies"
+              ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+              : title === "Graphic Designing Trainer Certificate"
             ? { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" }
             : title === "UI/UX Designing Trainer Certificate"
               ? { url: uiuxTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX Design Trainer, Desigan M" }
@@ -98,7 +100,7 @@ function Index() {
 
     <section className="px-6 pb-24 pt-8 md:pb-32 md:pt-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place]) => { const cert = certFor(title, place); return <div key={`${period}-${title}`} className="grid gap-3 border-b border-ink/15 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center"><span className="text-xs font-bold text-accent">{period}</span><strong>{title}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{cert && <button type="button" onClick={() => setOpenCert(cert)} className="rounded-md bg-accent px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-accent-strong">View</button>}</span></div>; })}</div></div>
+        <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><div><GraduationCap className="size-8 text-accent" /><p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">Learning journey</p><h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Certified through practice.</h2><p className="mt-5 max-w-sm leading-relaxed text-ink/65">Internships across product and visual design, followed by formal trainer certifications.</p></div><div className="border-t border-ink/15">{certificates.map(([period,title,place,subtitle]) => { const cert = certFor(title, place); return <div key={`${period}-${title}`} className="grid gap-3 border-b border-ink/15 py-6 sm:grid-cols-[150px_1fr_auto] sm:items-center"><span className="text-xs font-bold text-accent">{period}</span><strong>{title}{subtitle && <span className="mt-1 block text-sm font-normal text-ink/50">{subtitle}</span>}</strong><span className="flex items-center gap-4 text-sm text-ink/50">{place}{cert && <button type="button" onClick={() => setOpenCert(cert)} className="rounded-md bg-accent px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-accent-strong">View</button>}</span></div>; })}</div></div>
       </div>
     </section>
     {openCert && <CertificateModal src={openCert.url} alt={openCert.alt} onClose={() => setOpenCert(null)} />}
