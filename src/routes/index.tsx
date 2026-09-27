@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   const featured = featuredProjects();
   const [openCert, setOpenCert] = useState<null | { url: string; alt: string }>(null);
-  const certFor = (title: string, place: string) =>
+  const certFor = (title: string | undefined, place: string | undefined) =>
     title === "UI/UX Design Internship" && place === "Untik"
       ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
       : title === "Graphic Designing Internship" && place === "Myme Techies"
