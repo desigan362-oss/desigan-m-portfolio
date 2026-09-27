@@ -56,7 +56,14 @@ function CertificatePage() {
             <div className="flex justify-between py-3"><dt className="text-ink/50">Awarded to</dt><dd className="font-bold">Desigan M</dd></div>
           </dl>
           <p className="mt-6 leading-relaxed text-ink/70">{cert.description}</p>
-          <a href={cert.url} target="_blank" rel="noreferrer" className="mt-8 inline-block rounded-full bg-accent px-6 py-3 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-md transition hover:-translate-y-0.5 hover:bg-accent-strong">Open full size</a>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a href={cert.url} target="_blank" rel="noreferrer" className="inline-block rounded-full bg-accent px-6 py-3 text-xs font-bold uppercase tracking-wide text-accent-foreground shadow-md transition hover:-translate-y-0.5 hover:bg-accent-strong">Open full size</a>
+            {cert.website && (
+              <a href={cert.website} target="_blank" rel="noreferrer" className="inline-block rounded-full border border-accent/40 bg-card px-6 py-3 text-xs font-bold uppercase tracking-wide text-accent shadow-md transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10">
+                Visit {cert.issuer} ↗
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>
