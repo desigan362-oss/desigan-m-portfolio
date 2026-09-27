@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as GraphicDesignRouteImport } from './routes/graphic-design'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UiUxProjectsRouteImport } from './routes/ui-ux-projects'
@@ -50,6 +51,11 @@ const ExperienceRoute = ExperienceRouteImport.update({
 const GraphicDesignRoute = GraphicDesignRouteImport.update({
   id: '/graphic-design',
   path: '/graphic-design',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SkillsRoute = SkillsRouteImport.update({
@@ -91,6 +97,7 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
@@ -105,6 +112,7 @@ export interface FileRoutesByTo {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
@@ -120,6 +128,7 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/experience': typeof ExperienceRoute
   '/graphic-design': typeof GraphicDesignRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/training': typeof TrainingRoute
   '/ui-ux-projects': typeof UiUxProjectsRoute
@@ -136,6 +145,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
@@ -150,6 +160,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
@@ -164,6 +175,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/experience'
     | '/graphic-design'
+    | '/sitemap.xml'
     | '/skills'
     | '/training'
     | '/ui-ux-projects'
@@ -179,6 +191,7 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   ExperienceRoute: typeof ExperienceRoute
   GraphicDesignRoute: typeof GraphicDesignRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SkillsRoute: typeof SkillsRoute
   TrainingRoute: typeof TrainingRoute
   UiUxProjectsRoute: typeof UiUxProjectsRoute
@@ -229,6 +242,13 @@ declare module '@tanstack/react-router' {
       path: '/graphic-design'
       fullPath: '/graphic-design'
       preLoaderRoute: typeof GraphicDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/skills': {
@@ -283,6 +303,7 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   ExperienceRoute: ExperienceRoute,
   GraphicDesignRoute: GraphicDesignRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SkillsRoute: SkillsRoute,
   TrainingRoute: TrainingRoute,
   UiUxProjectsRoute: UiUxProjectsRoute,

@@ -30,6 +30,7 @@ const timeline: TimelineItem[] = [
 ];
 
 export const Route = createFileRoute("/experience")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Experience — Desigan M." },

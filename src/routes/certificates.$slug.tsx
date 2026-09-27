@@ -2,6 +2,7 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getCertificate } from "@/data/certificates";
 
 export const Route = createFileRoute("/certificates/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const cert = getCertificate(params.slug);
     if (!cert) throw notFound();

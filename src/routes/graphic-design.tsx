@@ -5,6 +5,7 @@ import { graphicDesignProjects } from "@/data/projects";
 import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/graphic-design")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Graphic Design Projects — Desigan M." },
