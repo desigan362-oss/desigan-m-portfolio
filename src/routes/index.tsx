@@ -6,6 +6,7 @@ import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.as
 import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
 import leastActionCertificate from "@/assets/least-action-internship-certificate.png.asset.json";
 import gdTrainerCertificate from "@/assets/graphic-design-trainer-certificate.png.asset.json";
+import uiuxTrainerCertificate from "@/assets/uiux-trainer-certificate.png.asset.json";
 import { ArrowDown, ArrowUpRight, GraduationCap, Palette, PenTool, Users } from "lucide-react";
 import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -45,9 +46,11 @@ function Index() {
           ? { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" }
           : title === "Graphic Designing Trainer Certificate"
             ? { url: gdTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — Graphic Design Trainer, Desigan M" }
-            : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
-              ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
-              : null;
+            : title === "UI/UX Designing Trainer Certificate"
+              ? { url: uiuxTrainerCertificate.url, alt: "Myme Techies Certificate of Training Excellence — UI/UX Design Trainer, Desigan M" }
+              : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
+                ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+                : null;
   return <>
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
