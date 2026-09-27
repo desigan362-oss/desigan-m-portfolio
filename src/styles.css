@@ -258,3 +258,25 @@
 }
 
 .timeline-ring { animation: timeline-ring 1.8s ease-out infinite; }
+
+.cert-highlight {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in oklab, var(--accent) 22%, transparent);
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--accent-soft) 75%, transparent),
+    var(--card) 45%,
+    color-mix(in oklab, var(--accent-soft) 75%, transparent));
+  box-shadow: 0 20px 40px -15px var(--accent-shadow);
+}
+
+.cert-highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 25%;
+  width: 4px;
+  border-radius: 0 999px 999px 0;
+  background: var(--accent);
+}
