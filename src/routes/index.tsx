@@ -4,6 +4,7 @@ import { CertificateModal } from "@/components/CertificateModal";
 import untikCertificate from "@/assets/untik-internship-certificate.png.asset.json";
 import mymeCertificate from "@/assets/myme-techies-internship-certificate.png.asset.json";
 import mymeExperienceCertificate from "@/assets/myme-techies-experience-certificate.png.asset.json";
+import leastActionCertificate from "@/assets/least-action-internship-certificate.png.asset.json";
 import { ArrowDown, ArrowUpRight, GraduationCap, Palette, PenTool, Users } from "lucide-react";
 import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -39,9 +40,11 @@ function Index() {
       ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
       : title === "Graphic Designing Internship" && place === "Myme Techies"
         ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
-        : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
-          ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
-          : null;
+        : title === "UI/UX Design Internship" && place === "Least Action"
+          ? { url: leastActionCertificate.url, alt: "Least Action Company Certificate of Internship — UI/UX Development, Desigan M" }
+          : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
+            ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+            : null;
   return <>
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
