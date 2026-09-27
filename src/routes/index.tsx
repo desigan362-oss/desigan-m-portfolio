@@ -39,7 +39,9 @@ function Index() {
       ? { url: untikCertificate.url, alt: "Untik Certificate of Internship — UI/UX Design, Desigan M" }
       : title === "Graphic Designing Internship" && place === "Myme Techies"
         ? { url: mymeCertificate.url, alt: "Myme Techies Certificate of Internship — Graphic Design, Desigan M" }
-        : null;
+        : title === "Graphic Designer · UI/UX Designer · Trainer" && place === "Myme Techies"
+          ? { url: mymeExperienceCertificate.url, alt: "Myme Techies Certificate of Experience — Graphic Designer and Trainer, Desigan M" }
+          : null;
   return <>
     <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-panel px-6 pb-14 pt-12 text-ink md:pt-20">
       <SolarSystemBackground />
