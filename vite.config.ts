@@ -8,6 +8,7 @@
 import path from "node:path";
 import { loadEnv } from "vite";
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/tanstack/vite";
 
 // Load all env vars into process.env for server routes only (never exposed
 // to the client bundle — the VITE_-only envDefine stays unchanged).
@@ -21,6 +22,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
+    plugins: [mcpPlugin()],
     resolve: {
       alias: {
         // Pin React Email's entities dependency to the hoisted v4.5.0 copy;

@@ -11,3 +11,5 @@
 
 - Render the inner-page back button once in the root layout so it remains fixed beneath the header without duplication.
 - Preload portfolio routes on link intent with no delay so page changes feel immediate.
+
+- MCP server lives in src/lib/mcp (public, read-only, no auth) — portfolio data is already public; enquiries never exposed.
