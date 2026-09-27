@@ -62,7 +62,7 @@ function Index() {
         <div className="relative z-10 mx-auto grid min-h-[calc(100svh-8rem)] max-w-7xl items-center gap-10 lg:grid-cols-[1fr_320px]">
           <div className="max-w-4xl py-16">
             <div className="mb-8 flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.24em] text-accent"><span className="h-px w-10 bg-accent" /> Portfolio · 2026</div>
-            <h1 className="whitespace-nowrap font-display text-5xl font-extrabold leading-none sm:text-7xl md:text-8xl xl:text-9xl">Desigan <span className="text-accent">M</span></h1>
+            <h1 className="font-display text-5xl font-extrabold leading-none sm:text-7xl md:text-8xl xl:text-9xl">Desigan <span className="whitespace-nowrap text-accent">M</span> <span className="mt-4 block text-2xl font-bold tracking-wide text-ink/70 sm:text-3xl md:text-4xl">— Designer & Trainer</span></h1>
             <p className="mt-7 max-w-3xl text-xl font-semibold leading-snug text-ink md:text-3xl">Building memorable brands through graphic design, visual storytelling and thoughtful digital experiences.</p>
             <p className="mt-5 max-w-xl text-sm font-bold leading-relaxed text-ink/80 md:text-base">Graphic Designer · UI/UX Designer · Visual Designer · Trainer</p>
             <div className="mt-9"><ContactActions /></div>
